@@ -21,7 +21,7 @@ const index = () => {
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
-                <b>Smartway</b> adalah travel agen profesional yang berdiri sejak 2016 dibawah naungan &nbsp;
+                <b>Smartway</b> adalahhh travel agen profesional yang berdiri sejak 2016 dibawah naungan &nbsp;
                 <b>PT. Bagus Bahagia Bersama (BBB Group)</b>. Saat ini kami melayani tur dalam negeri: 
                 Jawa Timur, Bali, Lombok, Belitung dan baru saja melakukan expansi tur ke luar
                 negeri dengan menjadikan Jepang sebagai destinasi awal
