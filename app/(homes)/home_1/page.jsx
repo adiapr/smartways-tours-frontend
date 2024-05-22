@@ -34,9 +34,9 @@ const Home_1 = () => {
           <div className="row y-gap-20 justify-between items-end">
             <div className="col-auto">
               <div className="sectionTitle -md">
-                <h2 className="sectionTitle__title">Popular Destinations</h2>
+                <h2 className="sectionTitle__title">Layanan Utama Kami</h2>
                 <p className=" sectionTitle__text mt-5 sm:mt-0">
-                  These popular destinations have a lot to offer
+                  Menyediakan berbagai layanan untuk kebutuhan liburan Anda.
                 </p>
               </div>
             </div>
@@ -47,7 +47,7 @@ const Home_1 = () => {
                 href="#"
                 className="button -md -blue-1 bg-blue-1-05 text-blue-1"
               >
-                View All Destinations
+                Lihat Semua Layanan
                 <div className="icon-arrow-top-right ml-15" />
               </a>
             </div>

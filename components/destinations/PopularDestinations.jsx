@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import { Scrollbar } from "swiper";
-import { destinations2 } from "../../data/desinations";
+import { destinations2, layanan } from "../../data/desinations";
 
 const PopularDestinations = () => {
   return (
@@ -40,10 +40,10 @@ const PopularDestinations = () => {
           },
         }}
       >
-        {destinations2.map((item) => (
+        {layanan.map((item) => (
           <SwiperSlide key={item.id}>
             <Link
-              href={`/tour-single/${item.id}`}
+              href={item.href}
               className="citiesCard -type-1 d-block rounded-4"
               key={item.id}
             >

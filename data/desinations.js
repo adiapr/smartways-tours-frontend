@@ -21,36 +21,41 @@ export const destinations1 = [
   { id: 20, city: "London", properties: "12,683",region:'europe' },
 ];
 
-export const destinations2 = [
+export const layanan = [
   {
     id: 1,
     hoverText: "14 Hotel - 22 Cars - 18 Tours - 95 Activity",
-    city: "Jawa Timur",
+    city: "Wisata Domestik",
+    href:  "/tour-list-v1",
     img: "/img/destinations/1/bromo.webp",
   },
   {
     id: 2,
     hoverText: "14 Hotel - 22 Cars - 18 Tours - 95 Activity",
-    city: "Yogyakarta",
-    img: "/img/destinations/1/yogyakarta.jpg",
+    city: "Wisata Internasional",
+    href:  "/tour-list-v1",
+    img: "/img/backgrounds/wisata-internasional.jpg",
   },
   {
     id: 3,
     hoverText: "14 Hotel - 22 Cars - 18 Tours - 95 Activity",
-    city: "Belitung",
-    img: "/img/destinations/1/belitung.jpg",
+    city: "Outbond",
+    href:  "/activity-list-v2",
+    img: "/img/backgrounds/outbonddd.jpeg",
   },
   {
     id: 4,
     hoverText: "14 Hotel - 22 Cars - 18 Tours - 95 Activity",
-    city: "Lombok",
-    img: "/img/destinations/1/lombok.webp",
+    city: "Rental Mobil/Bus",
+    href:  "/car-list-v1",
+    img: "/img/backgrounds/car.jpg",
   },
   // {
   //   id: 5,
   //   hoverText: "14 Hotel - 22 Cars - 18 Tours - 95 Activity",
   //   city: "Rome",
-  //   img: "/img/destinations/1/5.png",
+  // href:  "",//   
+  // img: "/img/destinations/1/5.png",
   // },
   // {
   //   id: 6,
