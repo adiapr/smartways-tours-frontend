@@ -93,30 +93,30 @@ export const pageItems = [
 export const outbondItems = [
   {
     name: "Rafting",
-    routePath: "/dashboard/db-dashboard",
+    routePath: "/activity-list-v2",
   },
   {
     name: "Fun Game",
-    routePath: "/dashboard/db-booking",
+    routePath: "/activity-list-v2",
   },
 ];
 
 export const renCar = [
   {
     name: "Jawa Timur",
-    routePath: "/dashboard/db-dashboard",
+    routePath: "/car-list-v1",
   },
   {
     name: "Bali",
-    routePath: "/dashboard/db-booking",
+    routePath: "/car-list-v1",
   },
   {
     name: "Lombok",
-    routePath: "/dashboard/db-dashboard",
+    routePath: "/car-list-v1",
   },
   {
     name: "Belitung",
-    routePath: "/dashboard/db-booking",
+    routePath: "/car-list-v1",
   },
 ];
 
@@ -169,10 +169,10 @@ export const categorieMegaMenuItems = [
     menuCol: [
       {
         id: 1,
-        megaBanner: "/img/backgrounds/7.png",
-        title: "Things to do on your hotel",
-        btnText: "See Hotel",
-        btnRoute: "tour-single/1",
+        megaBanner: "/img/backgrounds/wisata-bali.webp",
+        title: "Pilih paket wisata domestik terlengkap",
+        btnText: "Lihat Paket",
+        btnRoute: "/tour-list-v1",
         menuItems: [
           {
             id: 1,
@@ -180,50 +180,22 @@ export const categorieMegaMenuItems = [
             menuList: [
               {
                 name: "Jawa Timur",
-                routePath: "/tour-single/1",
+                routePath: "/tour-list-v1",
               },
               {
                 name: "Lombok",
-                routePath: "tour-single/1",
+                routePath: "/tour-list-v1",
               },
               {
                 name: "Belitung",
-                routePath: "tour-single/1",
+                routePath: "/tour-list-v1",
               },
               {
                 name: "Bali",
-                routePath: "tour-single/1",
-              },
-              // {
-              //   name: "Hotel List v5",
-              //   routePath: "tour-single/1",
-              // },
+                routePath: "/tour-list-v1",
+              }
             ],
-          },
-          // {
-          //   id: 2,
-          //   title: "Hotel Single",
-          //   menuList: [
-          //     {
-          //       name: "Hotel Single v1",
-          //       routePath: "/hotel-single-v1/5",
-          //     },
-          //     {
-          //       name: "Hotel Single v2",
-          //       routePath: "/hotel-single-v2/3",
-          //     },
-          //   ],
-          // },
-          {
-            id: 3,
-            title: "Hotel Booking",
-            menuList: [
-              {
-                name: "Booking Page",
-                routePath: "/booking-page",
-              },
-            ],
-          },
+          }
         ],
       },
     ],
@@ -233,14 +205,14 @@ export const categorieMegaMenuItems = [
     menuCol: [
       {
         id: 1,
-        megaBanner: "/img/backgrounds/8.png",
-        title: "Things to do on your tour",
-        btnText: "See Tour",
+        megaBanner: "/img/backgrounds/wisata-internasional.jpg",
+        title: "Jelajahi dunia lebih jauh",
+        btnText: "Lihat Paket",
         btnRoute: "/tour-list-v1",
         menuItems: [
           {
             id: 1,
-            title: "Tour List",
+            title: "",
             menuList: [
               {
                 name: "Jepang",
@@ -250,214 +222,6 @@ export const categorieMegaMenuItems = [
               //   name: "Tour List v2",
               //   routePath: "/tour-list-v2",
               // },
-            ],
-          },
-          // {
-          //   id: 2,
-          //   title: "Tour Pages",
-          //   menuList: [
-          //     {
-          //       name: "Tour Map",
-          //       routePath: "/tour-list-v3",
-          //     },
-          //     {
-          //       name: "Tour Single",
-          //       routePath: "/tour-single/5",
-          //     },
-          //   ],
-          // },
-        ],
-      },
-    ],
-  },
-  {
-    id: 3,
-    menuCol: [
-      {
-        id: 1,
-        megaBanner: "/img/backgrounds/9.png",
-        title: "Things to do on your activity",
-        btnText: "See Activity",
-        btnRoute: "/activity-list-v1",
-        menuItems: [
-          {
-            id: 1,
-            title: "Activity List",
-            menuList: [
-              {
-                name: "Activity List v1",
-                routePath: "/activity-list-v1",
-              },
-              {
-                name: "Activity List v2",
-                routePath: "/activity-list-v2",
-              },
-            ],
-          },
-          {
-            id: 2,
-            title: "Activity Pages",
-            menuList: [
-              {
-                name: "Activity Map",
-                routePath: "/activity-list-v3",
-              },
-              {
-                name: "Activity Single",
-                routePath: "activity-single",
-                routePath: "/activity-single/3",
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: 4,
-    menuCol: [
-      {
-        id: 1,
-        megaBanner: "/img/backgrounds/10.png",
-        title: "Things to do on your rentals",
-        btnText: "See Rental",
-        btnRoute: "/rental-list-v1",
-        menuItems: [
-          {
-            id: 1,
-            title: "Rental List",
-            menuList: [
-              {
-                name: "Rental List v1",
-                routePath: "/rental-list-v1",
-              },
-              {
-                name: "Rental List v2",
-                routePath: "/rental-list-v2",
-              },
-            ],
-          },
-          {
-            id: 2,
-            title: "Rental Pages",
-            menuList: [
-              {
-                name: "Rental Map",
-                routePath: "/rental-list-v3",
-              },
-              {
-                name: "Rental Single",
-                routePath: "/rental-single/3",
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: 5,
-    menuCol: [
-      {
-        id: 1,
-        megaBanner: "/img/backgrounds/5.png",
-        title: "Things to do on your Next Car",
-        btnText: "See Car",
-        btnRoute: "/car-list-v1",
-        menuItems: [
-          {
-            id: 1,
-            title: "Car List",
-            menuList: [
-              {
-                name: "Car List v1",
-                routePath: "/car-list-v1",
-              },
-              {
-                name: "Car List v2",
-                routePath: "/car-list-v2",
-              },
-            ],
-          },
-          {
-            id: 2,
-            title: "Car Pages",
-            menuList: [
-              {
-                name: "Car Map",
-                routePath: "/car-list-v3",
-              },
-              {
-                name: "Car Single",
-                routePath: "/car-single/1",
-                routePath: "/car-single/1",
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: 6,
-    menuCol: [
-      {
-        id: 1,
-        megaBanner: "/img/backgrounds/1.png",
-        title: "Things to do on your Cruise",
-        btnText: "See Cruise",
-        btnRoute: "/cruise-list-v1",
-        menuItems: [
-          {
-            id: 1,
-            title: "Cruise List",
-            menuList: [
-              {
-                name: "Cruise List v1",
-                routePath: "/cruise-list-v1",
-              },
-              {
-                name: "Cruise List v2",
-                routePath: "/cruise-list-v2",
-              },
-            ],
-          },
-          {
-            id: 2,
-            title: "Cruise Pages",
-            menuList: [
-              {
-                name: "Cruise Map",
-                routePath: "/cruise-list-v3",
-              },
-              {
-                name: "Cruise Single",
-                routePath: "/cruise-single/3",
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: 7,
-    menuCol: [
-      {
-        id: 1,
-        megaBanner: "/img/backgrounds/2.png",
-        title: "Things to do on your flights",
-        btnText: "See Flights",
-        btnRoute: "/flight-list-v1",
-        menuItems: [
-          {
-            id: 1,
-            title: "Flight List",
-            menuList: [
-              {
-                name: "Flight List v1",
-                routePath: "/flight-list-v1",
-              },
             ],
           },
         ],
@@ -477,23 +241,23 @@ export const categorieMobileItems = [
         menuList: [
           {
             name: "Hotel List v1",
-            routePath: "tour-single/1",
+            routePath: "/tour-list-v1",
           },
           {
             name: "Hotel List v2",
-            routePath: "tour-single/1",
+            routePath: "/tour-list-v1",
           },
           {
             name: "Hotel List v3",
-            routePath: "tour-single/1",
+            routePath: "/tour-list-v1",
           },
           {
             name: "Hotel List v4",
-            routePath: "tour-single/1",
+            routePath: "/tour-list-v1",
           },
           {
             name: "Hotel List v5",
-            routePath: "tour-single/1",
+            routePath: "/tour-list-v1",
           },
         ],
       },
@@ -722,19 +486,19 @@ export const paketWisataItems = [
         menuList: [
           {
             name: "Bali",
-            routePath: "tour-single/1",
+            routePath: "/tour-list-v1",
           },
           {
             name: "Jawa Timur",
-            routePath: "tour-single/1",
+            routePath: "/tour-list-v1",
           },
           {
             name: "Yogyakarta",
-            routePath: "tour-single/1",
+            routePath: "/tour-list-v1",
           },
           {
             name: "Belitung",
-            routePath: "tour-single/1",
+            routePath: "/tour-list-v1",
           }
         ],
       },
