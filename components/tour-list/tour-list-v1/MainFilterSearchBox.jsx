@@ -23,7 +23,7 @@ const MainFilterSearchBox = () => {
           </div>
           {/* End check-in-out */}
 
-          <GuestSearch />
+          {/* <GuestSearch /> */}
           {/* End guest */}
 
           <div className="button-item h-full">

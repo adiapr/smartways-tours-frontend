@@ -28,7 +28,7 @@ const index = () => {
           <div className="row">
             <div className="col-12">
               <div className="text-center">
-                <h1 className="text-30 fw-600">Tours in London</h1>
+                <h1 className="text-30 fw-600">Cari wisata</h1>
               </div>
               {/* End text-center */}
               <MainFilterSearchBox />
@@ -43,7 +43,7 @@ const index = () => {
         <div className="container">
           <div className="row y-gap-30">
             <div className="col-xl-3">
-              <aside className="sidebar y-gap-40 xl:d-none">
+              <aside className="sidebar y-gap-40 xl:d-none h-screen">
                 <Sidebar />
               </aside>
               {/* End sidebar for desktop */}

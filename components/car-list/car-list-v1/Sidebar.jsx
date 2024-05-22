@@ -11,13 +11,13 @@ import FuelPolicyFilter from "../sidebar/FuelPolicyFilter";
 const Sidebar = () => {
   return (
     <>
-      <div className="sidebar__item -no-border position-relative">
+      {/* <div className="sidebar__item -no-border position-relative">
         <Map />
-      </div>
+      </div> */}
       {/* End find map */}
 
       <div className="sidebar__item">
-        <h5 className="text-18 fw-500 mb-10">Location (Heathrow Airport)</h5>
+        <h5 className="text-18 fw-500 mb-10">Lokasi</h5>
         <div className="sidebar-checkbox">
           <LocationFilters />
         </div>
@@ -26,7 +26,7 @@ const Sidebar = () => {
       {/* End Location filter */}
 
       <div className="sidebar__item">
-        <h5 className="text-18 fw-500 mb-10">Car Category</h5>
+        <h5 className="text-18 fw-500 mb-10">Kategori Mobil</h5>
         <div className="sidebar-checkbox">
           <CategorieFilters />
         </div>
@@ -34,40 +34,38 @@ const Sidebar = () => {
       </div>
       {/* End Category filter */}
 
-      <div className="sidebar__item pb-30">
+      {/* <div className="sidebar__item pb-30">
         <h5 className="text-18 fw-500 mb-10">Price</h5>
         <div className="row x-gap-10 y-gap-30">
           <div className="col-12">
             <PirceSlider />
           </div>
         </div>
-      </div>
+      </div> */}
       {/* End Price filter */}
 
-      <div className="sidebar__item">
+      {/* <div className="sidebar__item">
         <h5 className="text-18 fw-500 mb-10">Supplier</h5>
         <div className="sidebar-checkbox">
           <SupplierFilters />
         </div>
-        {/* End Sidebar-checkbox */}
-      </div>
+      </div> */}
       {/* End Supplier filter */}
 
-      <div className="sidebar__item">
+      {/* <div className="sidebar__item">
         <h5 className="text-18 fw-500 mb-10">Car Specifications</h5>
         <div className="sidebar-checkbox">
           <SpecificationsFilter />
         </div>
-      </div>
+      </div> */}
       {/* End Specifications filter */}
 
-      <div className="sidebar__item">
+      {/* <div className="sidebar__item">
         <h5 className="text-18 fw-500 mb-10">Mileage/Kilometres</h5>
         <div className="sidebar-checkbox">
           <MileageFilter />
         </div>
-        {/* End Sidebar-checkbox */}
-      </div>
+      </div> */}
       {/* End Kilometres filter */}
 
       <div className="sidebar__item">

@@ -13,7 +13,7 @@ export const metadata = {
 const BlogListV1 = () => {
   return (
     <>
-      <div className="header-margin"></div>
+      {/* <div className="header-margin"></div> */}
       {/* header top margin */}
 
       <DefaultHeader />

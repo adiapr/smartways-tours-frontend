@@ -28,7 +28,7 @@ const index = () => {
           <div className="row">
             <div className="col-12">
               <div className="text-center">
-                <h1 className="text-30 fw-600">London Rental Cars</h1>
+                {/* <h1 className="text-30 fw-600">London Rental Cars</h1> */}
               </div>
               {/* End text-center */}
               <MainFilterSearchBox />
