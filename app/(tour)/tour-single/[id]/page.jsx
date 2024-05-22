@@ -17,7 +17,7 @@ import ImportantInfo from "@/components/tour-single/ImportantInfo";
 import TourGallery from "@/components/tour-single/TourGallery";
 
 export const metadata = {
-  title: "Tour Single || GoTrip - Travel & Tour React NextJS Template",
+  title: "Tour Single | Smartway adalah travel agen profesional yang berdiri sejak 2016 dibawah naungan PT. Bagus Bahagia Bersama (BBB Group).",
   description: "GoTrip - Travel & Tour React NextJS Template",
 };
 

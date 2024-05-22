@@ -7,7 +7,7 @@ import TopHeaderFilter from "@/components/tour-list/tour-list-v3/TopHeaderFilter
 import TourProperties from "@/components/tour-list/tour-list-v3/TourProperties";
 
 export const metadata = {
-  title: "Tour List v3 || GoTrip - Travel & Tour React NextJS Template",
+  title: "Tour List v3 | Smartway adalah travel agen profesional yang berdiri sejak 2016 dibawah naungan PT. Bagus Bahagia Bersama (BBB Group).",
   description: "GoTrip - Travel & Tour React NextJS Template",
 };
 

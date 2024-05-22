@@ -7,7 +7,7 @@ import DropdownSelelctBar from "@/components/car-list/common/DropdownSelelctBar"
 import MapPropertyFinder from "@/components/car-list/common/MapPropertyFinder";
 
 export const metadata = {
-  title: "Car List v3 || GoTrip - Travel & Tour React NextJS Template",
+  title: "Car List v3 | Smartway adalah travel agen profesional yang berdiri sejak 2016 dibawah naungan PT. Bagus Bahagia Bersama (BBB Group).",
   description: "GoTrip - Travel & Tour React NextJS Template",
 };
 

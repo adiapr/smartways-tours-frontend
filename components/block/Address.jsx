@@ -3,9 +3,9 @@ const Address = () => {
     {
       id: 1,
       colClass: "col-lg-3",
-      title: "Address",
+      title: "Alamat",
       content: (
-        <>328 Queensberry Street, North Melbourne VIC 3051, Australia.</>
+        <>Jalan Nakula 51 Tumpang, kab Malang, Indonesia 65156</>
       ),
     },
     {
@@ -14,18 +14,18 @@ const Address = () => {
       title: "Toll Free Customer Care",
       content: (
         <>
-          <a href="tel:+4733378901">+47 333 78 901</a>
+          <a href="tel:+62341788733"> +62 341 - 788733</a>
         </>
       ),
     },
     {
       id: 3,
       colClass: "col-auto",
-      title: "Need live support?",
+      title: "Ingin bangtuan secara langsung?",
       content: (
         <>
           {" "}
-          <a href="mailto:i@gotrip.com">hi@gotrip.com</a>
+          <a href="mailto:hai@smartway.tours">hai@smartway.tours</a>
         </>
       ),
     },

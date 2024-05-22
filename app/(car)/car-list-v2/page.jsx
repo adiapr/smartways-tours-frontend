@@ -7,7 +7,7 @@ import Sidebar from "@/components/car-list/car-list-v2/Sidebar";
 import CarPropertes from "@/components/car-list/car-list-v2/CarPropertes";
 
 export const metadata = {
-  title: "Car List v2 || GoTrip - Travel & Tour React NextJS Template",
+  title: "Car List v2 | Smartway adalah travel agen profesional yang berdiri sejak 2016 dibawah naungan PT. Bagus Bahagia Bersama (BBB Group).",
   description: "GoTrip - Travel & Tour React NextJS Template",
 };
 

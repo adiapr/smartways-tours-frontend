@@ -15,7 +15,7 @@ import AddBanner from "@/components/home/home-3/AddBanner";
 import WhyChoose from "@/components/home/home-3/WhyChoose";
 
 export const metadata = {
-  title: "Home-3 || GoTrip - Travel & Tour React NextJS Template",
+  title: "Home-3 | Smartway adalah travel agen profesional yang berdiri sejak 2016 dibawah naungan PT. Bagus Bahagia Bersama (BBB Group).",
   description: "GoTrip - Travel & Tour React NextJS Template",
 };
 

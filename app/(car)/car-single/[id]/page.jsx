@@ -17,7 +17,7 @@ import Faq from "@/components/faq/Faq";
 import MapPropertyFinder from "@/components/car-single/MapPropertyFinder";
 
 export const metadata = {
-  title: "Car Single || GoTrip - Travel & Tour React NextJS Template",
+  title: "Car Single | Smartway adalah travel agen profesional yang berdiri sejak 2016 dibawah naungan PT. Bagus Bahagia Bersama (BBB Group).",
   description: "GoTrip - Travel & Tour React NextJS Template",
 };
 

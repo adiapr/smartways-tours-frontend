@@ -7,7 +7,7 @@ import HelpSearchBlock from "@/components/block/HelpSearchBlock";
 import HelpBlock from "@/components/block/HelpBlock";
 
 export const metadata = {
-  title: "Help Center || GoTrip - Travel & Tour React NextJS Template",
+  title: "Help Center | Smartway adalah travel agen profesional yang berdiri sejak 2016 dibawah naungan PT. Bagus Bahagia Bersama (BBB Group).",
   description: "GoTrip - Travel & Tour React NextJS Template",
 };
 

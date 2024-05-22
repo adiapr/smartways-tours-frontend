@@ -22,7 +22,7 @@ import StickyHeader2 from "@/components/hotel-single/StickyHeader2";
 import GalleryTwo from "@/components/hotel-single/GalleryTwo";
 
 export const metadata = {
-  title: "Hotel Single v2 || GoTrip - Travel & Tour React NextJS Template",
+  title: "Hotel Single v2 | Smartway adalah travel agen profesional yang berdiri sejak 2016 dibawah naungan PT. Bagus Bahagia Bersama (BBB Group).",
   description: "GoTrip - Travel & Tour React NextJS Template",
 };
 

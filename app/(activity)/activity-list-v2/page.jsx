@@ -7,7 +7,7 @@ import Pagination from "@/components/activity-list/common/Pagination";
 import Sidebar from "@/components/activity-list/activity-list-v2/Sidebar";
 
 export const metadata = {
-  title: "Activity List v2 || GoTrip - Travel & Tour React NextJS Template",
+  title: "Activity List v2 | Smartway adalah travel agen profesional yang berdiri sejak 2016 dibawah naungan PT. Bagus Bahagia Bersama (BBB Group).",
   description: "GoTrip - Travel & Tour React NextJS Template",
 };
 

@@ -1,13 +1,14 @@
 import CallToActions from "@/components/common/CallToActions";
 import Header11 from "@/components/header/header-11";
 import DefaultFooter from "@/components/footer/default";
-import TopHeaderFilter from "@/components/hotel-list/hotel-list-v2/TopHeaderFilter";
-import HotelProperties from "@/components/hotel-list/hotel-list-v2/HotelProperties";
+import MainFilterSearchBox from "@/components/hotel-list/hotel-list-v4/MainFilterSearchBox";
+import TopHeaderFilter from "@/components/hotel-list/hotel-list-v4/TopHeaderFilter";
 import Pagination from "@/components/hotel-list/common/Pagination";
-import Sidebar from "@/components/hotel-list/hotel-list-v2/Sidebar";
+import Sidebar from "@/components/hotel-list/hotel-list-v4/Sidebar";
+import HotelProperties from "@/components/hotel-list/hotel-list-v4/HotelProperties";
 
 export const metadata = {
-  title: "Hotel List v2 || GoTrip - Travel & Tour React NextJS Template",
+  title: "Hotel List v5 | Smartway adalah travel agen profesional yang berdiri sejak 2016 dibawah naungan PT. Bagus Bahagia Bersama (BBB Group).",
   description: "GoTrip - Travel & Tour React NextJS Template",
 };
 
@@ -21,6 +22,22 @@ const index = () => {
 
       <Header11 />
       {/* End Header 1 */}
+
+      <section className="pt-40 pb-40 bg-blue-2">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="text-center">
+                <h1 className="text-30 fw-600">Find Your Dream Luxury Hotel</h1>
+              </div>
+              {/* End text-center */}
+              <MainFilterSearchBox />
+            </div>
+            {/* End col-12 */}
+          </div>
+        </div>
+      </section>
+      {/* Top SearchBanner */}
 
       <section className="layout-pt-md layout-pb-lg">
         <div className="container">
@@ -38,7 +55,7 @@ const index = () => {
               >
                 <div className="offcanvas-header">
                   <h5 className="offcanvas-title" id="offcanvasLabel">
-                    Filter Hotels
+                    Filter Sidebar
                   </h5>
                   <button
                     type="button"

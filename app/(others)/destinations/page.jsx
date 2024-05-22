@@ -22,7 +22,7 @@ import Rentals from "@/components/rentals/Rentals";
 import Hotels from "@/components/hotels/Hotels2";
 
 export const metadata = {
-  title: "Destinations || GoTrip - Travel & Tour React NextJS Template",
+  title: "Destinations | Smartway adalah travel agen profesional yang berdiri sejak 2016 dibawah naungan PT. Bagus Bahagia Bersama (BBB Group).",
   description: "GoTrip - Travel & Tour React NextJS Template",
 };
 

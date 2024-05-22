@@ -8,7 +8,7 @@ import BlogSidebar from "@/components/blog/blog-sidebar";
 import BlogPagination from "@/components/blog/BlogPagination";
 
 export const metadata = {
-  title: "Blog List V2 || GoTrip - Travel & Tour React NextJS Template",
+  title: "Blog List V2 | Smartway adalah travel agen profesional yang berdiri sejak 2016 dibawah naungan PT. Bagus Bahagia Bersama (BBB Group).",
   description: "GoTrip - Travel & Tour React NextJS Template",
 };
 

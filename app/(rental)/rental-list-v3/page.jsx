@@ -7,7 +7,7 @@ import MapPropertyFinder from "@/components/rental-list/common/MapPropertyFinder
 import RentalProperties from "@/components/rental-list/rental-list-v3/RentalProperties";
 
 export const metadata = {
-  title: "Rental List v3 || GoTrip - Travel & Tour React NextJS Template",
+  title: "Rental List v3 | Smartway adalah travel agen profesional yang berdiri sejak 2016 dibawah naungan PT. Bagus Bahagia Bersama (BBB Group).",
   description: "GoTrip - Travel & Tour React NextJS Template",
 };
 

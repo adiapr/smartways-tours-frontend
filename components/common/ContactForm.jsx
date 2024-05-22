@@ -48,7 +48,7 @@ const ContactForm = () => {
           type="submit"
           className="button px-24 h-50 -dark-1 bg-blue-1 text-white"
         >
-          Send Message <div className="icon-arrow-top-right ml-15"></div>
+          Kirim Pesan <div className="icon-arrow-top-right ml-15"></div>
         </button>
       </div>
     </form>

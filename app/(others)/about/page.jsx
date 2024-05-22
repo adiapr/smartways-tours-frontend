@@ -12,7 +12,7 @@ import Counter2 from "@/components/counter/Counter2";
 import Brand from "@/components/brand/Brand";
 
 export const metadata = {
-  title: "About || GoTrip - Travel & Tour React NextJS Template",
+  title: "About | Smartway adalah travel agen profesional yang berdiri sejak 2016 dibawah naungan PT. Bagus Bahagia Bersama (BBB Group).",
   description: "GoTrip - Travel & Tour React NextJS Template",
 };
 
@@ -60,9 +60,9 @@ const About = () => {
           <div className="row justify-center text-center">
             <div className="col-auto">
               <div className="sectionTitle -md">
-                <h2 className="sectionTitle__title">Why Choose Us</h2>
+                <h2 className="sectionTitle__title">KENAPA MEMILIH SMARTWAY?</h2>
                 <p className=" sectionTitle__text mt-5 sm:mt-0">
-                  These popular destinations have a lot to offer
+                  PAket wisata populer yang siap menemani Anda
                 </p>
               </div>
             </div>
@@ -103,9 +103,9 @@ const About = () => {
           <div className="row y-gap-20 justify-between items-end">
             <div className="col-auto">
               <div className="sectionTitle -md">
-                <h2 className="sectionTitle__title">Our Team</h2>
+                <h2 className="sectionTitle__title">Tim Kita</h2>
                 <p className=" sectionTitle__text mt-5 sm:mt-0">
-                  Lorem ipsum dolor sit amet
+                  Tim Profesional dari Smartway.tours
                 </p>
               </div>
             </div>
@@ -123,7 +123,7 @@ const About = () => {
       </section>
       {/* End team section */}
 
-      <section className="section-bg layout-pt-lg layout-pb-lg">
+      {/* <section className="section-bg layout-pt-lg layout-pb-lg">
         <div className="section-bg__item -mx-20 bg-light-2" />
         <div className="container">
           <div className="row justify-center text-center">
@@ -138,39 +138,30 @@ const About = () => {
               </div>
             </div>
           </div>
-          {/* End .row */}
 
           <div className="overflow-hidden pt-80 js-section-slider">
             <div className="item_gap-x30">
               <Testimonial />
             </div>
           </div>
-          {/* End .overflow-hidden */}
 
           <div className="row y-gap-30 items-center pt-40 sm:pt-20">
             <div className="col-xl-4">
               <Counter2 />
             </div>
-            {/* End .col */}
 
             <div className="col-xl-8">
               <div className="row y-gap-30 justify-between items-center">
                 <Brand />
               </div>
             </div>
-            {/* End .col */}
           </div>
-          {/* End .row */}
         </div>
-        {/* End .container */}
-      </section>
-      {/* End testimonial section */}
+      </section> */}
 
       <CallToActions />
-      {/* End Call To Actions Section */}
 
       <DefaultFooter />
-      {/* End Call To Actions Section */}
     </>
   );
 };

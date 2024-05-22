@@ -4,19 +4,13 @@ const Block1 = () => {
   return (
     <>
       <div className="col-lg-5">
-        <h2 className="text-30 fw-600">About GoTrip.com</h2>
-        <p className="mt-5">These popular destinations have a lot to offer</p>
+        <h2 className="text-30 fw-600">Tentang Smartway.tours</h2>
+        <p className="mt-5">Destinasi populer ini memiliki banyak hal untuk ditawarkan</p>
         <p className="text-dark-1 mt-60 lg:mt-40 md:mt-20">
-          London is a shining example of a metropolis at the highest peak of
-          modernity and boasts an economy and cultural diversity that’s the envy
-          of other global superpowers.
+        Smartway Indonesia adalah yang terdepan di antara Perusahaan Manajemen Destinasi (DMC) online, yang berdedikasi untuk melampaui harapan pelanggan kami. Salah satu prestasi terkemuka kami adalah diakui sebagai yang terbaik dari yang terbaik Travelers' Choice yang dinilai oleh TripAdvisor, sebagai bukti komitmen kami terhadap keunggulan. Dengan pemahaman mendalam tentang kepulauan Indonesia, kami mengkhususkan diri dalam menciptakan perjalanan tak terlupakan yang menggabungkan pemandangan yang memukau, imersi budaya yang dalam, dan rasa petualangan. Didukung oleh tim profesional dan jaringan komprehensif di seluruh negeri, Smartway Indonesia dilengkapi untuk mewujudkan impian perjalanan apa pun.
           <br />
           <br />
-          Take the opportunity to acquaint yourself with its fascinating history
-          chronicled by institutions like the British Museum as well as see how
-          far it has come by simply riding the Tube and passing by celebrated
-          landmarks like Buckingham Palace, Westminster Abbey, and marvels like
-          Big Ben, the London Eye, and the Tower Bridge.
+          Komitmen kami melampaui penyediaan layanan yang luar biasa; kami bersemangat untuk melibatkan komunitas lokal dalam usaha kami, memastikan bahwa perjalanan kami memberikan kontribusi positif bagi orang-orang yang tanahnya kami jelajahi. Kami percaya dalam menciptakan pengalaman yang tidak hanya menyenangkan klien kami tetapi juga meningkatkan kesejahteraan penduduk setempat. Melalui perjalanan kami, kami tidak hanya menyaksikan pemandangan yang luar biasa tetapi juga bertujuan untuk memberikan dampak yang berarti bagi komunitas yang kami kunjungi. Pendekatan kami berakar dalam perhatian yang tulus, kolaborasi, dan berbagi, membina budaya saling menghormati dan kemitraan.
         </p>
       </div>
       {/* End .col */}
@@ -25,7 +19,7 @@ const Block1 = () => {
         <Image
           width={400}
           height={400}
-          src="/img/pages/about/2.png"
+          src="/img/pages/about/about.jpg"
           alt="image"
           className="rounded-4 w-100"
         />

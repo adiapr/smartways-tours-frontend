@@ -1,14 +1,14 @@
 import CallToActions from "@/components/common/CallToActions";
 import Header11 from "@/components/header/header-11";
 import DefaultFooter from "@/components/footer/default";
-import MainFilterSearchBox from "@/components/hotel-list/hotel-list-v4/MainFilterSearchBox";
-import TopHeaderFilter from "@/components/hotel-list/hotel-list-v4/TopHeaderFilter";
+import MainFilterSearchBox from "@/components/hotel-list/hotel-list-v1/MainFilterSearchBox";
+import TopHeaderFilter from "@/components/hotel-list/hotel-list-v1/TopHeaderFilter";
+import HotelProperties from "@/components/hotel-list/hotel-list-v1/HotelProperties";
 import Pagination from "@/components/hotel-list/common/Pagination";
-import Sidebar from "@/components/hotel-list/hotel-list-v4/Sidebar";
-import HotelProperties from "@/components/hotel-list/hotel-list-v4/HotelProperties";
+import Sidebar from "@/components/hotel-list/hotel-list-v1/Sidebar";
 
 export const metadata = {
-  title: "Hotel List v5 || GoTrip - Travel & Tour React NextJS Template",
+  title: "Hotel List v1 | Smartway adalah travel agen profesional yang berdiri sejak 2016 dibawah naungan PT. Bagus Bahagia Bersama (BBB Group).",
   description: "GoTrip - Travel & Tour React NextJS Template",
 };
 
@@ -23,7 +23,7 @@ const index = () => {
       <Header11 />
       {/* End Header 1 */}
 
-      <section className="pt-40 pb-40 bg-blue-2">
+      <section className="pt-40 pb-40 bg-light-2">
         <div className="container">
           <div className="row">
             <div className="col-12">
@@ -55,7 +55,7 @@ const index = () => {
               >
                 <div className="offcanvas-header">
                   <h5 className="offcanvas-title" id="offcanvasLabel">
-                    Filter Sidebar
+                    Filter Hotels
                   </h5>
                   <button
                     type="button"

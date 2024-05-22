@@ -9,7 +9,7 @@ import Faq from "@/components/faq/Faq";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Become Expert || GoTrip - Travel & Tour React NextJS Template",
+  title: "Become Expert | Smartway adalah travel agen profesional yang berdiri sejak 2016 dibawah naungan PT. Bagus Bahagia Bersama (BBB Group).",
   description: "GoTrip - Travel & Tour React NextJS Template",
 };
 

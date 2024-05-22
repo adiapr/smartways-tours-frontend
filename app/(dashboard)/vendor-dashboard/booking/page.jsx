@@ -2,7 +2,7 @@ import React from "react";
 import DashboardPage from "../../../../components/dashboard/vendor-dashboard/booking";
 
 export const metadata = {
-  title: "Vendor History || GoTrip - Travel & Tour React NextJS Template",
+  title: "Vendor History | Smartway adalah travel agen profesional yang berdiri sejak 2016 dibawah naungan PT. Bagus Bahagia Bersama (BBB Group).",
   description: "GoTrip - Travel & Tour React NextJS Template",
 };
 
