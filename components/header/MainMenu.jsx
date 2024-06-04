@@ -7,6 +7,7 @@ import {
   dashboardItems,
   outbondItems,
   renCar,
+  documentationItems,
 } from "../../data/mainMenuData";
 import CategoriesMegaMenu from "./CategoriesMegaMenu";
 import {
@@ -30,10 +31,9 @@ const MainMenu = ({ style = "" }) => {
             isActiveParentChaild(homeItems, pathname) ? "current" : ""
           } menu-item-has-children`}
         >
-          <Link href="/">
+          {/* <Link href="/">
             <span className="mr-10">Home</span>
-            {/* <i className="icon icon-chevron-sm-down" /> */}
-          </Link>
+          </Link> */}
           {/* <ul className="subnav">
             {homeItems.map((menu, i) => (
               <li
@@ -73,11 +73,11 @@ const MainMenu = ({ style = "" }) => {
           } menu-item-has-children`}
         >
           <a href="#">
-            <span className="mr-10">Outbond</span>
+            <span className="mr-10">Layanan Dokumentasi</span>
             <i className="icon icon-chevron-sm-down" />
           </a>
           <ul className="subnav">
-            {outbondItems.map((menu, i) => (
+            {documentationItems.map((menu, i) => (
               <li
                 key={i}
                 className={
@@ -96,7 +96,7 @@ const MainMenu = ({ style = "" }) => {
           } menu-item-has-children`}
         >
           <a href="#">
-            <span className="mr-10">Rent Car & Bus</span>
+            <span className="mr-10">Rental Mobil/Bus</span>
             <i className="icon icon-chevron-sm-down" />
           </a>
           <ul className="subnav">
@@ -119,7 +119,7 @@ const MainMenu = ({ style = "" }) => {
           } menu-item-has-children`}
         >
           <Link href="/blog-list-v2">
-            <span className="mr-10">Blog</span>
+            <span className="mr-10">Artikel</span>
           </Link>
         </li>
         <li
@@ -128,7 +128,7 @@ const MainMenu = ({ style = "" }) => {
           } menu-item-has-children`}
         >
           <Link href="/about">
-            <span className="mr-10">About Me</span>
+            <span className="mr-10">Tentang Kami</span>
           </Link>
         </li>
         {/* End blogIems */}
@@ -158,7 +158,7 @@ const MainMenu = ({ style = "" }) => {
         </li> */}
 
         <li className={pathname === "/contact" ? "current" : ""}>
-          <Link href="/contact">Contact</Link>
+          <Link href="/contact">Kontak</Link>
         </li>
       </ul>
     </nav>

@@ -19,6 +19,7 @@ import {
   paketWisataItems,
   outbondItems,
   renCar,
+  documentationItems,
 } from "../../data/mainMenuData";
 import {
   isActiveLink,
@@ -149,8 +150,8 @@ const MobileMenu = () => {
             </MenuItem> */}
             {/* End  Desitinations Menu */}
 
-            <SubMenu label="Outbond" className={ blogItems.some((item=>item.routePath?.split('/')[1] == pathname.split('/')[1])) ? "menu-active-link":''}>
-              {outbondItems.map((item, i) => (
+            <SubMenu label="Layanan Dokumentasi" className={ blogItems.some((item=>item.routePath?.split('/')[1] == pathname.split('/')[1])) ? "menu-active-link":''}>
+              {documentationItems.map((item, i) => (
                 <MenuItem
                   key={i}
                   onClick={()=>router.push(item.routePath)}
@@ -166,7 +167,7 @@ const MobileMenu = () => {
             </SubMenu>
             {/* End  All Blog Menu */}
 
-            <SubMenu label="Ren Car & Bus" className={ pageItems.some((item=>item.routePath?.split('/')[1] == pathname.split('/')[1])) ? "menu-active-link":''}>
+            <SubMenu label="Rental Mobil/Bus" className={ pageItems.some((item=>item.routePath?.split('/')[1] == pathname.split('/')[1])) ? "menu-active-link":''}>
               {renCar.map((item, i) => (
                 <MenuItem
                   key={i}
@@ -192,7 +193,7 @@ const MobileMenu = () => {
             }
               
             >
-              Blog
+              Artikel
             </MenuItem>
 
             <MenuItem
@@ -204,7 +205,7 @@ const MobileMenu = () => {
             }
               
             >
-              About Me
+              Tentang Kami
             </MenuItem>
 
             <MenuItem
@@ -216,7 +217,7 @@ const MobileMenu = () => {
             }
               
             >
-              Contact
+              Kontak
             </MenuItem>
 
           </Menu>
@@ -239,7 +240,7 @@ const MobileMenu = () => {
             className=" button -dark-1 px-30 fw-400 text-14 bg-blue-1 h-50 text-white"
             href="/login"
           >
-            Login
+            Masuk/Daftar
           </Link>
         </div>
       </div>

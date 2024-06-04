@@ -90,16 +90,31 @@ export const pageItems = [
   },
 ];
 
-export const outbondItems = [
+// export const outbondItems = [
+//   {
+//     name: "Rafting",
+//     routePath: "/activity-list-v2",
+//   },
+//   {
+//     name: "Fun Game",
+//     routePath: "/activity-list-v2",
+//   },
+// ];
+
+export const documentationItems = [
   {
-    name: "Rafting",
-    routePath: "/activity-list-v2",
+    name: "Jawa Timur",
+    routePath: "#!"
   },
   {
-    name: "Fun Game",
-    routePath: "/activity-list-v2",
+    name: "Bali",
+    routePath: "#!"
   },
-];
+  {
+    name: "Lombok",
+    routePath: "#!"
+  },
+]
 
 export const renCar = [
   {
@@ -114,10 +129,10 @@ export const renCar = [
     name: "Lombok",
     routePath: "/car-list-v1",
   },
-  {
-    name: "Belitung",
-    routePath: "/car-list-v1",
-  },
+  // {
+  //   name: "Belitung",
+  //   routePath: "/car-list-v1",
+  // },
 ];
 
 export const dashboardItems = [
@@ -176,26 +191,27 @@ export const categorieMegaMenuItems = [
         menuItems: [
           {
             id: 1,
-            title: "",
+            title: "Jawa Timur",
             menuList: [
               {
-                name: "Jawa Timur",
+                name: "Bromo",
                 routePath: "/tour-list-v1",
               },
               {
-                name: "Lombok",
+                name: "Malang",
                 routePath: "/tour-list-v1",
               },
               {
-                name: "Belitung",
+                name: "Madiun",
                 routePath: "/tour-list-v1",
               },
               {
-                name: "Bali",
+                name: "Terminal",
                 routePath: "/tour-list-v1",
               }
             ],
           }
+          
         ],
       },
     ],
@@ -218,10 +234,10 @@ export const categorieMegaMenuItems = [
                 name: "Jepang",
                 routePath: "/tour-list-v1",
               },
-              // {
-              //   name: "Tour List v2",
-              //   routePath: "/tour-list-v2",
-              // },
+              {
+                name: "Tour List v2",
+                routePath: "/tour-list-v2",
+              },
             ],
           },
         ],

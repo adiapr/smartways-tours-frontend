@@ -1,3 +1,4 @@
+import Image from "next/image";
 import AppButton from "./AppButton";
 import ContactInfo from "./ContactInfo";
 import Copyright from "./Copyright";
@@ -6,6 +7,9 @@ import FooterContent from "./FooterContent";
 const index = () => {
   return (
     <footer className="footer -type-1">
+      <div className="btn btn-success" style={{ position:'fixed', bottom:'30px', right:'16px' }}>
+        <Image src={'/img/icons/whatsapp.svg'} width={18} height={18} /> Gabung Grup Whatsapp
+      </div>
       <div className="container">
         <div className="pt-60 pb-60">
           <div className="row y-gap-40 justify-between xl:justify-start">

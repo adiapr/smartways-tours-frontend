@@ -171,7 +171,7 @@ const TourSingleV1Dynamic = ({ params }) => {
         <div className="container">
           <h3 className="text-22 fw-500 mb-20">Car Location</h3>
           <div className=" rounded-4 overflow-hidden map-500">
-            <MapPropertyFinder />
+            {/* <MapPropertyFinder /> */}
           </div>
         </div>
       </section>

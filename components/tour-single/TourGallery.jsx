@@ -11,9 +11,11 @@ import { Gallery, Item } from "react-photoswipe-gallery";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import ModalVideo from "react-modal-video"
+import TourRight from "./TourRight";
 
 export default function TourGallery({tour}) {
     const [isOpen, setOpen] = useState(false);
+    // console.log('Tour in TourGallery:', tour);
   return (
     <>
      <ModalVideo
@@ -22,12 +24,12 @@ export default function TourGallery({tour}) {
         isOpen={isOpen}
         videoId="oqNZOOWF8qM"
         onClose={() => setOpen(false)}
-      />
+    />
     
     <section className="pt-40 js-pin-container">
         <div className="container">
           <div className="row y-gap-30">
-            <div className="col-xl-8">
+            <div className="col-xl-9">
               <div className="relative d-flex justify-center overflow-hidden js-section-slider">
                 <Swiper
                   modules={[Navigation]}
@@ -37,18 +39,22 @@ export default function TourGallery({tour}) {
                     prevEl: ".js-img-prev",
                   }}
                 >
-                  {tour?.slideImg?.map((slide, i) => (
-                    <SwiperSlide key={i}>
-                      <Image
-                        width={451}
-                        height={450}
-                        priority
-                        src={slide}
-                        alt="image"
-                        style={{ height: "501px" }}
-                        className="rounded-4 col-12 cover object-cover"
-                      />
-                    </SwiperSlide>
+                  {tour?.documentations?.map((documentation, i) => (
+                    documentation.media.map((media, j) => (
+                      <SwiperSlide key={`${i}-${j}`}>
+                        {/* <p>Link media: {media.original_url}</p> Debugging line */}
+                        <Image
+                          width={451}
+                          height={450}
+                          priority
+                          src={media.original_url} // Ensure fallback URL
+                          alt="image"
+                          style={{ height: "501px" }}
+                          className="rounded-4 col-12 cover object-cover aspect-video"
+                          unoptimized
+                        />
+                      </SwiperSlide>
+                    ))
                   ))}
                 </Swiper>
 
@@ -89,28 +95,18 @@ export default function TourGallery({tour}) {
                 </div>
                 {/* End prev nav button wrapper */}
               </div>
-              {/* End relative */}
-
-              {/* slider gallery */}
-
-              <h3 className="text-22 fw-500 mt-40">Tour snapshot</h3>
-              <TourSnapShot />
-              {/* End toursnapshot */}
+              {/* <h3 className="text-22 fw-500 mt-40">Tour snapshot</h3> */}
+              <TourSnapShot tour={tour} />
               <div className="border-top-light mt-40 mb-40"></div>
 
-              <Overview />
-              {/* End  Overview */}
+              <Overview tour={tour} />
             </div>
-            {/* End .col-xl-8 */}
 
-            <div className="col-xl-4">
-              <SidebarRight tour={tour} />
+            <div className="col-xl-3">
+                  <TourRight tour={tour} />
             </div>
-            {/* End .col-xl-4 */}
           </div>
-          {/* End .row */}
         </div>
-        {/* End container */}
       </section>
     </>
   )

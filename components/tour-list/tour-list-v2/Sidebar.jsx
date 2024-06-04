@@ -8,7 +8,7 @@ import MainFilterSearchBox from "./MainFilterSearchBox";
 const Sidebar = () => {
   return (
     <>
-      <div className="sidebar__item -no-border">
+      {/* <div className="sidebar__item -no-border">
         <div className="px-20 py-20 bg-light-2 rounded-4">
           <h5 className="text-18 fw-500 mb-10">Search Tours</h5>
 
@@ -16,11 +16,11 @@ const Sidebar = () => {
             <MainFilterSearchBox />
           </div>
         </div>
-      </div>
+      </div> */}
       {/* End search tours */}
 
       <div className="sidebar__item -no-border">
-        <h5 className="text-18 fw-500 mb-10">Category Types</h5>
+        <h5 className="text-18 fw-bold mb-10">Cari Berdasarkan Lokasi</h5>
         <div className="sidebar-checkbox">
           <CategoryTypes />
         </div>
@@ -28,40 +28,38 @@ const Sidebar = () => {
       </div>
       {/* End popular filter */}
 
-      <div className="sidebar__item">
+      {/* <div className="sidebar__item">
         <h5 className="text-18 fw-500 mb-10">Other</h5>
         <div className="sidebar-checkbox">
           <OthersFilter />
         </div>
-        {/* End Sidebar-checkbox */}
-      </div>
+      </div> */}
       {/* End Aminities filter */}
 
-      <div className="sidebar__item pb-30">
+      {/* <div className="sidebar__item pb-30">
         <h5 className="text-18 fw-500 mb-10">Price</h5>
         <div className="row x-gap-10 y-gap-30">
           <div className="col-12">
             <PirceSlider />
           </div>
         </div>
-      </div>
+      </div> */}
       {/* End Nightly priceslider */}
 
-      <div className="sidebar__item">
+      {/* <div className="sidebar__item">
         <h5 className="text-18 fw-500 mb-10">Duration</h5>
         <div className="sidebar-checkbox">
           <Duration />
         </div>
-      </div>
+      </div> */}
       {/* End style filter */}
 
-      <div className="sidebar__item">
+      {/* <div className="sidebar__item">
         <h5 className="text-18 fw-500 mb-10">Languages</h5>
         <div className="sidebar-checkbox">
           <Languages />
         </div>
-        {/* End Sidebar-checkbox */}
-      </div>
+      </div> */}
       {/* End Aminities filter */}
     </>
   );

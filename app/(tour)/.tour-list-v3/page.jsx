@@ -2,9 +2,9 @@ import Header11 from "@/components/header/header-11";
 import DropdownSelelctBar from "@/components/tour-list/common/DropdownSelelctBar";
 import MapPropertyFinder from "@/components/tour-list/common/MapPropertyFinder";
 import Pagination from "@/components/tour-list/common/Pagination";
-import MainFilterSearchBox from "@/components/tour-list/tour-list-v3/MainFilterSearchBox";
-import TopHeaderFilter from "@/components/tour-list/tour-list-v3/TopHeaderFilter";
-import TourProperties from "@/components/tour-list/tour-list-v3/TourProperties";
+import MainFilterSearchBox from "@/components/tour-list/.tour-list-v3/MainFilterSearchBox";
+import TopHeaderFilter from "@/components/tour-list/.tour-list-v3/TopHeaderFilter";
+import TourProperties from "@/components/tour-list/.tour-list-v3/TourProperties";
 
 export const metadata = {
   title: "Tour List v3 | Smartway adalah travel agen profesional yang berdiri sejak 2016 dibawah naungan PT. Bagus Bahagia Bersama (BBB Group).",

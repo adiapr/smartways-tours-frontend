@@ -12,6 +12,16 @@ import Testimonial from "@/components/home/home-1/Testimonial";
 import TestimonialLeftCol from "@/components/home/home-1/TestimonialLeftCol";
 import Hotels from "@/components/hotels/Hotels";
 import SelectFilter from "@/components/hotels/filter-tabs/SelectFilter";
+import Hero4 from "@/components/hero/hero-4";
+import CustomSlider from "@/components/hero/hero-1/CustomSlider";
+import TestimonialYoutube from "@/components/home/home-1/TestimonialYoutube";
+import WhyChooseUs from "@/components/home/home-1/WhyChooseus";
+import GalleryOne from "@/components/hotel-single/GalleryOne";
+import { hotelsData } from "@/data/hotels";
+import Documentation from "@/components/home/home-1/Documentations";
+import Private from "@/components/home/home-1/Private";
+import JoinGroup from "@/components/home/home-1/JoinGroup";
+// import WhyChooseUs from "@/components/home/home-5/WhyChooseUs";
 
 export const metadata = {
   title: "Smartway Tours",
@@ -19,17 +29,18 @@ export const metadata = {
 };
 
 const Home_1 = () => {
+  const hotel = hotelsData.find((item) => item.id == 1) || hotelsData[0];
   return (
     <>
-      {/* End Page Title */}
-
       <Header1 />
-      {/* End Header 1 */}
+      <CustomSlider />
+      <TestimonialYoutube />
+      <WhyChooseUs />
+      <Documentation hotel={hotel} />
+      <Private />
+      <JoinGroup />
 
-      <Hero1 />
-      {/* End Hero 1 */}
-
-      <section className="layout-pt-lg layout-pb-md" data-aos="fade-up">
+      {/* <section className="layout-pt-lg layout-pb-md" data-aos="fade-up">
         <div className="container">
           <div className="row y-gap-20 justify-between items-end">
             <div className="col-auto">
@@ -40,7 +51,6 @@ const Home_1 = () => {
                 </p>
               </div>
             </div>
-            {/* End col-auto */}
 
             <div className="col-auto md:d-none">
               <a
@@ -51,29 +61,23 @@ const Home_1 = () => {
                 <div className="icon-arrow-top-right ml-15" />
               </a>
             </div>
-            {/* End col-auto */}
           </div>
-          {/* End .row */}
 
           <div className="relative pt-40 sm:pt-20">
             <PopularDestinations />
           </div>
         </div>
-        {/* End .container */}
-      </section>
-      {/* End Popular Destinations */}
+      </section> */}
 
-      <section className="layout-pt-md layout-pb-md">
+      {/* <section className="layout-pt-md layout-pb-md">
         <div className="container">
           <div className="row y-gap-20">
             <AddBanner />
           </div>
         </div>
-        {/* End .container */}
-      </section>
-      {/* End AddBanner */}
+      </section> */}
 
-      <section className="layout-pt-md layout-pb-md">
+      {/* <section className="layout-pt-md layout-pb-md">
         <div className="container">
           <div className="row y-gap-10 justify-between items-end">
             <div className="col-auto">
@@ -88,32 +92,27 @@ const Home_1 = () => {
               <SelectFilter />
             </div>
           </div>
-          {/* End .row */}
 
           <div className="relative overflow-hidden pt-40 sm:pt-20 js-section-slider item_gap-x30">
             <Hotels />
           </div>
-          {/* End relative */}
         </div>
-      </section>
-      {/* Recommended Properties */}
+      </section> */}
 
-      <section className="layout-pt-md layout-pb-lg">
+      {/* <section className="layout-pt-md layout-pb-lg">
         <div className="container">
           <div className="row y-gap-20 justify-between">
             <BlockGuide />
           </div>
         </div>
-      </section>
-      {/* Block Guide Section */}
+      </section> */}
 
-      <section className="layout-pt-lg layout-pb-lg bg-blue-2">
+      {/* <section className="layout-pt-lg layout-pb-lg bg-blue-2">
         <div className="container">
           <div className="row y-gap-40 justify-between">
             <div className="col-xl-5 col-lg-6" data-aos="fade-up">
               <TestimonialLeftCol />
             </div>
-            {/* End col */}
 
             <div className="col-lg-6">
               <div
@@ -125,13 +124,10 @@ const Home_1 = () => {
               </div>
             </div>
           </div>
-          {/* End .row */}
         </div>
-        {/* End container */}
-      </section>
-      {/* End testimonial Section */}
+      </section> */}
 
-      <section className="layout-pt-lg layout-pb-md">
+      {/* <section className="layout-pt-lg layout-pb-md">
         <div className="container">
           <div className="row justify-center text-center">
             <div className="col-auto">
@@ -145,17 +141,13 @@ const Home_1 = () => {
               </div>
             </div>
           </div>
-          {/* End .row  */}
           <div className="row y-gap-30 pt-40">
             <Blog />
           </div>
-          {/* End .row */}
         </div>
-        {/* End .container */}
-      </section>
-      {/* End blog Section */}
+      </section> */}
 
-      <section className="layout-pt-md layout-pb-lg">
+      {/* <section className="layout-pt-md layout-pb-lg">
         <div className="container">
           <div className="row">
             <div className="col-auto">
@@ -167,21 +159,17 @@ const Home_1 = () => {
               </div>
             </div>
           </div>
-          {/* End .row */}
 
           <div className="tabs -pills pt-40 js-tabs">
             <Destinations />
           </div>
-          {/* End tabs */}
         </div>
-      </section>
-      {/* End Destination we love Section */}
+      </section> */}
 
-      <CallToActions />
-      {/* End Call To Actions Section */}
+      {/* <CallToActions /> */}
+
 
       <DefaultFooter />
-      {/* End Footer Section */}
     </>
   );
 };
