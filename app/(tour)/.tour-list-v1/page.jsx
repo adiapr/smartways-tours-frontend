@@ -68,7 +68,7 @@ const index = () => {
 
                 <div className="offcanvas-body">
                   <aside className="sidebar y-gap-40  xl:d-block">
-                    <Sidebar />
+                    {/* <Sidebar /> */}
                   </aside>
                 </div>
                 {/* End offcanvas body */}
