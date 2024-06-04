@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const ItineraryContent = ({ schedule }) => {
-  console.log('Jadwal:', schedule);
+  // console.log('Jadwal:', schedule);
   // const itineraryContent = [
   //   {
   //     id: 1,
