@@ -112,7 +112,7 @@ const CategoriesMegaMenu = ({ setIsActiveParent }) => {
                               : ""
                           }
                         >
-                          <Link href={'/paket-wisata/'+list.routePath}>{list.name}</Link>
+                          <Link href={'/paket-wisata/'+list.routePath}>{list.name.slice(0,20)}</Link>
                         </div>
                       ))}
                     </div>
