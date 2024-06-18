@@ -41,7 +41,7 @@ function Private() {
                 <Image src={'/img/illustration/private.jpg'} width={600} height={'100'} unoptimized />
 
                 <Link
-                    href="/booking-page"
+                    href="https://api.whatsapp.com/send?phone=6282155144449&text=Hai%20Smartway.tours%2C%0ASaya%20ingin%20mendaftar%20program%20private%20tours%2C%20mohon%20bantuannya%20ya"
                     className="button h-50 px-24 -dark-1 bg-blue-1 text-white"
                   >
                     Daftar Private Tour <div className="icon-arrow-top-right ml-15" />
@@ -81,7 +81,7 @@ function Private() {
                     </ul>
                 </p>
                 <Link
-                    href="/booking-page"
+                    href="https://api.whatsapp.com/send?phone=6282155144449&text=Hai%20Smartway.tours%2C%0ASaya%20ingin%20mendaftar%20program%20menabung%20untuk%20wisata%2C%20mohon%20bantuannya%20ya"
                     className="button h-50 px-24 -dark-1 bg-blue-1 text-white mt-3"
                 >
                     Daftar Program Menabung <div className="icon-arrow-top-right ml-15" />

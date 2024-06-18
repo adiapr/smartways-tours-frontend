@@ -8,8 +8,8 @@ import Sidebar from "@/components/car-list/car-list-v1/Sidebar";
 import CarPropertes from "@/components/car-list/car-list-v1/CarPropertes";
 
 export const metadata = {
-  title: "Car List v1 | Smartway adalah travel agen profesional yang berdiri sejak 2016 dibawah naungan PT. Bagus Bahagia Bersama (BBB Group).",
-  description: "GoTrip - Travel & Tour React NextJS Template",
+  title: "Rental Mobil | Smartway.tours",
+  description: "Smartway adalah travel agen profesional yang berdiri sejak 2016 dibawah naungan PT. Bagus Bahagia Bersama (BBB Group).",
 };
 
 const index = () => {
@@ -31,7 +31,7 @@ const index = () => {
                 {/* <h1 className="text-30 fw-600">London Rental Cars</h1> */}
               </div>
               {/* End text-center */}
-              <MainFilterSearchBox />
+              {/* <MainFilterSearchBox /> */}
             </div>
             {/* End col-12 */}
           </div>
@@ -53,18 +53,6 @@ const index = () => {
                 tabIndex="-1"
                 id="listingSidebar"
               >
-                <div className="offcanvas-header">
-                  <h5 className="offcanvas-title" id="offcanvasLabel">
-                    Filter Hotels
-                  </h5>
-                  <button
-                    type="button"
-                    className="btn-close"
-                    data-bs-dismiss="offcanvas"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                {/* End offcanvas header */}
 
                 <div className="offcanvas-body">
                   <aside className="sidebar y-gap-40  xl:d-block">
@@ -85,7 +73,7 @@ const index = () => {
                 <CarPropertes />
               </div>
               {/* End .row */}
-              <Pagination />
+              {/* <Pagination /> */}
             </div>
             {/* End .col for right content */}
           </div>

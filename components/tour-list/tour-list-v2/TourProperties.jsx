@@ -24,7 +24,7 @@ const TourProperties = () => {
   };
   fetchData();
 }, []);
-console.log(toursData);
+// console.log(toursData);
 
 
   return (

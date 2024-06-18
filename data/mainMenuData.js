@@ -119,19 +119,19 @@ export const documentationItems = [
 export const renCar = [
   {
     name: "Jawa Timur",
-    routePath: "/car-list-v1",
+    routePath: "/rent?location=Jawa Timur",
   },
   {
     name: "Bali",
-    routePath: "/car-list-v1",
+    routePath: "/rent?location=Bali",
   },
   {
     name: "Lombok",
-    routePath: "/car-list-v1",
+    routePath: "/rent?location=Lombok",
   },
   // {
   //   name: "Belitung",
-  //   routePath: "/car-list-v1",
+  //   routePath: "/rent?location=",
   // },
 ];
 

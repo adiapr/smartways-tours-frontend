@@ -56,11 +56,11 @@ function Partner() {
                         <Image src={'/img/partner/6.png'} width={200} height={100} className='slide-img' unoptimized loading="lazy" />
                     </IframeWrapper>
                 </SwiperSlide>
-                <SwiperSlide>
+                {/* <SwiperSlide>
                     <IframeWrapper>
                         <Image src={'/img/partner/7.png'} width={200} height={100} className='slide-img' unoptimized loading="lazy" />
                     </IframeWrapper>
-                </SwiperSlide>
+                </SwiperSlide> */}
                 
             </Swiper>
         </div>
@@ -97,11 +97,11 @@ function Partner() {
                         <Image src={'/img/partner/13.png'} width={200} height={100} className='slide-img' unoptimized loading="lazy" />
                     </IframeWrapper>
                 </SwiperSlide>
-                <SwiperSlide>
+                {/* <SwiperSlide>
                     <IframeWrapper>
                         <Image src={'/img/partner/14.png'} width={200} height={100} className='slide-img' unoptimized loading="lazy" />
                     </IframeWrapper>
-                </SwiperSlide>
+                </SwiperSlide> */}
                 <SwiperSlide>
                     <IframeWrapper>
                         <Image src={'/img/partner/15.png'} width={200} height={100} className='slide-img' unoptimized loading="lazy" />
@@ -123,21 +123,21 @@ function Partner() {
                         <Image src={'/img/partner/16.png'} width={200} height={100} className='slide-img' unoptimized loading="lazy" />
                     </IframeWrapper>
                 </SwiperSlide>
-                <SwiperSlide>
+                {/* <SwiperSlide>
                     <IframeWrapper>
                         <Image src={'/img/partner/17.png'} width={200} height={100} className='slide-img' unoptimized loading="lazy" />
                     </IframeWrapper>
-                </SwiperSlide>
-                <SwiperSlide>
+                </SwiperSlide> */}
+                {/* <SwiperSlide>
                     <IframeWrapper>
                         <Image src={'/img/partner/18.png'} width={200} height={100} className='slide-img' unoptimized loading="lazy" />
                     </IframeWrapper>
-                </SwiperSlide>
-                <SwiperSlide>
+                </SwiperSlide> */}
+                {/* <SwiperSlide>
                     <IframeWrapper>
                         <Image src={'/img/partner/19.png'} width={200} height={100} className='slide-img' unoptimized loading="lazy" />
                     </IframeWrapper>
-                </SwiperSlide>
+                </SwiperSlide> */}
                 <SwiperSlide>
                     <IframeWrapper>
                         <Image src={'/img/partner/20.png'} width={200} height={100} className='slide-img' unoptimized loading="lazy" />

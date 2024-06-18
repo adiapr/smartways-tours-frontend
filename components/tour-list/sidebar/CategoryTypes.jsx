@@ -1,10 +1,10 @@
 const CategoryTypes = () => {
   const categories = [
-    { name: "Tours", count: 92 },
-    { name: "Attractions", count: 45 },
-    { name: "Day Trips", count: 21 },
-    { name: "Outdoor Activities", count: 78 },
-    { name: "Concerts & Shows", count: 679 },
+    { name: "Jawa Timur", count: 92 },
+    { name: "Bali", count: 45 },
+    { name: "Lombok", count: 21 },
+    { name: "Jepang", count: 78 },
+    // { name: "Concerts & Shows", count: 679 },
   ];
 
   return (
@@ -24,7 +24,7 @@ const CategoryTypes = () => {
             </div>
           </div>
           <div className="col-auto">
-            <div className="text-15 text-light-1">{category.count}</div>
+            {/* <div className="text-15 text-light-1">{category.count}</div> */}
           </div>
         </div>
       ))}

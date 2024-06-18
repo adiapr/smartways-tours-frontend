@@ -1,11 +1,15 @@
 const LocationFilter = () => {
   const filters = [
     {
-      label: "Airport (meet & greet)",
+      label: "Jawa Timur",
       count: 92,
     },
     {
-      label: "Airport (shuttle)",
+      label: "Bali ",
+      count: 45,
+    },
+    {
+      label: "Lombok ",
       count: 45,
     },
   ];

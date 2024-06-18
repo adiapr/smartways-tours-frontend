@@ -57,18 +57,19 @@ const Header1 = () => {
                     </div>
                   </div>
                   {/* Start vertical devider*/}
-                  {/* <div className="col-auto">
+                  <div className="col-auto">
                     <div className="w-1 h-20 bg-white-20" />
-                  </div> */}
+                  </div>
                   {/* End vertical devider*/}
 
-                  {/* <LanguageMegaMenu textClass="text-white" /> */}
+                  
                   {/* End Megamenu for Language */}
                 </div>
                 {/* End language and currency selector */}
                 
                 {/* Start btn-group */}
                 <div className="d-flex items-center ml-20 is-menu-opened-hide md:d-none">
+                {/* <LanguageMegaMenu textClass="text-white" />  */}
                   {/* <Link
                     href="/login"
                     className="button px-30 fw-400 text-14 -white bg-white h-50 text-dark-1"

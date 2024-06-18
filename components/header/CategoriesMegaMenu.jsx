@@ -98,10 +98,10 @@ const CategoriesMegaMenu = ({ setIsActiveParent }) => {
         <div className={'react-tabs__tab-panel--selected'}>
           {categorieMegaMenuItems[activeNestedMenu]?.menuCol?.map((megaCol, i) => (
             <ul className="mega__content" key={i}>
-              <li className="mega__grid">
+              <li className="">
                 {megaCol?.menuItems?.map((item) => (
                   <div className="mega__item font-bold" key={item.id}>
-                    <div className="text-15 fw-bold underline">{item.title}</div>
+                    <Link href={`/paket-wisata?location=${item.title}`} className="text-15 fw-bold underline">{item.title}</Link>
                     <div className="y-gap-5 text-15 pt-5">
                       {item?.menuList?.map((list, i) => (
                         <div
@@ -112,7 +112,7 @@ const CategoriesMegaMenu = ({ setIsActiveParent }) => {
                               : ""
                           }
                         >
-                          <Link href={'/paket-wisata/'+list.routePath}>{list.name.slice(0,20)}</Link>
+                          {/* <Link href={'/paket-wisata/'+list.routePath}>{list.name.slice(0,20)}</Link> */}
                         </div>
                       ))}
                     </div>

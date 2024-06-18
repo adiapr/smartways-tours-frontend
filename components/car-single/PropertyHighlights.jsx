@@ -26,18 +26,21 @@ const PropertyHighlights = () => {
     },
   ];
   return (
-    <div className="row y-gap-30 justify-between pt-20">
-      {propertyContent.map((item) => (
-        <div className="col-md-auto col-6" key={item.id}>
-          <div className="d-flex">
-            <i className={`${item.icon} text-22 text-dark-1 mr-10`} />
-            <div className="text-15 lh-15">
-              {item.name}
-              <br /> {item.content}
+    <div style={{ position:'sticky', top:'0' }}>
+      <div className="row y-gap-30 justify-between pt-20">
+        {propertyContent.map((item) => (
+          <div className="col-6" key={item.id}>
+            <div className="d-flex">
+              <i className={`${item.icon} text-22 text-dark-1 mr-10`} />
+              <div className="text-15 lh-15">
+                {/* {item.name} */}
+                {/* <br />  */}
+                {item.content}
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };

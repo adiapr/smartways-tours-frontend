@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 function JoinGroup() {
@@ -16,7 +17,7 @@ function JoinGroup() {
                   Dapatkan Promo Menarik
                 </h4>
                 <div className="text-white">
-                  Daftarkan email anda untuk mendapatkan promo dan penawaran terbaik dari kami.
+                  Daftar grup whatsapp untuk mendapatkan penawaran terbaik dari kami
                 </div>
               </div>
             </div>
@@ -25,19 +26,19 @@ function JoinGroup() {
 
           <div className="col-auto">
             <div className="single-field -w-410 d-flex x-gap-10 y-gap-20">
-              <div>
+              {/* <div>
                 <input
                   className="bg-white h-60"
                   type="text"
                   placeholder="Email anda..."
                 />
-              </div>
+              </div> */}
               {/* End email input */}
 
               <div>
-                <button className="button -md h-60 bg-blue-1 text-white">
-                  Kirim
-                </button>
+                <a href='#' target='_blank' className="button -md h-60 bg-success fw-bold text-white">
+                  <Image src={'/img/icons/whatsapp.svg'} width={18} height={18} /> &nbsp; Gabung Grup Whatsapp
+                </a>
               </div>
               {/* End subscribe btn */}
             </div>

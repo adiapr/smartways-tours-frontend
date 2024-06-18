@@ -8,7 +8,9 @@ const index = () => {
   return (
     <footer className="footer -type-1">
       <div className="btn btn-success" style={{ position:'fixed', bottom:'30px', right:'16px' }}>
-        <Image src={'/img/icons/whatsapp.svg'} width={18} height={18} /> Gabung Grup Whatsapp
+        <a href="https://wa.me/6282155144449" target="_blank">
+          <Image src={'/img/icons/whatsapp.svg'} width={18} height={18} /> Hubungi Kami
+        </a>
       </div>
       <div className="container">
         <div className="pt-60 pb-60">

@@ -5,6 +5,7 @@ import ModalVideo from "react-modal-video";
 import { Gallery, Item } from "react-photoswipe-gallery";
 import Link from "next/link";
 import React, { useState } from 'react'
+import Image from "next/image";
 
 export default function Documentation({hotel}) {
     const [isOpen, setOpen] = useState(false);
@@ -26,8 +27,6 @@ export default function Documentation({hotel}) {
                   <h1 className="text-30 sm:text-25 fw-600">Dokumentasi Perjalanan Kami</h1>
                 </div>
               </div>
-              {/* End .row */}
-
               <div className="row x-gap-20 y-gap-20 items-center">
                 <div className="col-auto">
                   <div className="d-flex items-center text-15 text-light-1">
@@ -39,18 +38,12 @@ export default function Documentation({hotel}) {
                   
                 </div>
               </div>
-              {/* End .row */}
             </div>
-            {/* End .col */}
 
             <div className="col-auto">
               <div className="row x-gap-15 y-gap-15 items-center">
                 <div className="col-auto">
                   <div className="text-14">
-                    {/* From{" "} */}
-                    {/* <span className="text-22 text-dark-1 fw-500">
-                      US${hotel?.price}
-                    </span> */}
                   </div>
                 </div>
                 <div className="col-auto">
@@ -63,9 +56,7 @@ export default function Documentation({hotel}) {
                 </div>
               </div>
             </div>
-            {/* End .col */}
           </div>
-          {/* End .row */}
 
           <Gallery>
             <div className="galleryGrid -type-1 pt-30">
@@ -93,7 +84,6 @@ export default function Documentation({hotel}) {
                   </button>
                 </div>
               </div>
-              {/* End .galleryGrid__item */}
 
               <div className="galleryGrid__item">
                 <Item
@@ -114,7 +104,6 @@ export default function Documentation({hotel}) {
                   )}
                 </Item>
               </div>
-              {/* End .galleryGrid__item */}
 
               <div className="galleryGrid__item relative d-flex">
                 <img
@@ -133,7 +122,6 @@ export default function Documentation({hotel}) {
                   </div>
                 </div>
               </div>
-              {/* End .galleryGrid__item */}
 
               <div className="galleryGrid__item">
                 <Item
@@ -154,7 +142,6 @@ export default function Documentation({hotel}) {
                   )}
                 </Item>
               </div>
-              {/* End .galleryGrid__item */}
 
               <div className="galleryGrid__item relative d-flex">
                 <img
@@ -163,30 +150,38 @@ export default function Documentation({hotel}) {
                   className="rounded-4"
                 />
                 <div className="absolute px-10 py-10 col-12 h-full d-flex justify-end items-end">
-                  {/* <Item
-                    original="/img/slider/s4.jpg"
-                    thumbnail="/img/slider/s4.jpg"
-                    width={450}
-                    height={375}
-                  >
-                    {({ ref, open }) => (
-                      <div
-                        className="button -blue-1 px-24 py-15 bg-white text-dark-1 js-gallery"
-                        ref={ref}
-                        onClick={open}
-                        role="button"
-                      >
-                        See All Photos
-                      </div>
-                    )}
-                  </Item> */}
                 </div>
               </div>
-              {/* End .galleryGrid__item */}
             </div>
           </Gallery>
+
+          <div className="row mt-5">
+            <div className="col-md-3 col-6 mt-2 px-2">
+              <Image src={'/img/influencer/influencer (1).jpg'} width={400} height={600} style={{ width:'100%', aspectRatio:'9/16',objectFit:'cover' }} className="rounded" />
+            </div>
+            <div className="col-md-3 col-6 mt-2 px-2">
+              <Image src={'/img/influencer/influencer (2).jpg'} width={400} height={600} style={{ width:'100%', aspectRatio:'9/16',objectFit:'cover' }} className="rounded" />
+            </div>
+            <div className="col-md-3 col-6 mt-2 px-2">
+              <Image src={'/img/influencer/influencer (3).jpg'} width={400} height={600} style={{ width:'100%', aspectRatio:'9/16',objectFit:'cover' }} className="rounded" />
+            </div>
+            <div className="col-md-3 col-6 mt-2 px-2">
+              <Image src={'/img/influencer/influencer (4).jpg'} width={400} height={600} style={{ width:'100%', aspectRatio:'9/16',objectFit:'cover' }} className="rounded" />
+            </div>
+            <div className="col-md-3 col-6 mt-2 px-2">
+              <Image src={'/img/influencer/influencer (5).jpg'} width={400} height={600} style={{ width:'100%', aspectRatio:'9/16',objectFit:'cover' }} className="rounded" />
+            </div>
+            <div className="col-md-3 col-6 mt-2 px-2">
+              <Image src={'/img/influencer/influencer (6).jpg'} width={400} height={600} style={{ width:'100%', aspectRatio:'9/16',objectFit:'cover' }} className="rounded" />
+            </div>
+            <div className="col-md-3 col-6 mt-2 px-2">
+              <Image src={'/img/influencer/influencer (7).jpg'} width={400} height={600} style={{ width:'100%', aspectRatio:'9/16',objectFit:'cover' }} className="rounded" />
+            </div>
+            <div className="col-md-3 col-6 mt-2 px-2">
+              <Image src={'/img/influencer/influencer (8).jpg'} width={400} height={600} style={{ width:'100%', aspectRatio:'9/16',objectFit:'cover' }} className="rounded" />
+            </div>
+          </div>
         </div>
-        {/* End .container */}
       </section>
     </>
   )
