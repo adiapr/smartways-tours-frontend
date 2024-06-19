@@ -15,7 +15,7 @@ const handler = NextAuth({
         try {
           console.log("Credentials:", credentials); // Log kredensial yang digunakan
 
-          const response = await axios.post('http://127.0.0.1:8000/api/login', {
+          const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/login`, {
             email: credentials.email,
             password: credentials.password
           });
