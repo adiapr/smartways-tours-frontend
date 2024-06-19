@@ -2,8 +2,8 @@ import dynamic from "next/dynamic";
 import CallToActions from "@/components/common/CallToActions";
 import DefaultHeader from "@/components/header/default-header";
 import DefaultFooter from "@/components/footer/default";
-import LoginWithSocial from "@/components/common/loginWithSocial";
-import LoginForm from "@/components/common/loginForm";
+import LoginWithSocial from "@/components/common/LoginWithSocial";
+import LoginForm from "@/components/common/LoginForm";
 
 export const metadata = {
   title: "Login | Smartway adalah travel agen profesional yang berdiri sejak 2016 dibawah naungan PT. Bagus Bahagia Bersama (BBB Group).",

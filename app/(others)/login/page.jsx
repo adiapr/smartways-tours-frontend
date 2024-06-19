@@ -2,7 +2,7 @@ import dynamic from "next/dynamic";
 import CallToActions from "@/components/common/CallToActions";
 import DefaultHeader from "@/components/header/default-header";
 import DefaultFooter from "@/components/footer/default";
-import LoginForm from "@/components/common/loginForm";
+import LoginForm from "@/components/common/LoginForm";
 // import LoginWithSocial from "@/components/common/LoginWithSocial";
 
 export const metadata = {
