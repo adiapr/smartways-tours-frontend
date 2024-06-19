@@ -146,7 +146,7 @@ const TourIndex = ({ slug }) => {
         </div>
       </section>
 
-      <section className="layout-pt-lg layout-pb-lg mt-50 border-top-light">
+      {/* <section className="layout-pt-lg layout-pb-lg mt-50 border-top-light">
         <div className="container">
           <div className="row y-gap-20 justify-between items-end">
             <div className="col-auto">
@@ -172,7 +172,7 @@ const TourIndex = ({ slug }) => {
             <Tours />
           </div>
         </div>
-      </section>
+      </section> */}
 
       <CallToActions />
 

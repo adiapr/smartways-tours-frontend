@@ -112,7 +112,7 @@ const MobileMenu = () => {
               Home
             </MenuItem>
 
-            <SubMenu label="Produk" className={isActiveParent ? 'menu-active-link':'' }>
+            <SubMenu label="Paket Wisata" className={isActiveParent ? 'menu-active-link':'' }>
               {paketWisataItems.map((item) => (
                 <SubMenu label={item.title} key={item.id} className={isActiveNestedParent == item.id ? 'menu-active-link':'inactive-menu'}>
                   {item.menuItems.map((single) => (
@@ -135,20 +135,6 @@ const MobileMenu = () => {
                 </SubMenu>
               ))}
             </SubMenu>
-            {/* End  All Categories Menu */}
-
-            {/* <MenuItem
-             onClick={()=>router.push("/destinations")}
-             className={
-              pathname === "/destinations"
-                ? "menu-active-link"
-                : ""
-            }
-              
-            >
-              Desitinations
-            </MenuItem> */}
-            {/* End  Desitinations Menu */}
 
             <SubMenu label="Layanan Dokumentasi" className={ blogItems.some((item=>item.routePath?.split('/')[1] == pathname.split('/')[1])) ? "menu-active-link":''}>
               {documentationItems.map((item, i) => (

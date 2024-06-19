@@ -10,6 +10,7 @@ import Team1 from "@/components/team/Team1";
 import Testimonial from "@/components/testimonial/Testimonial";
 import Counter2 from "@/components/counter/Counter2";
 import Brand from "@/components/brand/Brand";
+import JoinGroup from "@/components/home/home-1/JoinGroup";
 
 export const metadata = {
   title: "About | Smartway adalah travel agen profesional yang berdiri sejak 2016 dibawah naungan PT. Bagus Bahagia Bersama (BBB Group).",
@@ -51,9 +52,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        {/* End .container */}
       </section>
-      {/* End About Banner Section */}
 
       <section className="layout-pt-lg layout-pb-md">
         <div className="container">
@@ -159,7 +158,8 @@ const About = () => {
         </div>
       </section> */}
 
-      <CallToActions />
+      {/* <CallToActions /> */}
+      <JoinGroup />
 
       <DefaultFooter />
     </>

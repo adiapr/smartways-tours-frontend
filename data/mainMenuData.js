@@ -501,20 +501,16 @@ export const paketWisataItems = [
         title: "Domestik",
         menuList: [
           {
-            name: "Bali",
-            routePath: "/tour-list-v1",
-          },
-          {
             name: "Jawa Timur",
-            routePath: "/tour-list-v1",
+            routePath: "/paket-wisata?location=Jawa Timur",
           },
           {
-            name: "Yogyakarta",
-            routePath: "/tour-list-v1",
+            name: "Bali",
+            routePath: "/paket-wisata?location=Bali",
           },
           {
-            name: "Belitung",
-            routePath: "/tour-list-v1",
+            name: "Lombok",
+            routePath: "/paket-wisata?location=Lombok",
           }
         ],
       },
@@ -524,7 +520,7 @@ export const paketWisataItems = [
         menuList: [
           {
             name: "Jepang",
-            routePath: "/hotel-single-v1/5",
+            routePath: "/paket-wisata?location=Jepang",
           },
         ],
       }

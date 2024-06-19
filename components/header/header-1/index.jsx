@@ -1,15 +1,14 @@
-
 'use client'
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useSession, signOut } from "next-auth/react";
 import MainMenu from "../MainMenu";
-import CurrenctyMegaMenu from "../CurrenctyMegaMenu";
-import LanguageMegaMenu from "../LanguageMegaMenu";
 import MobileMenu from "../MobileMenu";
 
 const Header1 = () => {
   const [navbar, setNavbar] = useState(false);
+  const { data: session } = useSession(); // Gunakan useSession untuk memeriksa status login
 
   const changeBackground = () => {
     if (window.scrollY >= 10) {
@@ -34,13 +33,10 @@ const Header1 = () => {
             <div className="col-auto">
               <div className="d-flex items-center">
                 <Link href="/" className="header-logo mr-20">
-                <img src="/img/logo/logo-white.png" alt="logo icon" />
+                  <img src="/img/logo/logo-white.png" alt="logo icon" />
                   <img src="/img/logo/logo-white.png" alt="logo icon" />
                 </Link>
                 {/* End logo */}
-
-                
-                {/* End header-menu */}
               </div>
               {/* End d-flex */}
             </div>
@@ -49,39 +45,53 @@ const Header1 = () => {
             <div className="col-auto">
               <div className="d-flex items-center">
                 <div className="row x-gap-20 items-center xxl:d-none">
-                  {/* <CurrenctyMegaMenu textClass="text-white" /> */}
-                  {/* End Megamenu for Currencty */}
                   <div className="header-menu">
                     <div className="header-menu__content">
                       <MainMenu style="text-white" />
                     </div>
                   </div>
-                  {/* Start vertical devider*/}
+                  {/* Start vertical divider */}
                   <div className="col-auto">
                     <div className="w-1 h-20 bg-white-20" />
                   </div>
-                  {/* End vertical devider*/}
-
-                  
-                  {/* End Megamenu for Language */}
+                  {/* End vertical divider */}
                 </div>
                 {/* End language and currency selector */}
                 
                 {/* Start btn-group */}
                 <div className="d-flex items-center ml-20 is-menu-opened-hide md:d-none">
-                {/* <LanguageMegaMenu textClass="text-white" />  */}
-                  {/* <Link
-                    href="/login"
-                    className="button px-30 fw-400 text-14 -white bg-white h-50 text-dark-1"
-                  >
-                    Become An Expert
-                  </Link> */}
-                  <Link
-                    href="/signup"
-                    className="button px-30 fw-400 text-14 border-white -outline-white h-50 text-white ml-20"
-                  >
-                    Masuk / Daftar
-                  </Link>
+                  {session ? (
+                    // Jika pengguna sudah login, tampilkan avatar dan dropdown
+                    <div className="dropdown">
+                      <button
+                        className="btn btn-secondary dropdown-toggle"
+                        type="button"
+                        id="dropdownMenuButton"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <img
+                          src={session.user.image || "/default-avatar.png"}
+                          alt="avatar"
+                          className="rounded-circle"
+                          width="30"
+                          height="30"
+                        />
+                      </button>
+                      <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a className="dropdown-item" href="/profile">Profile</a></li>
+                        <li><a className="dropdown-item" href="#" onClick={() => signOut()}>Logout</a></li>
+                      </ul>
+                    </div>
+                  ) : (
+                    // Jika pengguna belum login, tampilkan tombol Masuk/Daftar
+                    <Link
+                      href="/signup"
+                      className="button px-30 fw-400 text-14 border-white -outline-white h-50 text-white ml-20"
+                    >
+                      Masuk / Daftar
+                    </Link>
+                  )}
                 </div>
                 {/* End btn-group */}
 
@@ -100,9 +110,8 @@ const Header1 = () => {
                       aria-controls="mobile-sidebar_menu"
                       data-bs-target="#mobile-sidebar_menu"
                     />
-
                     <div
-                      className="offcanvas offcanvas-start  mobile_menu-contnet "
+                      className="offcanvas offcanvas-start mobile_menu-content"
                       tabIndex="-1"
                       id="mobile-sidebar_menu"
                       aria-labelledby="offcanvasMenuLabel"
