@@ -5,28 +5,49 @@ import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import styles from './SignUpForm.module.css'; // Impor file CSS Module
+import { useRouter } from "next/navigation";
+import { signIn } from "next-auth/react";
 
 const SignUpForm = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const router = useRouter();
+  const searchParams = new URLSearchParams(window.location.search);
+  const callbackUrl = searchParams.get('callbackUrl') || '';
 
   const handleRegister = async (event) => {
     event.preventDefault(); // Mencegah form submit default
     if (password !== confirmPassword) {
-      toast.error('Passwords do not match');
+      toast.error('Password tidak sama');
       return;
     }
 
     try {
+      // store to db 
       const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/register`, {
         name,
         email,
         password
       });
       toast.success('Berhasil registrasi');
-      console.log('Berhasil registrasi', response.data);
+      // console.log('Berhasil registrasi', response.data);
+
+      // next to login 
+      const signInResult = await signIn('credentials', {
+        redirect: false,
+        email,
+        password,
+        callbackUrl
+      });
+
+      if(signInResult.error) {
+        toast.error('Gagal Login setelah registrasi');
+      } else {
+        router.push(callbackUrl);
+      }
+
     } catch (error) {
       if (error.response && error.response.data) {
         toast.error(`Gagal registrasi: ${error.response.data.message}`);
@@ -44,7 +65,7 @@ const SignUpForm = () => {
           <h1 className="text-22 fw-500">Welcome back</h1>
           <p className="mt-10">
             Already have an account yet?{" "}
-            <Link href="/auth/signin" className="text-blue-1">
+            <Link href={`/login?callbackUrl=${encodeURIComponent(callbackUrl)}`} className="text-blue-1">
               Log in
             </Link>
           </p>

@@ -1,30 +1,42 @@
+"use client"
+import { useEffect, useState } from "react";
+
 const CategoryTypes = () => {
-  const categories = [
-    { name: "Jawa Timur", count: 92 },
-    { name: "Bali", count: 45 },
-    { name: "Lombok", count: 21 },
-    { name: "Jepang", count: 78 },
-    // { name: "Concerts & Shows", count: 679 },
-  ];
+  
+  const [locations, setLocations] = useState([]);
+
+  useEffect(() => {
+    const fetchData =  async () => {
+      try {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/location`);
+        const data = await response.json();
+        setLocations(data);
+
+      } catch (error) {
+        console.log('Error saat ambil data', error)
+      }
+    }
+    // console.log(fetchData);
+    fetchData(); // stop fetching data 
+  }, []) //arary kososng agar cuma berjalan sekali
 
   return (
     <>
-      {categories.map((category) => (
+      {locations.map((category) => (
         <div
           className="row y-gap-10 items-center justify-between"
-          key={category.name}
+          key={category.id}
         >
           <div className="col-auto">
             <div className="form-checkbox d-flex items-center">
-              <input type="checkbox" />
+              <input type="checkbox" name="locations" value={category.id} />
               <div className="form-checkbox__mark">
                 <div className="form-checkbox__icon icon-check" />
               </div>
-              <div className="text-15 ml-10">{category.name}</div>
+              <div className="text-15 ml-10">{category.location}</div>
             </div>
           </div>
           <div className="col-auto">
-            {/* <div className="text-15 text-light-1">{category.count}</div> */}
           </div>
         </div>
       ))}

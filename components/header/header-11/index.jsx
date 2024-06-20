@@ -8,9 +8,12 @@ import CurrenctyMegaMenu from "../CurrenctyMegaMenu";
 import LanguageMegaMenu from "../LanguageMegaMenu";
 
 import MobileMenu from "../MobileMenu";
+import ButtonHeader from "../Button";
+import { useSession } from "next-auth/react";
 
 const Header1 = () => {
   const [navbar, setNavbar] = useState(false);
+  const { data: session } = useSession();
 
   const changeBackground = () => {
     if (window.scrollY >= 10) {
@@ -76,12 +79,7 @@ const Header1 = () => {
                   >
                     Become An Expert
                   </Link> */}
-                  <Link
-                    href="/signup"
-                    className="button px-30 fw-400 text-14 border-white -outline-white h-50 text-white ml-20"
-                  >
-                    Sign In / Register
-                  </Link>
+                  <ButtonHeader session={session} />
                 </div>
                 {/* End btn-group */}
 

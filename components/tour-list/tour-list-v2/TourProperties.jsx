@@ -44,58 +44,26 @@ const TourProperties = () => {
               <div className="cardImage ratio ratio-1:1">
                 <div className="cardImage__content">
                   <div className="cardImage-slider rounded-4 overflow-hidden custom_inside-slider">
-                    <Swiper
-                      className="mySwiper"
-                      modules={[Pagination, Navigation]}
-                      pagination={{
-                        clickable: true,
-                      }}
-                      navigation={true}
-                    >
-                      {item?.media?.map((slide, i) => (
-                        <SwiperSlide key={i}>
-                          <Image
-                            width={300}
-                            height={300}
-                            className=""
-                            src={slide.original_url}
-                            alt="image"
-                            unoptimized
-                          />
-                        </SwiperSlide>
-                      ))}
-                    </Swiper>
+                    {item.media && item.media.length > 0 && item.media[0].original_url && (
+                      <Image
+                        width={300}
+                        height={300}
+                        className=""
+                        src={item.media[0].original_url}
+                        alt={item.name}
+                        unoptimized
+                      />
+                    )}
                   </div>
                 </div>
               </div>
 
-              <div className="cardImage__wishlist">
+              <div className="cardImage__wishlist" style={{ marginRight: '-60px' }}>
                 <button className="button -blue-1 bg-white size-30 rounded-full shadow-2">
                   <i className="icon-heart text-12" />
                 </button>
+              </div>
             </div>
-
-              {/* <div className="cardImage__leftBadge">
-                <div
-                  className={`py-5 px-15 rounded-right-4 text-12 lh-16 fw-500 uppercase ${
-                    isTextMatched(item?.tag, "likely to sell out*")
-                      ? "bg-dark-1 text-white"
-                      : ""
-                  } ${
-                    isTextMatched(item?.tag, "best seller")
-                      ? "bg-blue-1 text-white"
-                      : ""
-                  }  ${
-                    isTextMatched(item?.tag, "top rated")
-                      ? "bg-yellow-1 text-dark-1"
-                      : ""
-                  }`}
-                >
-                  {item.tag}
-                </div>
-              </div> */}
-            </div>
-            {/* End .tourCard__image */}
 
             <div className="tourCard__content mt-10">
               <div className="d-flex items-center lh-14 mb-5">

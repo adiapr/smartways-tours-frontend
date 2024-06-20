@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { useSession, signOut } from "next-auth/react";
 import MainMenu from "../MainMenu";
 import MobileMenu from "../MobileMenu";
+import ButtonHeader from "../Button";
 
 const Header1 = () => {
   const [navbar, setNavbar] = useState(false);
@@ -60,38 +61,7 @@ const Header1 = () => {
                 
                 {/* Start btn-group */}
                 <div className="d-flex items-center ml-20 is-menu-opened-hide md:d-none">
-                  {session ? (
-                    // Jika pengguna sudah login, tampilkan avatar dan dropdown
-                    <div className="dropdown">
-                      <button
-                        className="btn btn-secondary dropdown-toggle"
-                        type="button"
-                        id="dropdownMenuButton"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                      >
-                        <img
-                          src={session.user.image || "/default-avatar.png"}
-                          alt="avatar"
-                          className="rounded-circle"
-                          width="30"
-                          height="30"
-                        />
-                      </button>
-                      <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <li><a className="dropdown-item" href="/profile">Profile</a></li>
-                        <li><a className="dropdown-item" href="#" onClick={() => signOut()}>Logout</a></li>
-                      </ul>
-                    </div>
-                  ) : (
-                    // Jika pengguna belum login, tampilkan tombol Masuk/Daftar
-                    <Link
-                      href="/signup"
-                      className="button px-30 fw-400 text-14 border-white -outline-white h-50 text-white ml-20"
-                    >
-                      Masuk / Daftar
-                    </Link>
-                  )}
+                  <ButtonHeader session={session} />
                 </div>
                 {/* End btn-group */}
 

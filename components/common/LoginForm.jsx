@@ -12,6 +12,7 @@ const LoginForm = () => {
   const [password, setPassword] = useState("");
   const router = useRouter();
   const searchParams = useSearchParams();
+  const callbackUrl = searchParams.get('callbackUrl') || '/';
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -44,7 +45,7 @@ const LoginForm = () => {
           <h1 className="text-22 fw-500">Welcome back</h1>
           <p className="mt-10">
             Don&apos;t have an account yet?{" "}
-            <Link href="/signup" className="text-blue-1">
+            <Link href={`/signup?callbackUrl=${encodeURIComponent(callbackUrl)}`} className="text-blue-1">
               Sign up for free
             </Link>
           </p>
