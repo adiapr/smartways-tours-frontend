@@ -22,13 +22,14 @@ function ButtonHeader({session}) {
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              <img
+              {/* <img
                 src={session.user.image || "/default-avatar.png"}
-                alt={session.user.name}
+                alt=
                 className="rounded-circle"
                 width="30"
                 height="30"
-              />
+              /> */}
+              <i className="bi bi-person-circle me-1"></i> {session.user.name}
             </button>
             <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
               <li><a className="dropdown-item" href="/dashboard/db-dashboard">Dashboard</a></li>
