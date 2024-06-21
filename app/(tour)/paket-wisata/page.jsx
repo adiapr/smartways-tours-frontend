@@ -3,6 +3,7 @@ import Header11 from "@/components/header/header-11";
 import DefaultFooter from "@/components/footer/default";
 import TopHeaderFilter from "@/components/tour-list/tour-list-v2/TopHeaderFilter";
 import TourMain from "@/components/tour-list/tour-list-v2/TourMain";
+import JoinGroup from "@/components/home/home-1/JoinGroup";
 
 export const metadata = {
   title: "Paket Wisata | Smartway.tours",
@@ -21,7 +22,8 @@ const Index = () => {
           </div>
         </div>
       </section>
-      <CallToActions />
+      {/* <CallToActions /> */}
+      <JoinGroup />
       <DefaultFooter />
     </>
   );

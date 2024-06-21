@@ -11,6 +11,7 @@ import Itinerary from "@/components/tour-single/itinerary";
 import ImportantInfo from "@/components/tour-single/ImportantInfo";
 import TourGallery from "@/components/tour-single/TourGallery";
 import TourPrices from './TourPrices';
+import JoinGroup from '../home/home-1/JoinGroup';
 
 const TourIndex = ({ slug }) => {
   const [tour, setTour] = useState(null);
@@ -174,7 +175,8 @@ const TourIndex = ({ slug }) => {
         </div>
       </section> */}
 
-      <CallToActions />
+      {/* <CallToActions /> */}
+      <JoinGroup />
 
       <DefaultFooter />
     </>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import footerDataContent from "../../../data/footerContent";
 import DOMPurify from "dompurify";
+import Image from "next/image";
 // import DOMPurify from 'dompurify';
 
 const FooterContent = () => {
@@ -48,6 +49,20 @@ const FooterContent = () => {
               <Link href={'#'}>
                 Karir
               </Link>
+          </div>
+          <div className="row">
+              <div className="col-12">
+                <b>Penghargaan</b>
+              </div>
+              <div className="col-4">
+                  <Image src={'/img/penghargaan/ta2020.png'} width={35} height={35} />
+              </div>
+              <div className="col-4">
+                  <Image src={'/img/penghargaan/ta2022.gif'} width={90} height={90} />
+              </div>
+              <div className="col-4">
+                  <Image src={'/img/penghargaan/ta2023.gif'} width={90} height={90} />
+              </div>
           </div>
         </div>
     </>
