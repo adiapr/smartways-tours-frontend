@@ -89,7 +89,7 @@ function Partner() {
                 </SwiperSlide>
                 <SwiperSlide>
                     <IframeWrapper>
-                        <Image src={'/img/partner/12.png'} width={200} height={100} className='slide-img' unoptimized loading="lazy" />
+                        <Image src={'/img/partner/jasamarga.webp'} width={200} height={100} className='slide-img' unoptimized loading="lazy" />
                     </IframeWrapper>
                 </SwiperSlide>
                 <SwiperSlide>
