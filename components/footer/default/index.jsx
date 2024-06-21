@@ -3,6 +3,9 @@ import AppButton from "./AppButton";
 import ContactInfo from "./ContactInfo";
 import Copyright from "./Copyright";
 import FooterContent from "./FooterContent";
+import Tentang from "./Contact";
+import Contact from "./Contact";
+import Payment from "./Payment";
 
 const index = () => {
   return (
@@ -15,30 +18,29 @@ const index = () => {
       <div className="container">
         <div className="pt-60 pb-60">
           <div className="row y-gap-40 justify-between xl:justify-start">
-            <div className="col-xl-2 col-lg-4 col-sm-6">
-              <h5 className="text-16 fw-500 mb-30">Contact Us</h5>
-              <ContactInfo />
+            <div className=" col-lg-4 col-sm-6">
+              <h2 className="text-16 fw-bold mb-30">
+                <Image src={'/img/logo/logo-hitam.png'} width={200} height={100} />
+              </h2>
+              <Contact />
             </div>
-            {/* End col */}
 
-            <FooterContent />
-            {/* End footer menu content */}
+              <FooterContent />
 
-            {/* <div className="col-xl-2 col-lg-4 col-sm-6">
-              <h5 className="text-16 fw-bold mb-30">Smartway</h5>
-              <AppButton />
-              
-            </div> */}
+            <div className="col-lg-3 col-sm-6">
+              <h5 className="text-16 fw-bold mb-30">Partner Pembayaran</h5>
+              {/* <AppButton /> */}
+              <Payment />
+            </div>
           </div>
         </div>
-        {/* End footer top */}
 
-        <p className="mb-4">
+        {/* <p className="mb-4">
         <b>Smartway</b> adalah travel agen profesional yang berdiri sejak 2016 dibawah naungan 
               <b>PT. Bagus Bahagia Bersama (BBB Group)</b>. Saat ini kami melayani tur dalam negeri: 
               Jawa Timur, Bali, Lombok, Belitung dan baru saja melakukan expansi tur ke luar
               negeri dengan menjadikan Jepang sebagai destinasi awal
-        </p>
+        </p> */}
         <div className="py-20 border-top-light">
           <Copyright />
         </div>

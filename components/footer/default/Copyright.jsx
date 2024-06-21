@@ -23,9 +23,9 @@ const Copyright = () => {
 
           <div className="col-auto">
             <div className="d-flex x-gap-15">
-              <a href="#">Privacy</a>
+              {/* <a href="#">Privacy</a>
               <a href="#">Terms</a>
-              <a href="#">Site Map</a>
+              <a href="#">Site Map</a> */}
             </div>
           </div>
           {/* End .col */}
@@ -52,7 +52,7 @@ const Copyright = () => {
 
           <div className="col-auto">
             <div className="d-flex x-gap-20 items-center">
-              <Social />
+              {/* <Social /> */}
             </div>
           </div>
           {/* End .col */}
