@@ -6,10 +6,14 @@ import LocationTopBar from "@/components/common/LocationTopBar";
 import Blog2 from "@/components/blog/Blog2";
 import BlogSidebar from "@/components/blog/blog-sidebar";
 import BlogPagination from "@/components/blog/BlogPagination";
+import JoinGroup from "@/components/home/home-1/JoinGroup";
+import Blog3 from "@/components/blog/Blog3";
+import Blog4 from "@/components/blog/Blog4";
+import Blog1 from "@/components/blog/Blog1";
 
 export const metadata = {
-  title: "Blog List V2 | Smartway adalah travel agen profesional yang berdiri sejak 2016 dibawah naungan PT. Bagus Bahagia Bersama (BBB Group).",
-  description: "GoTrip - Travel & Tour React NextJS Template",
+  title: "Artikel | Smartway.tours",
+  description: "Smartway adalah travel agen profesional yang berdiri sejak 2016 dibawah naungan PT. Bagus Bahagia Bersama (BBB Group).",
 };
 
 const BlogListV2 = () => {
@@ -29,9 +33,9 @@ const BlogListV2 = () => {
           <div className="row justify-center text-center">
             <div className="col-auto">
               <div className="sectionTitle -md">
-                <h2 className="sectionTitle__title">Travel articles</h2>
+                <h2 className="sectionTitle__title">Artikel</h2>
                 <p className=" sectionTitle__text mt-5 sm:mt-0">
-                  Lorem ipsum is placeholder text commonly used in site.
+                  Dapatkan artikel menarik sebagai referensi wisata anda.
                 </p>
               </div>
             </div>
@@ -48,7 +52,7 @@ const BlogListV2 = () => {
                 <Blog2 />
               </div>
               {/* End .row */}
-              <BlogPagination />
+              {/* <BlogPagination /> */}
             </div>
             {/* End .col */}
 
@@ -62,7 +66,8 @@ const BlogListV2 = () => {
         {/* End .container */}
       </section>
 
-      <CallToActions />
+      {/* <CallToActions /> */}
+      <JoinGroup />
       {/* End Call To Actions Section */}
 
       <DefaultFooter />

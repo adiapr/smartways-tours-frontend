@@ -80,7 +80,7 @@ const MainMenu = ({ style = "" }) => {
             isActiveParentChaild(blogItems, pathname) ? "current" : ""
           } menu-item-has-children`}
         >
-          <Link href="/blog-list-v2">
+          <Link href="/blog">
             <span className="mr-10">Artikel</span>
           </Link>
         </li>

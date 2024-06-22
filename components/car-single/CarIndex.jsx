@@ -20,7 +20,7 @@ const CarIndex = ({ slug }) => {
                 const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/rent-car/${slug}`);
                 const data = await response.json();
                 setCar(data);
-                console.log(data); // Log data yang diterima dari API
+                // console.log(response); // Log data yang diterima dari API
             } catch (error) {
                 console.log('Data gagal diambil', error);
             }
@@ -30,6 +30,8 @@ const CarIndex = ({ slug }) => {
             fetchCar();
         }
     }, [slug])
+
+    console.log(car)
 
     if (!car) {
         return <div>Loading...</div>

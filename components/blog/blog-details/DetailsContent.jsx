@@ -2,10 +2,10 @@ import Social2 from "../../common/social/Social2";
 import blogsData from "../../../data/blogs";
 import Link from "next/link";
 
-const DetailsContent = () => {
+const DetailsContent = ({article}) => {
   return (
     <>
-      <h3 className="text-20 fw-500">What makes a good brand book?</h3>
+      <h3 className="text-20 fw-500">{article.name}</h3>
       <div className="text-15 mt-20">
         Sed viverra ipsum nunc aliquet bibendum enim facilisis gravida. Diam
         phasellus vestibulum lorem sed risus ultricies. Magna sit amet purus
@@ -96,17 +96,17 @@ const DetailsContent = () => {
       </div>
 
       <div className="row y-gap-20 justify-between pt-30">
-        <div className="col-auto">
+        {/* <div className="col-auto">
           <div className="d-flex items-center">
             <div className="fw-500 mr-10">Share</div>
             <div className="d-flex items-center">
               <Social2 />
             </div>
           </div>
-        </div>
+        </div> */}
         {/* End social share */}
 
-        <div className="col-auto">
+        {/* <div className="col-auto">
           <div className="row x-gap-10 y-gap-10">
             {blogsData.slice(0, 3).map((item) => (
               <div key={item.id} className="col-auto">
@@ -119,7 +119,7 @@ const DetailsContent = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
         {/* End tags */}
       </div>
     </>
