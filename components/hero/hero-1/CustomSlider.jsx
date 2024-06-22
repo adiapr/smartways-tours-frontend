@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper';
 import 'swiper/swiper-bundle.min.css';
@@ -72,6 +72,26 @@ const CustomSlider = () => {
         },
     ]
 
+    const [item, setItem] = useState([]);
+
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/slider`);
+          const result = await response.json();
+          if (Array.isArray(result)) {
+            setItem(result);
+          } else {
+            console.log('Unexpected data format:', result);
+          }
+        } catch (error) {
+          console.log('Gagal ambil data', error);
+        }
+      };
+      fetchData();
+    }, []);
+    // console.log(item);
+
   return (
     <section className="masthead z-5">
       <Swiper
@@ -82,17 +102,17 @@ const CustomSlider = () => {
         // autoplay={{ delay: 3000 }}
         loop
       >
-        {slides.map((slide, index) => (
+        {item.map((slide, index) => (
           <SwiperSlide key={index}>
             <div className="masthead__slide" style={{ position: "relative" }}>
-              <img alt="image" src={slide.image} className="js-lazy" style={{ width: "100%", height: "100vh", objectFit: "cover" }} />
+              <img alt="image" src={slide.media[0].original_url} className="js-lazy" style={{ width: "100%", height: "100vh", objectFit: "cover" }} />
               <IframeWrapper>
                 <div className="bg-primary"></div>
                 <div className="w-full slide-container">
                   <div className="row justify-center align-items-center h-100">
                     <div className="col-auto  mx-auto">
                       <div className="text-center text-white container">
-                        <h1 className="text-60 lg:text-40 md:text-30" data-aos="fade-up">{slide.title}</h1>
+                        <h1 className="text-60 lg:text-40 md:text-30" data-aos="fade-up">{slide.name}</h1>
                         <p className="mt-6 md:mt-10 text-white" data-aos="fade-up" data-aos-delay="100">{slide.description}</p>
                       </div>
                     </div>
@@ -103,7 +123,8 @@ const CustomSlider = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="container">
+      <div className="mt-50"></div>
+      {/* <div className="container">
         <div className="row justify-center">
           <div className="col-auto">
             <div className="tabs -underline mt-60 js-tabs" data-aos="fade-up" data-aos-delay="200">
@@ -111,7 +132,7 @@ const CustomSlider = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };
