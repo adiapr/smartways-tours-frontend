@@ -124,15 +124,6 @@ const CustomSlider = () => {
         ))}
       </Swiper>
       <div className="mt-50"></div>
-      {/* <div className="container">
-        <div className="row justify-center">
-          <div className="col-auto">
-            <div className="tabs -underline mt-60 js-tabs" data-aos="fade-up" data-aos-delay="200">
-              <MainFilterSearchBox />
-            </div>
-          </div>
-        </div>
-      </div> */}
     </section>
   );
 };

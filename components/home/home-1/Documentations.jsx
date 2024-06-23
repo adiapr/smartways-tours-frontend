@@ -113,13 +113,13 @@ export default function Documentation({hotel}) {
                   role="button"
                 />
                 <div className="absolute h-full col-12 flex-center">
-                  <div
+                  {/* <div
                     className="button -blue-1 size-40 rounded-full flex-center bg-white text-dark-1 js-gallery"
                     role="button"
                     onClick={() => setOpen(true)}
                   >
                     <i className="icon-play text-16" />
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
