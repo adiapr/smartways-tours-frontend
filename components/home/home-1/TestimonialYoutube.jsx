@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 
 const IframeWrapper = styled.div`
@@ -11,6 +11,20 @@ const IframeWrapper = styled.div`
 `;
 
 function TestimonialYoutube() {
+    const [videos, setVideos] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/testimony`);
+                const result = await response.json();
+                setVideos(result);
+            } catch (error) {
+                console.log('error ya : ', error)                
+            }
+        }
+        fetchData();
+    }, [])
   return (
     <div className='container mt-3'>
         <h2 className="text-30">
@@ -20,10 +34,12 @@ function TestimonialYoutube() {
 
         <IframeWrapper>
             <div className="row mt-2">
-                <div className="col-md-3 col-6 px-2">
-                        <iframe width="315" height="560" src="https://www.youtube-nocookie.com/embed/wFcNQJa6oBM?si=6LAhytFcYUi6Shpq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div className="col-md-3 col-6 px-2">
+                {videos.map((item) => (
+                    <div className="col-md-3 col-6 px-2" key={item.id}>
+                            <iframe src={`https://www.youtube-nocookie.com/embed/${item.name}&amp;controls=0`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                ))}
+                {/* <div className="col-md-3 col-6 px-2">
                         <iframe width="315" height="560" src="https://www.youtube-nocookie.com/embed/nl1yIG92-Yw?si=pj_cn7Uqec1tBSsc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 <div className="col-md-3 col-6 px-2">
@@ -31,7 +47,7 @@ function TestimonialYoutube() {
                 </div>
                 <div className="col-md-3 col-6 px-2">
                         <iframe width="315" height="560" src="https://www.youtube-nocookie.com/embed/_Awjuuok7vk?si=ws4Wv6lJeqQsAOis" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
+                </div> */}
             </div>
         </IframeWrapper>
     </div>

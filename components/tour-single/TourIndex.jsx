@@ -99,12 +99,12 @@ const TourIndex = ({ slug }) => {
 
             <div className="col-auto">
               <div className="row x-gap-10 y-gap-10">
-                <div className="col-auto">
+                {/* <div className="col-auto">
                   <button className="button px-15 py-10 -blue-1 bg-light-2">
                     <i className="icon-share mr-10"></i>
                     Bagikan
                   </button>
-                </div>
+                </div> */}
 
                 <div className="col-auto">
                   {/* <button className="button px-15 py-10 -blue-1 bg-light-2">
