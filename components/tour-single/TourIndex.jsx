@@ -140,42 +140,12 @@ const TourIndex = ({ slug }) => {
         </div>
       </section>
 
-      <section className="border-top-light  mt-40 pt-40">
+      <section className="border-top-light  mt-20 pt-40">
         <div className="container">
-          <h3 className="text-22 fw-bold mb-20">Pilihan Paket Harga</h3>
           <TourPrices prices={tour.prices} />
         </div>
       </section>
 
-      {/* <section className="layout-pt-lg layout-pb-lg mt-50 border-top-light">
-        <div className="container">
-          <div className="row y-gap-20 justify-between items-end">
-            <div className="col-auto">
-              <div className="sectionTitle -md">
-                <h2 className="sectionTitle__title">Pilihan Wisata Lainnya</h2>
-                <p className=" sectionTitle__text mt-5 sm:mt-0">
-                  Jelajahi tempat wisata lebih banyak lagi
-                </p>
-              </div>
-            </div>
-
-            <div className="col-auto">
-              <Link
-                href="#"
-                className="button -md -blue-1 bg-blue-1-05 text-blue-1"
-              >
-                More <div className="icon-arrow-top-right ml-15" />
-              </Link>
-            </div>
-          </div>
-
-          <div className="row y-gap-30 pt-40 sm:pt-20 item_gap-x30">
-            <Tours />
-          </div>
-        </div>
-      </section> */}
-
-      {/* <CallToActions /> */}
       <JoinGroup />
 
       <DefaultFooter />

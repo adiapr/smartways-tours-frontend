@@ -10,24 +10,24 @@ const Sidebar = () => {
 const pathname = usePathname()
 
   const sidebarContent = [
-    {
-      id: 1,
-      icon: "/img/dashboard/sidebar/compass.svg",
-      name: "Dashboard",
-      routePath: "/dashboard/db-dashboard",
-    },
+    // {
+    //   id: 1,
+    //   icon: "/img/dashboard/sidebar/compass.svg",
+    //   name: "Dashboard",
+    //   routePath: "/dashboard/db-dashboard",
+    // },
     {
       id: 2,
       icon: "/img/dashboard/sidebar/booking.svg",
-      name: " Booking History",
+      name: " Riwayat Pembelian",
       routePath: "/dashboard/db-booking",
     },
-    {
-      id: 3,
-      icon: "/img/dashboard/sidebar/bookmark.svg",
-      name: "Wishlist",
-      routePath: "/dashboard/db-wishlist",
-    },
+    // {
+    //   id: 3,
+    //   icon: "/img/dashboard/sidebar/bookmark.svg",
+    //   name: "Wishlist",
+    //   routePath: "/dashboard/db-wishlist",
+    // },
     {
       id: 4,
       icon: "/img/dashboard/sidebar/gear.svg",

@@ -33,7 +33,7 @@ const Header1 = () => {
   return (
     <>
       <header className={`header bg-white ${navbar ? "is-sticky" : ""}`}>
-        <div className="header__container px-30 sm:px-20">
+        <div className="header__container px-30 sm:px-20" style={{ borderBottom: 'solid 1px' }}>
           <div className="row justify-between items-center">
             <div className="col-auto">
               <div className="d-flex items-center">
