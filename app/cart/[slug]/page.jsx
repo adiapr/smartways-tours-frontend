@@ -5,11 +5,23 @@ import JoinGroup from '@/components/home/home-1/JoinGroup';
 import Image from 'next/image'
 import DefaultFooter from "@/components/footer/default";
 import React, { useEffect, useState } from 'react'
+import Snap from 'midtrans-client';
 
 function Cart({ params }) { 
     const [carData, setCarData] = useState([]);
     const [selectedCarPrice, setSelectedCarPrice] = useState(0);
     const [snapToken, setSnapToken] = useState(null);
+    const [snapInitialized, setSnapInitialized] = useState(false); // State untuk menandai inisialisasi Snap SDK
+
+    useEffect(() => {
+        // Inisialisasi Snap SDK
+        const clientKey = process.env.NEXT_PUBLIC_MIDTRANS_CLIENT_KEY;
+        Snap.apiConfig({
+            isProduction: false, // Ganti ke true jika di production
+            clientKey: clientKey,
+        });
+        setSnapInitialized(true); // Tandai inisialisasi selesai
+    }, []);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -56,32 +68,38 @@ function Cart({ params }) {
                     order_id: tour.id,
                 }),
             });
-
+    
             const data = await response.json();
             setSnapToken(data.token);
-
-            // load midtrans 
-            window.snap.pay(data.token, {
-                onSuccess: function(result){
-                    alert("Payment success!"); 
-                    console.log(result);
-                },
-                onPending: function (result) {
-                    alert("Waiting for your payment!"); 
-                    console.log(result);
-                },
-                onError: function (result) {
-                    alert("Payment failed!"); 
-                    console.log(result);
-                },
-                onClose: function () {
-                    alert("You closed the popup without finishing the payment");
-                }
-            })
+    
+            // Pastikan Snap SDK sudah diinisialisasi sebelum memanggil window.snap.pay
+            if (snapInitialized && window.snap && window.snap.pay) {
+                Snap.snap.pay(data.token, {
+                    // Konfigurasi callback onSuccess, onPending, onError, onClose
+                    onSuccess: function(result){
+                        alert("Pembayaran berhasil!"); 
+                        console.log(result);
+                    },
+                    onPending: function (result) {
+                        alert("Menunggu pembayaran Anda!"); 
+                        console.log(result);
+                    },
+                    onError: function (result) {
+                        alert("Pembayaran gagal!"); 
+                        console.log(result);
+                    },
+                    onClose: function () {
+                        alert("Anda menutup popup tanpa menyelesaikan pembayaran");
+                    }
+                });
+            } else {
+                console.error('Snap SDK belum diinisialisasi.');
+            }
         } catch (error) {
             console.error('Error:', error);
         }
     }
+    
   
     return (
         <div>
@@ -90,7 +108,7 @@ function Cart({ params }) {
             <section className="pt-40">
                 <div className="container">
                     <div className="alert alert-primary">
-                        <b><i className='bi bi-info-circle-fill'></i> Silahkan periksa kembali pesanan anda</b>
+                        <b><i className='bi bi-info-circle-fill'></i> Silahkan periksa kembali pesanan Anda</b>
                     </div>
 
                     <div className="row">

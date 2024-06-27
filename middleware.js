@@ -8,5 +8,8 @@ export default withAuth({
 })
 
 export const config = {
-  matcher: ['/contact'],
+  matcher: [
+    '/contact',
+    '/cart/:path*'
+  ],
 }

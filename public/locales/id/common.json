@@ -1,0 +1,37 @@
+{
+  "common": {
+    "menuPackages": "Paket Wisata",
+      "menuDocumentation": "Layanan Dokumentasi",
+      "menuRentals": "Rental Mobil/Bus",
+      "menuArticles": "Artikel",
+      "menuAboutUs": "Tentang Kami",
+      "menuContact": "Kontak",
+      "whyChooseUs": {
+        "title": "Kenapa memilih kami?",
+        "subtitle": "Setiap Langkah, Setiap Petualangan Bersama Kami",
+        "cards": {
+          "leading": {
+            "title": "Leading di Jawa Timur",
+            "text": "Kami bangga menjadi agen perjalanan terbaik di Jawa Timur, telah mendapatkan penghargaan Travelers' Choice #1 Jawa Timur dari TripAdvisor pada tahun 2020-2022-2023."
+          },
+          "pricing": {
+            "title": "Harga Kompetitif",
+            "text": "Kami menawarkan harga yang sangat kompetitif untuk layanan perjalanan kami, karena kami menerapkan pemasaran online strategis, efisiensi operasional, dan kemitraan yang kuat dengan berbagai mitra."
+          },
+          "service": {
+            "title": "Menerapkan Orientasi Layanan WOW",
+            "text": "Kami menganggap pelanggan kami sebagai tamu yang diundang ke sebuah pesta, dan kami adalah tuan rumah. Tugas kami adalah membuat setiap aspek penting dari pengalaman pelanggan sedikit lebih baik."
+          },
+          "record": {
+            "title": "Rekam Jejak Terbukti",
+            "text": "Berdiri sejak tahun 2016, selama lebih dari 7 tahun terakhir, kami telah melayani lebih dari 20.000 pelanggan untuk tur di Indonesia (Jawa Timur, Bali, dan Lombok) maupun luar negeri. Smartway telah menjadi merek agen perjalanan terkemuka, mendapatkan kepercayaan dari berbagai perusahaan nasional. Selain itu, kami telah bekerja sama dengan banyak mitra dari Amerika Serikat, Jerman, Belanda, Tiongkok, Hong Kong, Malaysia, Singapura, dan Taiwan."
+          },
+          "professional": {
+            "title": "Tim Profesional dengan Sertifikasi BNSP",
+            "text": "Pelatihan, evaluasi, dan perbaikan internal dilakukan setiap bulan, memfasilitasi pertumbuhan positif dalam tim kami. 75% anggota tim kami memiliki kemampuan berbahasa Inggris mulai dari tingkat menengah hingga lancar. Selain itu, tim lapangan kami, yang terdiri dari pemimpin tur, pemandu, dan spesialis acara (MICE), memiliki sertifikasi dari BNSP (Badan Nasional Sertifikasi Profesi)."
+          }
+        }
+      }
+    }
+  }
+

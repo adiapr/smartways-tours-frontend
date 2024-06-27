@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { useTranslation } from 'react-i18next';
+import { useState } from "react";
 import {
   homeItems,
   blogItems,
@@ -13,18 +15,27 @@ import {
   isActiveParentChaild,
 } from "../../utils/linkActiveChecker";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import Image from "next/image";
 
 const MainMenu = ({ style = "" }) => {
+  const { t, i18n } = useTranslation('common');
   const pathname = usePathname();
   const [isActiveParent, setIsActiveParent] = useState(false);
+
+  const changeLanguageToEnglish = () => {
+    i18n.changeLanguage('en');
+  };
+
+  const changeLanguageToIndonesian = () => {
+    i18n.changeLanguage('id');
+  };
 
   return (
     <nav className="menu js-navList">
       <ul className={`menu__nav ${style} -is-active`}>
-        <li className={isActiveParent ? "menu-item-has-children -has-mega-menu current":'menu-item-has-children -has-mega-menu'}>
+        <li className={isActiveParent ? "menu-item-has-children -has-mega-menu current" : 'menu-item-has-children -has-mega-menu'}>
           <a href="#">
-            <span className="mr-10">Paket Wisata</span>
+            <span className="mr-10">{t('common.menuPackages')}</span>
             <i className="icon icon-chevron-sm-down" />
           </a>
           <div className="mega">
@@ -37,7 +48,7 @@ const MainMenu = ({ style = "" }) => {
           } menu-item-has-children`}
         >
           <a href="#">
-            <span className="mr-10">Layanan Dokumentasi</span>
+            <span className="mr-10">{t('common.menuDocumentation')}</span>
             <i className="icon icon-chevron-sm-down" />
           </a>
           <ul className="subnav">
@@ -59,7 +70,7 @@ const MainMenu = ({ style = "" }) => {
           } menu-item-has-children`}
         >
           <a href="#">
-            <span className="mr-10">Rental Mobil/Bus</span>
+            <span className="mr-10">{t('common.menuRentals')}</span>
             <i className="icon icon-chevron-sm-down" />
           </a>
           <ul className="subnav">
@@ -81,7 +92,7 @@ const MainMenu = ({ style = "" }) => {
           } menu-item-has-children`}
         >
           <Link href="/blog">
-            <span className="mr-10">Artikel</span>
+            <span className="mr-10">{t('common.menuArticles')}</span>
           </Link>
         </li>
         <li
@@ -90,11 +101,18 @@ const MainMenu = ({ style = "" }) => {
           } menu-item-has-children`}
         >
           <Link href="/about">
-            <span className="mr-10">Tentang Kami</span>
+            <span className="mr-10">{t('common.menuAboutUs')}</span>
           </Link>
         </li>
         <li className={pathname === "/contact" ? "current" : ""}>
-          <Link href="/contact">Kontak</Link>
+          <Link href="/contact">{t('common.menuContact')}</Link>
+        </li>
+        <li className="language-switch ms-2">
+          {i18n.language === 'en' ? (
+            <button onClick={changeLanguageToIndonesian}><Image src={'/img/lang/id.png'} width={40} height={40} style={{ borderRadius:'10px', border:'solid 1px white' }}/></button>
+          ) : (
+            <button onClick={changeLanguageToEnglish}><Image src={'/img/lang/en.png'} width={40} height={40} style={{ borderRadius:'10px', border:'solid 1px white' }}/></button>
+          )}
         </li>
       </ul>
     </nav>

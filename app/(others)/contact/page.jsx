@@ -16,17 +16,8 @@ export const metadata = {
 const Contact = () => {
   return (
     <>
-      {/* End Page Title */}
-
-      {/* <div className="header-margin"></div> */}
-      {/* header top margin */}
-
       <DefaultHeader />
-      {/* End Header 1 */}
-
       <LocationTopBar />
-      {/* End location top bar section */}
-
       <div className="map-outer">
         <div className="map-canvas">
           <iframe
@@ -35,8 +26,6 @@ const Contact = () => {
           ></iframe>
         </div>
       </div>
-      {/* End map section */}
-
       <section className="relative container">
         <div className="row justify-end">
           <div className="col-xl-5 col-lg-7">
@@ -47,8 +36,6 @@ const Contact = () => {
           </div>
         </div>
       </section>
-      {/* End contact section form */}
-
       <section className="layout-pt-md layout-pb-lg">
         <div className="container">
           <div className="row x-gap-80 y-gap-20 justify-between">
@@ -83,22 +70,15 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          {/* End .row */}
 
           <div className="row y-gap-40 justify-between pt-50">
             <WhyChoose />
           </div>
-          {/* End .row */}
         </div>
-        {/* End .container */}
       </section>
-      {/* End Why Choose Us section */}
 
       <CallToActions />
-      {/* End Call To Actions Section */}
-
       <DefaultFooter />
-      {/* End Call To Actions Section */}
     </>
   );
 };

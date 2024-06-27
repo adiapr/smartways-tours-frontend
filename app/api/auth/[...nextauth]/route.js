@@ -20,10 +20,10 @@ const handler = NextAuth({
             password: credentials.password
           });
 
-          console.log("API Response:", response.data); // Log respons dari API
+          // console.log("API Response:", response.data); // Log respons dari API
 
           if (response.data && response.data.token) {
-            console.log("Authorization successful:", response.data.user);
+            // console.log("Authorization successful:", response.data.user);
             return { id: response.data.user.id, name: response.data.user.name, email: response.data.user.email };
           }
 

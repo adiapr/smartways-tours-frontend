@@ -1,8 +1,8 @@
 "use client";
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
-import { signIn } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
 import { useRouter, useSearchParams } from 'next/navigation';
 import 'react-toastify/dist/ReactToastify.css';
 // import { useRouter } from 'next/router';
@@ -13,6 +13,13 @@ const LoginForm = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const callbackUrl = searchParams.get('callbackUrl') || '/';
+  const { data: session, status } = useSession();
+
+  useEffect(() => {
+    if(status === 'authenticated'){
+      router.replace(callbackUrl);
+    }
+  }, [status, router, callbackUrl]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -30,7 +37,7 @@ const LoginForm = () => {
       if (result.error) {
         toast.error("Invalid email or password");
       } else {
-        router.push(result.url); // Gunakan router.push untuk mengarahkan pengguna
+        router.replace(result.url); 
       }
     } catch (error) {
       console.error("Error during signIn:", error);

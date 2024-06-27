@@ -14,6 +14,7 @@ import { Provider } from "react-redux";
 import { store } from "../store/store";
 import { SessionProvider } from "next-auth/react";
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import { I18nextProviderWrapper } from "./providers/i18nextProvider";
 
 if (typeof window !== "undefined") {
   require("bootstrap/dist/js/bootstrap");
@@ -43,12 +44,14 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <main>
-          <SessionProvider>
-            <Provider store={store}>
-              {children}
-              <SrollTop />
-            </Provider>
-          </SessionProvider>
+          <I18nextProviderWrapper>
+            <SessionProvider>
+              <Provider store={store}>
+                {children}
+                <SrollTop />
+              </Provider>
+            </SessionProvider>
+          </I18nextProviderWrapper>
         </main>
       </body>
     </html>
