@@ -13,15 +13,15 @@ function Cart({ params }) {
     const [snapToken, setSnapToken] = useState(null);
     const [snapInitialized, setSnapInitialized] = useState(false); // State untuk menandai inisialisasi Snap SDK
 
-    useEffect(() => {
-        // Inisialisasi Snap SDK
-        const clientKey = process.env.NEXT_PUBLIC_MIDTRANS_CLIENT_KEY;
-        Snap.apiConfig({
-            isProduction: false, // Ganti ke true jika di production
-            clientKey: clientKey,
-        });
-        setSnapInitialized(true); // Tandai inisialisasi selesai
-    }, []);
+    // useEffect(() => {
+    //     // Inisialisasi Snap SDK
+    //     const clientKey = process.env.NEXT_PUBLIC_MIDTRANS_CLIENT_KEY;
+    //     Snap.apiConfig({
+    //         isProduction: false, // Ganti ke true jika di production
+    //         clientKey: clientKey,
+    //     });
+    //     setSnapInitialized(true); // Tandai inisialisasi selesai
+    // }, []);
 
     useEffect(() => {
         const fetchData = async () => {
