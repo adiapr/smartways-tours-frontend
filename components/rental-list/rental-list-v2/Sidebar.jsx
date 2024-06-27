@@ -2,7 +2,7 @@ import Map from "../sidebar/Map";
 import TypePlace from "../sidebar/TypePlace";
 import AminitesFilter from "../sidebar/AminitesFilter";
 import GuestRatingFilters from "../sidebar/GuestRatingFilters";
-import PirceSlider from "../sidebar/PirceSlider";
+// import PirceSlider from "../sidebar/PirceSlider";
 import MainFilterSearchBox from "./MainFilterSearchBox";
 
 const Sidebar = () => {
@@ -33,7 +33,7 @@ const Sidebar = () => {
         <h5 className="text-18 fw-500 mb-10">Price</h5>
         <div className="row x-gap-10 y-gap-30">
           <div className="col-12">
-            <PirceSlider />
+            {/* <PirceSlider /> */}
           </div>
         </div>
       </div>

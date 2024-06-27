@@ -1,6 +1,6 @@
 import Map from "../sidebar/Map";
 import LocationFilters from "../sidebar/LocationFilters";
-import PirceSlider from "../sidebar/PirceSlider";
+// import PirceSlider from "../sidebar/PirceSlider";
 import CategorieFilters from "../sidebar/CategorieFilters";
 import SupplierFilters from "../sidebar/SupplierFilters";
 import SpecificationsFilter from "../sidebar/SpecificationsFilter";
@@ -44,7 +44,7 @@ const Sidebar = () => {
         <h5 className="text-18 fw-500 mb-10">Price</h5>
         <div className="row x-gap-10 y-gap-30">
           <div className="col-12">
-            <PirceSlider />
+            {/* <PirceSlider /> */}
           </div>
         </div>
       </div>

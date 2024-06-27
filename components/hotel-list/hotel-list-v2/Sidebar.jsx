@@ -7,7 +7,7 @@ import RatingsFilter from "../sidebar/RatingsFilter";
 import GuestRatingFilters from "../sidebar/GuestRatingFilters";
 import StyleFilter from "../sidebar/StyleFilter";
 import NeighborhoddFilter from "../sidebar/NeighborhoddFilter";
-import PirceSlider from "../sidebar/PirceSlider";
+// import PirceSlider from "../sidebar/PirceSlider";
 import MainFilterSearchBox from "../hotel-list-v2/MainFilterSearchBox";
 
 const Sidebar = () => {
@@ -52,7 +52,7 @@ const Sidebar = () => {
         <h5 className="text-18 fw-500 mb-10">Nightly Price</h5>
         <div className="row x-gap-10 y-gap-30">
           <div className="col-12">
-            <PirceSlider />
+            {/* <PirceSlider /> */}
           </div>
         </div>
       </div>

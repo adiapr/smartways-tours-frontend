@@ -2,7 +2,7 @@ import CategoryTypes from "../sidebar/CategoryTypes";
 import OthersFilter from "../sidebar/OthersFilter";
 import Duration from "../sidebar/Duration";
 import Languages from "../sidebar/Languages";
-import PirceSlider from "../sidebar/PirceSlider";
+// import PirceSlider from "../sidebar/PirceSlider";
 
 const Sidebar = () => {
   return (
@@ -27,7 +27,7 @@ const Sidebar = () => {
         <h5 className="text-18 fw-500 mb-10">Price</h5>
         <div className="row x-gap-10 y-gap-30">
           <div className="col-12">
-            <PirceSlider />
+            {/* <PirceSlider /> */}
           </div>
         </div>
       </div> */}

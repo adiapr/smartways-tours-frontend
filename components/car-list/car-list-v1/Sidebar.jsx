@@ -1,6 +1,6 @@
 import Map from "../sidebar/Map";
 import LocationFilters from "../sidebar/LocationFilters";
-import PirceSlider from "../sidebar/PirceSlider";
+// import PirceSlider from "../sidebar/PirceSlider";
 import CategorieFilters from "../sidebar/CategorieFilters";
 import SupplierFilters from "../sidebar/SupplierFilters";
 import SpecificationsFilter from "../sidebar/SpecificationsFilter";
