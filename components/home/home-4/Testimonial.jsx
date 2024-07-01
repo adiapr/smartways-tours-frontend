@@ -8,7 +8,7 @@ import { testimonial2 } from "../../../data/testimonialData";
 
 const Testimonial = () => {
   return (
-    <>
+    <div className="container">
       <Swiper
         modules={[Navigation]}
         spaceBetween={30}
@@ -51,8 +51,9 @@ const Testimonial = () => {
                   <div className="col-auto">
                     <Image
                       width={60}
-                      height={60}
+                      height={60} 
                       src={item.avatar}
+                      style={{ borderRadius:'50%', objectFit:'cover' }}
                       alt="image"
                       className="size-60"
                     />
@@ -79,7 +80,7 @@ const Testimonial = () => {
         <i className="icon icon-chevron-right text-12" />
       </button>
       {/* End js-next */}
-    </>
+    </div>
   );
 };
 

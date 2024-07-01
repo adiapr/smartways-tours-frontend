@@ -154,33 +154,6 @@ export default function Documentation({hotel}) {
               </div>
             </div>
           </Gallery>
-
-          <div className="row mt-5">
-            <div className="col-md-3 col-6 mt-2 px-2">
-              <Image src={'/img/influencer/influencer (1).jpg'} width={400} height={600} style={{ width:'100%', aspectRatio:'9/16',objectFit:'cover' }} className="rounded" />
-            </div>
-            <div className="col-md-3 col-6 mt-2 px-2">
-              <Image src={'/img/influencer/influencer (2).jpg'} width={400} height={600} style={{ width:'100%', aspectRatio:'9/16',objectFit:'cover' }} className="rounded" />
-            </div>
-            <div className="col-md-3 col-6 mt-2 px-2">
-              <Image src={'/img/influencer/influencer (3).jpg'} width={400} height={600} style={{ width:'100%', aspectRatio:'9/16',objectFit:'cover' }} className="rounded" />
-            </div>
-            <div className="col-md-3 col-6 mt-2 px-2">
-              <Image src={'/img/influencer/influencer (4).jpg'} width={400} height={600} style={{ width:'100%', aspectRatio:'9/16',objectFit:'cover' }} className="rounded" />
-            </div>
-            <div className="col-md-3 col-6 mt-2 px-2">
-              <Image src={'/img/influencer/influencer (5).jpg'} width={400} height={600} style={{ width:'100%', aspectRatio:'9/16',objectFit:'cover' }} className="rounded" />
-            </div>
-            <div className="col-md-3 col-6 mt-2 px-2">
-              <Image src={'/img/influencer/influencer (6).jpg'} width={400} height={600} style={{ width:'100%', aspectRatio:'9/16',objectFit:'cover' }} className="rounded" />
-            </div>
-            <div className="col-md-3 col-6 mt-2 px-2">
-              <Image src={'/img/influencer/influencer (7).jpg'} width={400} height={600} style={{ width:'100%', aspectRatio:'9/16',objectFit:'cover' }} className="rounded" />
-            </div>
-            <div className="col-md-3 col-6 mt-2 px-2">
-              <Image src={'/img/influencer/influencer (8).jpg'} width={400} height={600} style={{ width:'100%', aspectRatio:'9/16',objectFit:'cover' }} className="rounded" />
-            </div>
-          </div>
         </div>
       </section>
     </>

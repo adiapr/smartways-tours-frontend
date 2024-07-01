@@ -9,6 +9,7 @@ import Documentation from "@/components/home/home-1/Documentations";
 import Private from "@/components/home/home-1/Private";
 import JoinGroup from "@/components/home/home-1/JoinGroup";
 import Partner from "@/components/home/home-1/Partner";
+import Testimonial from "@/components/home/home-4/Testimonial";
 
 export const metadata = {
   title: "Smartway Tours",
@@ -24,6 +25,7 @@ const Home_1 = () => {
       <TestimonialYoutube />
       <WhyChooseUs />
       <Documentation hotel={hotel} />
+      <Testimonial />
       <Partner />
       <Private />
       <JoinGroup />

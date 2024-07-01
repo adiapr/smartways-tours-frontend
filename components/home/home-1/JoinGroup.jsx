@@ -4,7 +4,13 @@ import React from 'react'
 function JoinGroup() {
   return (
     
-    <section className="layout-pt-md layout-pb-md bg-dark-2 mt-3">
+    <section className="layout-pt-md layout-pb-md mt-3" style={{ 
+      backgroundImage: "url('img/backgrounds/bg-wisata.png')", 
+      backgroundRepeat: 'no-repeat', 
+      backgroundSize: 'cover', 
+      backgroundPosition: 'top', 
+      backgroundAttachment: 'scroll' 
+    }}>
       <div className="container">
         <div className="row y-gap-30 justify-between items-center">
           <div className="col-auto">

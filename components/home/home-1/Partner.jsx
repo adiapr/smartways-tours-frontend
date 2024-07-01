@@ -18,143 +18,36 @@ const IframeWrapper = styled.div`
 function Partner() {
   return (
     <div className="container my-5">
-        <div className="my-2">
-            <Swiper
-                slidesPerView={4}
-                spaceBetween={20}
-                modules={[Navigation, Pagination, Autoplay]}
-                autoplay={{ delay: 3000 }}
-                className="mySwiper"
-            >
-                <SwiperSlide>
-                    <IframeWrapper>
-                        <Image src={'/img/partner/1.png'} width={200} height={100} className='slide-img' unoptimized loading="lazy" />
-                    </IframeWrapper>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <IframeWrapper>
-                        <Image src={'/img/partner/2.png'} width={200} height={100} className='slide-img' unoptimized loading="lazy" />
-                    </IframeWrapper>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <IframeWrapper>
-                        <Image src={'/img/partner/3.png'} width={200} height={100} className='slide-img' unoptimized loading="lazy" />
-                    </IframeWrapper>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <IframeWrapper>
-                        <Image src={'/img/partner/4.png'} width={200} height={100} className='slide-img' unoptimized loading="lazy" />
-                    </IframeWrapper>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <IframeWrapper>
-                        <Image src={'/img/partner/8.png'} width={200} height={100} className='slide-img' unoptimized loading="lazy" />
-                    </IframeWrapper>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <IframeWrapper>
-                        <Image src={'/img/partner/6.png'} width={200} height={100} className='slide-img' unoptimized loading="lazy" />
-                    </IframeWrapper>
-                </SwiperSlide>
-                {/* <SwiperSlide>
-                    <IframeWrapper>
-                        <Image src={'/img/partner/7.png'} width={200} height={100} className='slide-img' unoptimized loading="lazy" />
-                    </IframeWrapper>
-                </SwiperSlide> */}
-                
-            </Swiper>
+        <h3 className='mb-10'>Dikukung Oleh</h3>
+        <div className="d-block w-100">        
+            <Image src={'/img/partnership/didukung/Disbudpar_Jatim.png'} width={200} height={100} className='slide-img me-4 mt-20' style={{ height:'25px', width:'auto' }} unoptimized loading="lazy" />            
+            <Image src={'/img/partnership/didukung/kemenparekraf.png'} width={200} height={100} className='slide-img me-4 mt-20' style={{ height:'25px', width:'auto' }} unoptimized loading="lazy" />            
+            <Image src={'/img/partnership/didukung/TNBTS Logo.jpeg'} width={200} height={100} className='slide-img me-4 mt-20' style={{ height:'25px', width:'auto' }} unoptimized loading="lazy" />            
+            <Image src={'/img/partnership/didukung/Wonderful Indonesia.png'} width={200} height={100} className='slide-img me-4 mt-20' style={{ height:'25px', width:'auto' }} unoptimized loading="lazy" />        
         </div>
-        <div className="my-2">
-            <Swiper
-                slidesPerView={4}
-                spaceBetween={20}
-                modules={[Navigation, Pagination, Autoplay]}
-                autoplay={{ delay: 3000 }}
-                className="mySwiper"
-            >
-                <SwiperSlide>
-                    <IframeWrapper>
-                        <Image src={'/img/partner/9.png'} width={200} height={100} className='slide-img' unoptimized loading="lazy" />
-                    </IframeWrapper>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <IframeWrapper>
-                        <Image src={'/img/partner/10.png'} width={200} height={100} className='slide-img' unoptimized loading="lazy" />
-                    </IframeWrapper>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <IframeWrapper>
-                        <Image src={'/img/partner/11.png'} width={200} height={100} className='slide-img' unoptimized loading="lazy" />
-                    </IframeWrapper>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <IframeWrapper>
-                        <Image src={'/img/partner/jasamarga.webp'} width={200} height={100} className='slide-img' unoptimized loading="lazy" />
-                    </IframeWrapper>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <IframeWrapper>
-                        <Image src={'/img/partner/13.png'} width={200} height={100} className='slide-img' unoptimized loading="lazy" />
-                    </IframeWrapper>
-                </SwiperSlide>
-                {/* <SwiperSlide>
-                    <IframeWrapper>
-                        <Image src={'/img/partner/14.png'} width={200} height={100} className='slide-img' unoptimized loading="lazy" />
-                    </IframeWrapper>
-                </SwiperSlide> */}
-                <SwiperSlide>
-                    <IframeWrapper>
-                        <Image src={'/img/partner/15.png'} width={200} height={100} className='slide-img' unoptimized loading="lazy" />
-                    </IframeWrapper>
-                </SwiperSlide>
-                
-            </Swiper>
+        <h3 className='mt-30'>Telah diulas oleh banyak media nasional</h3>
+        <div className="d-block">
+            <Image src={'/img/partnership/diulas/medcom.png'} width={200} height={100} className='slide-img me-4 mt-20' style={{ height:'25px', width:'auto' }} unoptimized loading="lazy" />
+            <Image src={'/img/partnership/diulas/republika.png'} width={200} height={100} className='slide-img me-4 mt-20' style={{ height:'25px', width:'auto' }} unoptimized loading="lazy" />
         </div>
-        <div className="my-2">
-            <Swiper
-                slidesPerView={4}
-                spaceBetween={20}
-                modules={[Navigation, Pagination, Autoplay]}
-                autoplay={{ delay: 3000 }}
-                className="mySwiper"
-            >
-                <SwiperSlide>
-                    <IframeWrapper>
-                        <Image src={'/img/partner/16.png'} width={200} height={100} className='slide-img' unoptimized loading="lazy" />
-                    </IframeWrapper>
-                </SwiperSlide>
-                {/* <SwiperSlide>
-                    <IframeWrapper>
-                        <Image src={'/img/partner/17.png'} width={200} height={100} className='slide-img' unoptimized loading="lazy" />
-                    </IframeWrapper>
-                </SwiperSlide> */}
-                {/* <SwiperSlide>
-                    <IframeWrapper>
-                        <Image src={'/img/partner/18.png'} width={200} height={100} className='slide-img' unoptimized loading="lazy" />
-                    </IframeWrapper>
-                </SwiperSlide> */}
-                {/* <SwiperSlide>
-                    <IframeWrapper>
-                        <Image src={'/img/partner/19.png'} width={200} height={100} className='slide-img' unoptimized loading="lazy" />
-                    </IframeWrapper>
-                </SwiperSlide> */}
-                <SwiperSlide>
-                    <IframeWrapper>
-                        <Image src={'/img/partner/20.png'} width={200} height={100} className='slide-img' unoptimized loading="lazy" />
-                    </IframeWrapper>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <IframeWrapper>
-                        <Image src={'/img/partner/21.png'} width={200} height={100} className='slide-img' unoptimized loading="lazy" />
-                    </IframeWrapper>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <IframeWrapper>
-                        <Image src={'/img/partner/7.png'} width={200} height={100} className='slide-img' unoptimized loading="lazy" />
-                    </IframeWrapper>
-                </SwiperSlide>
-                
-            </Swiper>
+        <h3 className='mt-30'> Kerjasama perusahaan dan institusi</h3>
+        <div className="d-block">
+            <Image src={'/img/partnership/kerjasama/1.png'} width={200} height={100} className='slide-img me-4 mt-20' style={{ height:'25px', width:'auto' }} unoptimized loading="lazy" />
+            <Image src={'/img/partnership/kerjasama/2.png'} width={200} height={100} className='slide-img me-4 mt-20' style={{ height:'25px', width:'auto' }} unoptimized loading="lazy" />
+            <Image src={'/img/partnership/kerjasama/3.png'} width={200} height={100} className='slide-img me-4 mt-20' style={{ height:'25px', width:'auto' }} unoptimized loading="lazy" />
+            <Image src={'/img/partnership/kerjasama/4.png'} width={200} height={100} className='slide-img me-4 mt-20' style={{ height:'25px', width:'auto' }} unoptimized loading="lazy" />
+            <Image src={'/img/partnership/kerjasama/ciputra.png'} width={200} height={100} className='slide-img me-4 mt-20' style={{ height:'25px', width:'auto' }} unoptimized loading="lazy" />
+            <Image src={'/img/partnership/kerjasama/11.png'} width={200} height={100} className='slide-img me-4 mt-20' style={{ height:'25px', width:'auto' }} unoptimized loading="lazy" />
+            <Image src={'/img/partnership/kerjasama/jasamarga.webp'} width={200} height={100} className='slide-img me-4 mt-20' style={{ height:'25px', width:'auto' }} unoptimized loading="lazy" />
+            <Image src={'/img/partnership/kerjasama/13.png'} width={200} height={100} className='slide-img me-4 mt-20' style={{ height:'25px', width:'auto' }} unoptimized loading="lazy" />
+            <Image src={'/img/partnership/kerjasama/adaro.png'} width={200} height={100} className='slide-img me-4 mt-20' style={{ height:'25px', width:'auto' }} unoptimized loading="lazy" />
+            <Image src={'/img/partnership/kerjasama/15.png'} width={200} height={100} className='slide-img me-4 mt-20' style={{ height:'25px', width:'auto' }} unoptimized loading="lazy" />
+            <Image src={'/img/partnership/kerjasama/16.png'} width={200} height={100} className='slide-img me-4 mt-20' style={{ height:'25px', width:'auto' }} unoptimized loading="lazy" />
+            <Image src={'/img/partnership/kerjasama/bmw.jpg'} width={50} height={50} className='slide-img me-4 mt-20' style={{ height:'25px', width:'auto' }} unoptimized loading="lazy" />
+            <Image src={'/img/partnership/kerjasama/reliance.jpg'} width={200} height={100} className='slide-img me-4 mt-20' style={{ height:'25px', width:'auto' }} unoptimized loading="lazy" />
+            <Image src={'/img/partnership/kerjasama/iss.jpg'} width={200} height={100} className='slide-img me-4 mt-20' style={{ height:'25px', width:'auto' }} unoptimized loading="lazy" />
+            <Image src={'/img/partnership/kerjasama/20.png'} width={200} height={100} className='slide-img me-4 mt-20' style={{ height:'25px', width:'auto' }} unoptimized loading="lazy" />
+            {/* <Image src={'/img/partnership/kerjasama/1.png'} width={200} height={100} className='slide-img me-4 mt-20' style={{ height:'25px', width:'auto' }} unoptimized loading="lazy" /> */}
         </div>
     </div>
   )
