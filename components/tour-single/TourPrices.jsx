@@ -4,34 +4,14 @@ import React from 'react'
 function TourPrices({prices}) {
   return (
     <div>
-        <h3 className="text-22 fw-bold mb-20">Pilihan Paket Harga</h3>
-        {/* <form action="" method="post">
-            <div className="row">
-                <div className="mt-2 col-md-10">
-                    <select name="" id="" className="form-select" required>
-                        <option value="">- Pilih Paket -</option>
-                        {prices.map((item) => (
-                            <option value={item.id} key={item.id} className='d-flex justify-content-between align-items-center'>
-                                <span>{item.name}</span>
-                                <s>{item.price}</s>
-                            </option>
-                        ))}
-                    </select>
-                </div>
-                <div className="mt-2 col-md-2">
-                    <button type="sumbit" value="" className="btn btn-primary float-end w-100" >
-                        Pilih paket
-                    </button>
-                </div>
-            </div>
-        </form> */}
+        <h3 className="text-22 fw-bold mb-20">Penawaran menarik bulan ini!</h3>
         <div className="table-responsive">
             <table className="table table-hover table-striped">
                 <tr className='fw-bold bg-dark-3 text-white '>
                     <th className='fw-bold'>#</th>
-                    <th className='fw-bold'>Nama Paket</th>
+                    <th className='fw-bold'>Jenis Tur</th>
                     <th className='fw-bold'>Harga</th>
-                    <th className='fw-bold'>Order</th>
+                    <th className='fw-bold'>Pesan sekarang</th>
                 </tr>
                 {prices.map((item, index) =>
                     <tr className='border-bottom' key={item.id}>

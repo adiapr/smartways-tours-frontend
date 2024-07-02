@@ -20,7 +20,7 @@ const index = () => {
           <div className="row y-gap-40 justify-between xl:justify-start">
             <div className=" col-lg-4 col-sm-6">
               <h2 className="text-16 fw-bold mb-30">
-                <Image src={'/img/logo/logo-hitam.png'} width={200} height={100} />
+                <Image src={'/img/logo/logo_tagline_hitam.png'} width={200} height={100} />
               </h2>
               <Contact />
             </div>
