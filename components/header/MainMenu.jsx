@@ -47,22 +47,10 @@ const MainMenu = ({ style = "" }) => {
             isActiveParentChaild(documentationItems, pathname) ? "current" : ""
           } menu-item-has-children`}
         >
-          <a href="#">
+          <a href="/documentation">
             <span className="mr-10">{t('common.menuDocumentation')}</span>
-            <i className="icon icon-chevron-sm-down" />
+            {/* <i className="icon icon-chevron-sm-down" /> */}
           </a>
-          <ul className="subnav">
-            {documentationItems.map((menu, i) => (
-              <li
-                key={i}
-                className={
-                  isActiveLink(menu.routePath, pathname) ? "current" : ""
-                }
-              >
-                <Link href={menu.routePath}>{menu.name}</Link>
-              </li>
-            ))}
-          </ul>
         </li>
         <li
           className={`${

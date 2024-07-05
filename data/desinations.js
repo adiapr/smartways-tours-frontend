@@ -75,7 +75,7 @@ export const destinations3 = [
   {
     id: 1,
     img: "/img/destinations/1/1.png",
-    title: "United Kingdom",
+    title: "Garduation",
     travellers: "147,681",
     delayAnimation: "0",
   },
@@ -100,34 +100,34 @@ export const destinations3 = [
     travellers: "147,681",
     delayAnimation: "300",
   },
-  {
-    id: 5,
-    img: "/img/destinations/1/5.png",
-    title: "Spain",
-    travellers: "147,681",
-    delayAnimation: "400",
-  },
-  {
-    id: 6,
-    img: "/img/destinations/1/1.png",
-    title: "United Kingdom",
-    travellers: "147,681",
-    delayAnimation: "500",
-  },
-  {
-    id: 7,
-    img: "/img/destinations/1/2.png",
-    title: "Italy",
-    travellers: "147,681",
-    delayAnimation: "600",
-  },
-  {
-    id: 8,
-    img: "/img/destinations/1/3.png",
-    title: "France",
-    travellers: "147,681",
-    delayAnimation: "700",
-  },
+  // {
+  //   id: 5,
+  //   img: "/img/destinations/1/5.png",
+  //   title: "Spain",
+  //   travellers: "147,681",
+  //   delayAnimation: "400",
+  // },
+  // {
+  //   id: 6,
+  //   img: "/img/destinations/1/1.png",
+  //   title: "United Kingdom",
+  //   travellers: "147,681",
+  //   delayAnimation: "500",
+  // },
+  // {
+  //   id: 7,
+  //   img: "/img/destinations/1/2.png",
+  //   title: "Italy",
+  //   travellers: "147,681",
+  //   delayAnimation: "600",
+  // },
+  // {
+  //   id: 8,
+  //   img: "/img/destinations/1/3.png",
+  //   title: "France",
+  //   travellers: "147,681",
+  //   delayAnimation: "700",
+  // },
 ];
 
 export const destinations4 = [

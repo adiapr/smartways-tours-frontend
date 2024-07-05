@@ -9,7 +9,7 @@ import Payment from "./Payment";
 
 const index = () => {
   return (
-    <footer className="footer -type-1">
+    <footer className="footer -type-1" style={{ zIndex: '999' }}>
       <div className="btn btn-success" style={{ position:'fixed', bottom:'30px', right:'16px' }}>
         <a href="https://wa.me/6282155144449" target="_blank">
           <Image src={'/img/icons/whatsapp.svg'} width={18} height={18} /> Hubungi Kami

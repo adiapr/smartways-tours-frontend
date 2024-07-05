@@ -9,7 +9,8 @@ function JoinGroup() {
       backgroundRepeat: 'no-repeat', 
       backgroundSize: 'cover', 
       backgroundPosition: 'top', 
-      backgroundAttachment: 'scroll' 
+      backgroundAttachment: 'scroll',
+      zIndex:'999' 
     }}>
       <div className="container">
         <div className="row y-gap-30 justify-between items-center">

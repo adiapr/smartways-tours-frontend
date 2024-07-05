@@ -66,6 +66,33 @@ export const destinations2 = [
   },
 ];
 
+export const documentationCategory = [
+  {
+    id: 1,
+    hoverText: "Jadikan hari wisuda Anda abadi dengan layanan dokumentasi profesional kami. Kenangan indah ini akan selalu hidup dalam foto dan video berkualitas tinggi.",
+    city: "Graduation",
+    img: "/img/documentation/graduation.jpg",
+  },
+  {
+    id: 2,
+    hoverText: "Abadikan setiap detik bersama keluarga tercinta dengan layanan dokumentasi kami. Setiap senyum, tawa, dan kebersamaan menjadi kenangan abadi.",
+    city: "Family",
+    img: "/img/documentation/family.jpg",
+  },
+  {
+    id: 3,
+    hoverText: "Hari pernikahan Anda adalah momen yang paling berharga. Kami hadir untuk mengabadikan setiap detik cinta Anda.",
+    city: "Pre/Post-wedding",
+    img: "/img/documentation/wedding.jpg",
+  },
+  {
+    id: 4,
+    hoverText: "Dengan layanan dokumentasi kami, momen-momen istimewa Anda akan selalu hidup dalam foto dan video berkualitas tinggi.",
+    city: "Special Moment",
+    img: "/img/documentation/special.jpg",
+  },
+];
+
 export const destinations3 = [
   {
     id: 1,
