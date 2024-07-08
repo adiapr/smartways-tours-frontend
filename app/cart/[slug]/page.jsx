@@ -87,6 +87,16 @@ function Cart({ params }) {
             console.error('Error:', error);
         }
     }
+
+    const formatCurrency = (value) => {
+        return value.toLocaleString('id-ID', {
+            style: 'currency',
+            currency: 'IDR',
+            minimumFractionDigits: 0
+        });
+    }
+
+    const total = (Number(tour?.price) || 0) + (Number(selectedCarPrice) || 0);
     
     return (
         <div>
@@ -179,7 +189,7 @@ function Cart({ params }) {
                                                 <p>Paket Wisata</p>
                                             </div>
                                             <div>
-                                                Rp.{tour?.price.toLocaleString('id-ID')},00
+                                                Rp.{(Number(tour?.price) || 0).toLocaleString('id-ID')},00
                                             </div>
                                         </div>
                                         <div className="d-flex justify-content-between">
@@ -187,7 +197,7 @@ function Cart({ params }) {
                                                 <p>Mobil</p>
                                             </div>
                                             <div>
-                                                Rp.{selectedCarPrice.toLocaleString('id-ID')},00
+                                                Rp.{(Number(selectedCarPrice) || 0).toLocaleString('id-ID')},00
                                             </div>
                                         </div>
                                         <hr />
@@ -196,7 +206,7 @@ function Cart({ params }) {
                                                 <p>Total</p>
                                             </div>
                                             <div>
-                                                Rp.{(tour?.price + selectedCarPrice).toLocaleString('id-ID')},00
+                                                Rp.{total.toLocaleString('id-ID')},00
                                             </div>
                                         </div>
                                         <button type="submit" className="btn btn-primary mt-10 w-100" onClick={handleOrder}>
