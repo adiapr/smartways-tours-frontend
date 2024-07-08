@@ -18,45 +18,48 @@ const SignUpForm = () => {
   const callbackUrl = searchParams.get('callbackUrl') || '';
 
   const handleRegister = async (event) => {
-    event.preventDefault(); // Mencegah form submit default
+    event.preventDefault();
     if (password !== confirmPassword) {
       toast.error('Password tidak sama');
       return;
     }
-
+  
     try {
-      // store to db 
       const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/register`, {
         name,
         email,
         password
       });
-      toast.success('Berhasil registrasi');
-      // console.log('Berhasil registrasi', response.data);
-
-      // next to login 
-      const signInResult = await signIn('credentials', {
-        redirect: false,
-        email,
-        password,
-        callbackUrl
-      });
-
-      if(signInResult.error) {
-        toast.error('Gagal Login setelah registrasi');
+  
+      if (response.status === 201) {
+        toast.success('Berhasil registrasi');
+        
+        const signInResult = await signIn('credentials', {
+          redirect: false,
+          email,
+          password,
+          callbackUrl
+        });
+  
+        if (signInResult.error) {
+          toast.error('Gagal Login setelah registrasi');
+        } else {
+          router.push(callbackUrl);
+        }
       } else {
-        router.push(callbackUrl);
+        toast.error('Gagal registrasi: Respons tidak terduga');
       }
-
+  
     } catch (error) {
       if (error.response && error.response.data) {
         toast.error(`Gagal registrasi: ${error.response.data.message}`);
       } else {
-        toast.error('Gagal registrasi: An unexpected error occurred');
+        toast.error('Gagal registrasi: tidak diketahui');
       }
-      console.log('Gagal registrasi', error);
+      console.error('Gagal registrasi', error);
     }
   };
+  
 
   return (
     <div>
@@ -72,11 +75,10 @@ const SignUpForm = () => {
         </div>
 
         <div className="col-12">
-        <ToastContainer />  
+          <ToastContainer />  
         </div>
         <div className="col-12">
           <div className="form-input">
-         
             <input type="text" name="name" value={name} onChange={(e) => setName(e.target.value)} required />
             <label className="lh-1 text-14 text-light-1">Nama Lengkap</label>
           </div>
@@ -127,7 +129,6 @@ const SignUpForm = () => {
           </button>
         </div>
       </form>
-      
     </div>
   );
 };

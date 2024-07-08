@@ -12,8 +12,11 @@ const LoginForm = () => {
   const [password, setPassword] = useState("");
   const router = useRouter();
   const searchParams = useSearchParams();
-  const callbackUrl = searchParams.get('callbackUrl') || '/';
+  const fullUrl = new URLSearchParams(window.location.href);
+  const callbackUrl = searchParams.get('callbackUrl') || fullUrl;
   const { data: session, status } = useSession();
+
+  console.log("linknya ", fullUrl);
 
   useEffect(() => {
     if(status === 'authenticated'){
@@ -24,7 +27,9 @@ const LoginForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const callbackUrl = searchParams.get('callbackUrl') || '/';
+      
+      
+      const callbackUrl = searchParams.get('callbackUrl') || new URLSearchParams(window.location.search);
       const result = await signIn("credentials", {
         redirect: false,
         email,
@@ -43,6 +48,7 @@ const LoginForm = () => {
       console.error("Error during signIn:", error);
       toast.error("An unexpected error occurred");
     }
+    console.log(fullUrl);
   };
 
   return (

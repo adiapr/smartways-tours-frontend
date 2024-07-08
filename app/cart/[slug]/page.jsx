@@ -6,6 +6,7 @@ import Image from 'next/image'
 import DefaultFooter from "@/components/footer/default";
 import React, { useEffect, useState } from 'react'
 import Snap from 'midtrans-client';
+import LoginForm from '@/components/common/LoginForm';
 
 function Cart({ params }) { 
     const [carData, setCarData] = useState([]);
@@ -209,6 +210,8 @@ function Cart({ params }) {
                                                 Rp.{total.toLocaleString('id-ID')},00
                                             </div>
                                         </div>
+                                        <hr />
+                                        <LoginForm />
                                         <button type="submit" className="btn btn-primary mt-10 w-100" onClick={handleOrder}>
                                             Pesan Sekarang <i className="bi bi-arrow-right"></i>
                                         </button>
