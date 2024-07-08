@@ -26,7 +26,7 @@ const TourProperties = ({ selectedLocations }) => {
 
   return (
     <>
-      {filteredToursData.slice(0, 9).map((item) => (
+      {filteredToursData.slice(0, 15).map((item) => (
         <div
           className="col-lg-4 col-6 px-1"
           key={item?.id}
