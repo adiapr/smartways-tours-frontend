@@ -22,14 +22,8 @@ export const metadata = {
 const About = () => {
   return (
     <>
-      {/* End Page Title */}
-
       <div className="header-margin"></div>
-      {/* header top margin */}
-
       <DefaultHeader />
-      {/* End Header 1 */}
-
       <div className="row">
         <div className="col-md-3">
           <div className="p-3">

@@ -47,6 +47,7 @@ const TourProperties = ({ selectedLocations }) => {
                           width={300}
                           height={300}
                           className="w-100"
+                          style={{ aspectRatio:'16/9', objectFit:'cover' }}
                           src={item.media[0].original_url}
                           alt={item.name}
                           unoptimized
