@@ -10,6 +10,6 @@ export default withAuth({
 export const config = {
   matcher: [
     // '/contact',
-    '/cart/:path*'
+    // '/cart/:path*'
   ],
 }

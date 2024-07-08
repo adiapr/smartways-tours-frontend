@@ -11,17 +11,7 @@ function Cart({ params }) {
     const [carData, setCarData] = useState([]);
     const [selectedCarPrice, setSelectedCarPrice] = useState(0);
     const [snapToken, setSnapToken] = useState(null);
-    const [snapInitialized, setSnapInitialized] = useState(false); // State untuk menandai inisialisasi Snap SDK
-
-    // useEffect(() => {
-    //     // Inisialisasi Snap SDK
-    //     const clientKey = process.env.NEXT_PUBLIC_MIDTRANS_CLIENT_KEY;
-    //     Snap.apiConfig({
-    //         isProduction: false, // Ganti ke true jika di production
-    //         clientKey: clientKey,
-    //     });
-    //     setSnapInitialized(true); // Tandai inisialisasi selesai
-    // }, []);
+    const [snapInitialized, setSnapInitialized] = useState(false);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -72,10 +62,8 @@ function Cart({ params }) {
             const data = await response.json();
             setSnapToken(data.token);
     
-            // Pastikan Snap SDK sudah diinisialisasi sebelum memanggil window.snap.pay
             if (snapInitialized && window.snap && window.snap.pay) {
                 Snap.snap.pay(data.token, {
-                    // Konfigurasi callback onSuccess, onPending, onError, onClose
                     onSuccess: function(result){
                         alert("Pembayaran berhasil!"); 
                         console.log(result);
@@ -100,7 +88,6 @@ function Cart({ params }) {
         }
     }
     
-  
     return (
         <div>
             <div className="header-margin"></div>
