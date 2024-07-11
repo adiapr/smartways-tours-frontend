@@ -15,7 +15,10 @@ const SignUpForm = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const router = useRouter();
   const searchParams = new URLSearchParams(window.location.search);
-  const callbackUrl = searchParams.get('callbackUrl') || '';
+  const fullUrl = window.location.href;
+
+  console.log("url : ", fullUrl)
+  const callbackUrl = searchParams.get('callbackUrl') || fullUrl;
 
   const handleRegister = async (event) => {
     event.preventDefault();

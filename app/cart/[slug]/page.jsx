@@ -7,12 +7,14 @@ import DefaultFooter from "@/components/footer/default";
 import React, { useEffect, useState } from 'react'
 import Snap from 'midtrans-client';
 import LoginForm from '@/components/common/LoginForm';
+import { useSession } from 'next-auth/react';
 
 function Cart({ params }) { 
     const [carData, setCarData] = useState([]);
     const [selectedCarPrice, setSelectedCarPrice] = useState(0);
     const [snapToken, setSnapToken] = useState(null);
     const [snapInitialized, setSnapInitialized] = useState(false);
+    const { data: session } = useSession();
 
     useEffect(() => {
         const fetchData = async () => {
@@ -211,10 +213,14 @@ function Cart({ params }) {
                                             </div>
                                         </div>
                                         <hr />
-                                        <LoginForm />
-                                        <button type="submit" className="btn btn-primary mt-10 w-100" onClick={handleOrder}>
-                                            Pesan Sekarang <i className="bi bi-arrow-right"></i>
-                                        </button>
+                                        {session ? (
+                                            <button type="submit" className="btn btn-primary mt-10 w-100" onClick={handleOrder}>
+                                                Pesan Sekarang <i className="bi bi-arrow-right"></i>
+                                            </button>
+                                        ) : (
+                                            <LoginForm />
+                                        )}
+                                        
                                     </div>
                                 </div>
                             </div>

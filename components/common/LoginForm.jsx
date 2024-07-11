@@ -12,11 +12,15 @@ const LoginForm = () => {
   const [password, setPassword] = useState("");
   const router = useRouter();
   const searchParams = useSearchParams();
-  const fullUrl = new URLSearchParams(window.location.href);
-  const callbackUrl = searchParams.get('callbackUrl') || fullUrl;
   const { data: session, status } = useSession();
+  // const fullUrl = window.location.href;
+  const [fullUrl, setFullUrl] = useState("");
+  useEffect(() => {
+    setFullUrl(window.location.href);
+  }, []);
+  // console.log("linknya ", fullUrl);
+  const callbackUrl = searchParams.get('callbackUrl') || fullUrl;
 
-  console.log("linknya ", fullUrl);
 
   useEffect(() => {
     if(status === 'authenticated'){
@@ -37,7 +41,7 @@ const LoginForm = () => {
         callbackUrl: callbackUrl
       });
 
-      console.log("SignIn Result:", result); // Tambahkan log ini untuk debugging
+      // console.log("SignIn Result:", result); // Tambahkan log ini untuk debugging
 
       if (result.error) {
         toast.error("Invalid email or password");
@@ -48,7 +52,7 @@ const LoginForm = () => {
       console.error("Error during signIn:", error);
       toast.error("An unexpected error occurred");
     }
-    console.log(fullUrl);
+    // console.log(fullUrl);
   };
 
   return (
