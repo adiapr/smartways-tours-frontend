@@ -5,7 +5,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import { signIn, useSession } from "next-auth/react";
 import { useRouter, useSearchParams } from 'next/navigation';
 import 'react-toastify/dist/ReactToastify.css';
-// import { useRouter } from 'next/router';
 
 const LoginForm = () => {
   const [email, setEmail] = useState("");
@@ -18,7 +17,6 @@ const LoginForm = () => {
   useEffect(() => {
     setFullUrl(window.location.href);
   }, []);
-  // console.log("linknya ", fullUrl);
   const callbackUrl = searchParams.get('callbackUrl') || fullUrl;
 
 
@@ -52,7 +50,6 @@ const LoginForm = () => {
       console.error("Error during signIn:", error);
       toast.error("An unexpected error occurred");
     }
-    // console.log(fullUrl);
   };
 
   return (
@@ -67,8 +64,6 @@ const LoginForm = () => {
             </Link>
           </p>
         </div>
-        {/* End .col */}
-
         <div className="col-12">
           <div className="form-input ">
             <input
@@ -80,8 +75,6 @@ const LoginForm = () => {
             <label className="lh-1 text-14 text-light-1">Email</label>
           </div>
         </div>
-        {/* End .col */}
-
         <div className="col-12">
           <div className="form-input ">
             <input
@@ -93,15 +86,11 @@ const LoginForm = () => {
             <label className="lh-1 text-14 text-light-1">Password</label>
           </div>
         </div>
-        {/* End .col */}
-
         <div className="col-12">
           <a href="#" className="text-14 fw-500 text-blue-1 underline">
-            Forgot your password?
+            Lupa Password
           </a>
         </div>
-        {/* End .col */}
-
         <div className="col-12">
           <button
             type="submit"
@@ -110,7 +99,6 @@ const LoginForm = () => {
             Sign In <div className="icon-arrow-top-right ml-15" />
           </button>
         </div>
-        {/* End .col */}
       </form>
       <ToastContainer />
     </div>

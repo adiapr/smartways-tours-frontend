@@ -5,16 +5,17 @@ import JoinGroup from '@/components/home/home-1/JoinGroup';
 import Image from 'next/image'
 import DefaultFooter from "@/components/footer/default";
 import React, { useEffect, useState } from 'react'
-import Snap from 'midtrans-client';
+import { Snap } from 'midtrans-client';
 import LoginForm from '@/components/common/LoginForm';
 import { useSession } from 'next-auth/react';
 
-function Cart({ params }) { 
+function Cart({ params }) {
     const [carData, setCarData] = useState([]);
     const [selectedCarPrice, setSelectedCarPrice] = useState(0);
     const [snapToken, setSnapToken] = useState(null);
     const [snapInitialized, setSnapInitialized] = useState(false);
     const { data: session } = useSession();
+    const [tour, setTour] = useState(null);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -29,7 +30,6 @@ function Cart({ params }) {
         fetchData();
     }, []);
 
-    const [tour, setTour] = useState(null);
     useEffect(() => {
         const fetchTour = async () => {
             try {
@@ -44,7 +44,7 @@ function Cart({ params }) {
         if (params) {
             fetchTour();
         }
-    }, [params])
+    }, [params]);
 
     const handleSelectCar = (price) => {
         setSelectedCarPrice(price);
@@ -52,40 +52,64 @@ function Cart({ params }) {
 
     const handleOrder = async () => {
         try {
-            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/create-transaction`, {
+            // Pastikan tour sudah terisi sebelum menghitung total
+            if (!tour) {
+                console.error('Tour data is not available');
+                return;
+            }
+
+            const total = (Number(tour?.price) || 0) + (Number(selectedCarPrice) || 0);
+
+            // console.log(session?.user.id)
+
+            const requestBody = {
+                order_id: tour.id,
+                user_id: session?.user.id,
+                metode: 2,
+                harga_jual: tour.start_price,
+                total: total,
+                product_type: 'App\\Models\\Tours',
+                product_id: tour.id,
+                // snap_token: data.token
+            };
+
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/transaction`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({
-                    order_id: tour.id,
-                }),
+                body: JSON.stringify(requestBody),
             });
-    
+
             const data = await response.json();
-            setSnapToken(data.token);
-    
-            if (snapInitialized && window.snap && window.snap.pay) {
-                Snap.snap.pay(data.token, {
-                    onSuccess: function(result){
-                        alert("Pembayaran berhasil!"); 
-                        console.log(result);
-                    },
-                    onPending: function (result) {
-                        alert("Menunggu pembayaran Anda!"); 
-                        console.log(result);
-                    },
-                    onError: function (result) {
-                        alert("Pembayaran gagal!"); 
-                        console.log(result);
-                    },
-                    onClose: function () {
-                        alert("Anda menutup popup tanpa menyelesaikan pembayaran");
-                    }
-                });
-            } else {
-                console.error('Snap SDK belum diinisialisasi.');
-            }
+
+            // console.log(data)
+
+            window.location.href = `https://app.sandbox.midtrans.com/snap/v2/vtweb/${data.token}`;
+
+            // setSnapToken(data.token);
+
+            // if (snapInitialized && window.snap && window.snap.pay) {
+            //     Snap.snap.pay(data.token, {
+            //         onSuccess: function(result){
+            //             alert("Pembayaran berhasil!"); 
+            //             console.log(result);
+            //         },
+            //         onPending: function (result) {
+            //             alert("Menunggu pembayaran Anda!"); 
+            //             console.log(result);
+            //         },
+            //         onError: function (result) {
+            //             alert("Pembayaran gagal!"); 
+            //             console.log(result);
+            //         },
+            //         onClose: function () {
+            //             alert("Anda menutup popup tanpa menyelesaikan pembayaran");
+            //         }
+            //     });
+            // } else {
+            //     console.error('Snap SDK belum diinisialisasi.');
+            // }
         } catch (error) {
             console.error('Error:', error);
         }
@@ -100,7 +124,7 @@ function Cart({ params }) {
     }
 
     const total = (Number(tour?.price) || 0) + (Number(selectedCarPrice) || 0);
-    
+
     return (
         <div>
             <div className="header-margin"></div>
