@@ -85,7 +85,7 @@ function Cart({ params }) {
 
             // console.log(data)
 
-            window.location.href = `https://app.midtrans.com/snap/v2/vtweb/${data.token}`;
+            // window.location.href = `https://app.midtrans.com/snap/v2/vtweb/${data.token}`;
 
         } catch (error) {
             console.error('Error:', error);
