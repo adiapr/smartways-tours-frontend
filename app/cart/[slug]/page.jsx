@@ -85,31 +85,8 @@ function Cart({ params }) {
 
             // console.log(data)
 
-            window.location.href = `https://app.sandbox.midtrans.com/snap/v2/vtweb/${data.token}`;
+            // window.location.href = `https://app.sandbox.midtrans.com/snap/v2/vtweb/${data.token}`;
 
-            // setSnapToken(data.token);
-
-            // if (snapInitialized && window.snap && window.snap.pay) {
-            //     Snap.snap.pay(data.token, {
-            //         onSuccess: function(result){
-            //             alert("Pembayaran berhasil!"); 
-            //             console.log(result);
-            //         },
-            //         onPending: function (result) {
-            //             alert("Menunggu pembayaran Anda!"); 
-            //             console.log(result);
-            //         },
-            //         onError: function (result) {
-            //             alert("Pembayaran gagal!"); 
-            //             console.log(result);
-            //         },
-            //         onClose: function () {
-            //             alert("Anda menutup popup tanpa menyelesaikan pembayaran");
-            //         }
-            //     });
-            // } else {
-            //     console.error('Snap SDK belum diinisialisasi.');
-            // }
         } catch (error) {
             console.error('Error:', error);
         }
