@@ -69,7 +69,7 @@ function Cart({ params }) {
                 harga_jual: tour.start_price,
                 total: total,
                 product_type: 'App\\Models\\Tours',
-                product_id: tour.id,
+                product_id: tour?.tour.id,
                 // snap_token: data.token
             };
 
