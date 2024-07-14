@@ -24,39 +24,32 @@ const Blog2 = () => {
   }, []);
 
   return (
-    <>
+    <div div className="row md:text-center">
       {articles.slice(0, 5).map((item) => (
-        <Link
-          href={`/blog/${item.slug}`}
-          className="blogCard -type-1 col-12"
-          key={item.id}
-        >
-          <div className="row y-gap-15 items-center md:justify-center md:text-center">
-            <div className="col-lg-4">
+        
+          <div className="col-lg-4 col-6 px-1 mx-0">
+            <Link
+              href={`/blog/${item.slug}`}
+              className="blogCard -type-1 col-12"
+            >
               <div className="blogCard__image rounded-4">
                 <Image
                   width={250}
                   height={250}
-                  className="cover w-100 img-fluid"
+                  className="aspect-video w-100"
                   src={item.media[0].original_url}
                   alt="image"
                   unoptimized
                 />
+                <div className="text-15 text-light-1">{new Date(item.created_at).toLocaleDateString()}</div>
+                <h3 className="text-16 text-dark-1 mt-10 md:mt-5">
+                  {item.name}
+                </h3>
               </div>
-            </div>
-            <div className="col-lg-8">
-              <div className="text-15 text-light-1">{new Date(item.created_at).toLocaleDateString()}</div>
-              <h3 className="text-22 text-dark-1 mt-10 md:mt-5">
-                {item.name}
-              </h3>
-              <div className="text-15 lh-16 text-light-1 mt-10 md:mt-5">
-                {item.caption}
-              </div>
-            </div>
+            </Link>
           </div>
-        </Link>
       ))}
-    </>
+    </div>
   );
 };
 

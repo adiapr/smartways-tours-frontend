@@ -77,7 +77,10 @@ const FooterContent = () => {
               <div className="col-12">
                 <b>Penghargaan</b>
               </div>
-              <div className="col-4">
+              <div className="col-12">
+                <Image src={'/img/penghargaan/penghargaan.jpg'} width={200} height={100} />
+              </div>
+              {/* <div className="col-4">
                   <Image src={'/img/penghargaan/ta2020.png'} width={35} height={35} />
               </div>
               <div className="col-4">
@@ -85,7 +88,7 @@ const FooterContent = () => {
               </div>
               <div className="col-4">
                   <Image src={'/img/penghargaan/ta2023.gif'} width={90} height={90} />
-              </div>
+              </div> */}
           </div>
         </div>
     </>

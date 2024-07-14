@@ -10,6 +10,10 @@ import JoinGroup from "@/components/home/home-1/JoinGroup";
 import Blog3 from "@/components/blog/Blog3";
 import Blog4 from "@/components/blog/Blog4";
 import Blog1 from "@/components/blog/Blog1";
+// import Header1 from "@/components/header/default-header";
+import Header1 from "@/components/header/header-1";
+import CustomSlider from "@/components/hero/hero-1/CustomSlider";
+import Documentation from "@/components/home/home-1/Documentations";
 
 export const metadata = {
   title: "Artikel | Smartway.tours",
@@ -22,56 +26,51 @@ const BlogListV2 = () => {
       {/* <div className="header-margin"></div> */}
       {/* header top margin */}
 
-      <DefaultHeader />
-      {/* End Header 1 */}
+      <Header1 /> 
+      <section className="masthead -type-6">
+        <div className="masthead__bg bg-dark-3">
+          <img alt="image" src="/img/backgrounds/discount.jpg" className="js-lazy" />
+        </div>
 
-      <LocationTopBar />
-      {/* End location top bar section */}
-
-      <section className="layout-pt-md">
         <div className="container">
-          <div className="row justify-center text-center">
-            <div className="col-auto">
-              <div className="sectionTitle -md">
-                <h2 className="sectionTitle__title">Artikel</h2>
-                <p className=" sectionTitle__text mt-5 sm:mt-0">
-                  Dapatkan artikel menarik sebagai referensi wisata anda.
+          <div className="row justify-center">
+            <div className="col-xl-9">
+              <div className="text-center">
+                <h1
+                  className="text-60 lg:text-40 md:text-30 text-white"
+                  data-aos="fade-up"
+                >
+                  Artikel
+                </h1>
+                <p
+                  className="text-white mt-5"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                >
+                  Temukan tempat menakjubkan dengan penawaran eksklusif dan Dapatkan artikel menarik sebagai referensi wisata anda.
                 </p>
               </div>
             </div>
           </div>
         </div>
       </section>
-      {/* End title */}
-
       <section className="layout-pt-md layout-pb-lg">
         <div className="container">
           <div className="row y-gap-30 justify-between">
-            <div className="col-xl-8">
-              <div className="row y-gap-30">
+            <div className="col-xl-12">
+              <div className="row">
+                <h1>Artikel Terbaru</h1>
                 <Blog2 />
               </div>
-              {/* End .row */}
-              {/* <BlogPagination /> */}
             </div>
-            {/* End .col */}
-
-            <div className="col-xl-3">
-              <BlogSidebar />
-            </div>
-            {/* End .col */}
           </div>
-          {/* End .row */}
+
+          <Documentation />
         </div>
-        {/* End .container */}
       </section>
 
-      {/* <CallToActions /> */}
       <JoinGroup />
-      {/* End Call To Actions Section */}
-
       <DefaultFooter />
-      {/* End Call To Actions Section */}
     </>
   );
 };
