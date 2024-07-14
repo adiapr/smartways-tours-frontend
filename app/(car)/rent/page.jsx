@@ -28,17 +28,11 @@ const index = () => {
           <div className="row">
             <div className="col-12">
               <div className="text-center">
-                {/* <h1 className="text-30 fw-600">London Rental Cars</h1> */}
               </div>
-              {/* End text-center */}
-              {/* <MainFilterSearchBox /> */}
             </div>
-            {/* End col-12 */}
           </div>
         </div>
       </section>
-      {/* Top SearchBanner */}
-
       <section className="layout-pt-md layout-pb-lg">
         <div className="container">
           <div className="row y-gap-30">
@@ -46,7 +40,6 @@ const index = () => {
               <aside className="sidebar y-gap-40 xl:d-none">
                 <Sidebar />
               </aside>
-              {/* End sidebar for desktop */}
 
               <div
                 className="offcanvas offcanvas-start"
@@ -59,33 +52,20 @@ const index = () => {
                     <Sidebar />
                   </aside>
                 </div>
-                {/* End offcanvas body */}
               </div>
-              {/* End mobile menu sidebar */}
             </div>
-            {/* End col */}
-
             <div className="col-xl-9 ">
               <TopHeaderFilter />
               <div className="mt-30"></div>
-              {/* End mt--30 */}
               <div className="row y-gap-30">
                 <CarPropertes />
               </div>
-              {/* End .row */}
-              {/* <Pagination /> */}
             </div>
-            {/* End .col for right content */}
           </div>
-          {/* End .row */}
         </div>
-        {/* End .container */}
       </section>
-      {/* End layout for listing sidebar and content */}
 
       <CallToActions />
-      {/* End Call To Actions Section */}
-
       <DefaultFooter />
     </>
   );

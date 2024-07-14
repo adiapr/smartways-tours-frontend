@@ -51,6 +51,7 @@ const CarPropertes = () => {
                             width={250}
                             height={250}
                             className="rounded-4 col-12 js-lazy"
+                            style={{ objectFit:'cover', aspectRatio:'16/9' }}
                             src={item.media[0]?.original_url}
                             priority
                             alt="image"
@@ -170,7 +171,7 @@ const CarPropertes = () => {
                 <div className="text-22 lh-12 fw-600 mt-70 md:mt-20">
                 {formatRupiah(item?.price)}
                 </div>
-                <div className="text-14 text-light-1 mt-5">Total</div>
+                {/* <div className="text-14 text-light-1 mt-5">Total</div> */}
                 <Link
                   href={`/rent/${item.slug}`}
                   className="button h-50 px-24 bg-dark-1 -yellow-1 text-white mt-24"
