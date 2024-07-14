@@ -36,6 +36,7 @@ const Blog2 = () => {
                 <Image
                   width={250}
                   height={250}
+                  style={{ aspectRatio:'16/9', objectFit:'cover' }}
                   className="aspect-video w-100"
                   src={item.media[0].original_url}
                   alt="image"
