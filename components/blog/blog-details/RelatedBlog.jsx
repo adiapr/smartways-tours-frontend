@@ -24,7 +24,7 @@ const RelatedBlog = () => {
   return (
     <>
       {article.slice(0, 4).map((item) => (
-        <div className="col-lg-3 col-sm-6" key={item.id}>
+        <div className="col-lg-3 col-6" key={item.id}>
           <a
             href={`/blog/${item.slug}`}
             className="blogCard -type-2 d-block bg-white rounded-4 shadow-4"
