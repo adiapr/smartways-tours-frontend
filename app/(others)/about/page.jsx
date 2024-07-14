@@ -13,6 +13,7 @@ import Brand from "@/components/brand/Brand";
 import JoinGroup from "@/components/home/home-1/JoinGroup";
 import WhyChooseUs from "@/components/home/home-1/WhyChooseus";
 import Link from "next/link";
+import Menu from "./Menu";
 
 export const metadata = {
   title: "About | Smartway adalah travel agen profesional yang berdiri sejak 2016 dibawah naungan PT. Bagus Bahagia Bersama (BBB Group).",
@@ -27,33 +28,7 @@ const About = () => {
       <div className="row">
         <div className="col-md-3">
           <div className="p-3">
-            <div className="card none fixed" style={{ top:'150px', width:'250px', zIndex:'0' }}>
-              <div className="card-body">
-                <Link href="#tentang">
-                  <h6 className="fw-bold">
-                    Tentang Smartway
-                  </h6>
-                </Link>
-                <hr />
-                <Link href="#ceo">
-                  <h6 className="fw-bold">
-                    CEO Letter
-                  </h6>
-                </Link>
-                <hr />
-                <Link href="#kenapa">
-                  <h6 className="fw-bold">
-                    Kenapa memilih kami
-                  </h6>
-                </Link>
-                <hr />
-                <Link href="#tim">
-                  <h6 className="fw-bold">
-                    TIM Kita
-                  </h6>
-                </Link>
-              </div>
-            </div>
+            <Menu />
           </div>
         </div>
         <div className="col-md-9">

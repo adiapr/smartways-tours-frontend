@@ -32,7 +32,7 @@ function ButtonHeader({session}) {
               <i className="bi bi-person-circle me-1"></i> {session.user.name}
             </button>
             <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <li><a className="dropdown-item" href="/dashboard/db-booking">Dashboard</a></li>
+              {/* <li><a className="dropdown-item" href="/dashboard/db-booking">Dashboard</a></li> */}
               <li><a className="dropdown-item" href="#" onClick={() => signOut()}>Logout</a></li>
             </ul>
           </div>

@@ -92,9 +92,9 @@ const MainMenu = ({ style = "" }) => {
             <span className="mr-10">{t('common.menuAboutUs')}</span>
           </Link>
         </li>
-        <li className={pathname === "/contact" ? "current" : ""}>
+        {/* <li className={pathname === "/contact" ? "current" : ""}>
           <Link href="/contact">{t('common.menuContact')}</Link>
-        </li>
+        </li> */}
         <li className="language-switch ms-2">
           {i18n.language === 'en' ? (
             <button onClick={changeLanguageToIndonesian}><Image src={'/img/lang/id.png'} width={40} height={40} style={{ borderRadius:'10px', border:'solid 1px white' }}/></button>

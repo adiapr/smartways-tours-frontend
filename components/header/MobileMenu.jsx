@@ -61,9 +61,9 @@ const MobileMenu = () => {
 
   return (
     <>
-      <div className="pro-header d-flex align-items-center justify-between border-bottom-light">
+      <div className="pro-header d-flex align-items-center justify-between border-bottom-light container">
         <Link href="/">
-          <img src="/img/logo/logo-hitam.png" className="!max-w-[100px]" style={{ maxWidth:'150px' }} alt="brand" />
+          <img src="/img/logo/logo-hitam.png" className="!max-w-[100px] py-10" style={{ maxWidth:'150px' }} alt="brand" />
         </Link>
         {/* End logo */}
 
@@ -100,7 +100,7 @@ const MobileMenu = () => {
             </SubMenu> */}
             {/* End  All Home Menu */}
 
-            <MenuItem
+            {/* <MenuItem
              onClick={()=>router.push("/")}
              className={
               pathname === "/"
@@ -110,7 +110,7 @@ const MobileMenu = () => {
               
             >
               Home
-            </MenuItem>
+            </MenuItem> */}
 
             <SubMenu label="Paket Wisata" className={isActiveParent ? 'menu-active-link':'' }>
               {paketWisataItems.map((item) => (
@@ -211,9 +211,9 @@ const MobileMenu = () => {
 
 
 
-      <div className="mobile-footer px-20 py-5 border-top-light"></div>
-
-      <div className="pro-footer">
+      {/* <div className="mobile-footer px-20 py-5 border-top-light bg-primary"></div> */}
+      <hr />
+      <div className="pro-footer px-20">
         <ContactInfo />
         <div className="mt-10">
           <h5 className="text-16 fw-500 mb-10">Smartway Indonesia</h5>
