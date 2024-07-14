@@ -35,6 +35,7 @@ const RelatedBlog = () => {
                   width={400}
                   height={300}
                   className="cover w-100 img-fluid"
+                  style={{ aspectRatio:'16/9', objectFit:'cover' }}
                   src={item.media[0].original_url}
                   alt="image"
                   unoptimized
