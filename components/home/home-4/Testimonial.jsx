@@ -53,7 +53,7 @@ const Testimonial = () => {
                 Testimoni Influencer
               </h2>
               <p className="sectionTitle__text mt-5 sm:mt-0">
-              Destinasi populer ini memiliki banyak hal untuk ditawarkan
+                Destinasi populer ini memiliki banyak hal untuk ditawarkan
               </p>
             </div>
           </div>

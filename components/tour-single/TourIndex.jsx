@@ -67,8 +67,9 @@ const TourIndex = ({ slug }) => {
                     </div>
                     <div className="text-14 text-light-1 ml-10">
                       {/* {tour?.numberOfReviews} */}
-                       1.240
-                       reviews
+                      <Link href={tour.link_review} target='_blank'>
+                        {tour.review} reviews
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -133,6 +134,19 @@ const TourIndex = ({ slug }) => {
         </div>
       </section> */}
 
+      <section className="border-top-light  mt-40 pt-40">
+        <div className="container">
+          <h3 className="text-22 fw-bold mb-20">Syarat dan Ketentuan</h3>
+          {tour.ketentuan ? (
+            <div dangerouslySetInnerHTML={{ __html: tour.ketentuan }} />
+          ) : (
+            <p>
+              - Belum ada syarat dan ketentuan -
+            </p>
+          )}
+          
+        </div>
+      </section>
       <section className="border-top-light  mt-40 pt-40">
         <div className="container">
           <h3 className="text-22 fw-bold mb-20">Rute Perjalanan</h3>
