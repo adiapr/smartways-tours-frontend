@@ -1,86 +1,104 @@
-
 'use client'
 
 import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
 import { testimonial2 } from "../../../data/testimonialData";
+import Slider from "react-slick";
 
 const Testimonial = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4, // Default untuk layar besar
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024, // breakpoint untuk layar desktop
+        settings: {
+          slidesToShow: 3, // menampilkan 3 slide pada layar desktop besar
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 768, // breakpoint untuk layar tablet
+        settings: {
+          slidesToShow: 2, // menampilkan 2 slide pada layar tablet
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 480, // breakpoint untuk layar mobile
+        settings: {
+          slidesToShow: 1, // menampilkan 1 slide pada layar mobile
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      }
+    ]
+  };
+
   return (
-    <div className="container">
-      <Swiper
-        modules={[Navigation]}
-        spaceBetween={30}
-        className="overflow-visible"
-        navigation={{
-          nextEl: ".js-hm4tm-next-active",
-          prevEl: ".js-hm4tm-prev-active",
-        }}
-        breakpoints={{
-          500: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 22,
-          },
-          1024: {
-            slidesPerView: 3,
-          },
-          1200: {
-            slidesPerView: 3,
-          },
-        }}
-      >
-        {testimonial2.map((item) => (
-          <SwiperSlide key={item.id}>
-            <div
-              className="testimonials -type-1 bg-white rounded-4 pt-40 pb-30 px-40"
-              key={item.id}
-              data-aos="fade"
-              data-aos-delay={item.dealyAnimation}
-            >
-              <h4 className="text-16 fw-500 text-blue-1 mb-20">{item.meta}</h4>
-              <p className="testimonials__text lh-18 fw-500 text-dark-1">
-                {item.text}
+    <section className="section-bg layout-pt-lg layout-pb-lg">
+      <div className="section-bg__item -mx-20 bg-light-2" />
+      <div className="container">
+        <div className="row justify-center text-center">
+          <div className="col-auto">
+            <div className="sectionTitle -md">
+              <h2 className="sectionTitle__title">
+                Testimoni Influencer
+              </h2>
+              <p className="sectionTitle__text mt-5 sm:mt-0">
+              Destinasi populer ini memiliki banyak hal untuk ditawarkan
               </p>
-              <div className="pt-20 mt-28 border-top-light">
-                <div className="row x-gap-20 y-gap-20 items-center">
-                  <div className="col-auto">
-                    <Image
-                      width={60}
-                      height={60} 
-                      src={item.avatar}
-                      style={{ borderRadius:'50%', objectFit:'cover' }}
-                      alt="image"
-                      className="size-60"
-                    />
-                  </div>
-                  <div className="col-auto">
-                    <div className="text-15 fw-500 lh-14">{item.name}</div>
-                    <div className="text-14 lh-14 text-light-1 mt-5">
-                      {item.designation}
+            </div>
+          </div>
+        </div>
+        <div className="overflow-hidden pt-30 js-section-slider">
+          <div className="item_gap-x10">
+            <Slider {...settings}>
+              {testimonial2.map((item) => (
+                <div
+                  className="testimonials -type-1 bg-white rounded-4 pt-40 pb-30 px-10"
+                  key={item.id}
+                  data-aos="fade"
+                  data-aos-delay={item.dealyAnimation}
+                >
+                  <h4 className="text-16 fw-500 text-blue-1 mb-20">{item.meta}</h4>
+                  <p className="testimonials__text lh-18 fw-500 text-dark-1">
+                    {item.text}
+                  </p>
+                  <div className="pt-20 mt-28 border-top-light">
+                    <div className="row x-gap-20 y-gap-20 items-center">
+                      <div className="col-auto">
+                        <Image
+                          width={60}
+                          height={60}
+                          src={item.avatar}
+                          alt="image"
+                          className="size-60"
+                          style={{ borderRadius: '50%', objectFit: 'cover' }}
+                        />
+                      </div>
+                      <div className="col-auto">
+                        <div className="text-15 fw-500 lh-14">{item.name}</div>
+                        <div className="text-14 lh-14 text-light-1 mt-5">
+                          {item.designation}
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-
-      <button className="section-slider-nav -prev flex-center button -blue-1 bg-white shadow-1 size-40 rounded-full sm:d-none js-hm4tm-prev-active">
-        <i className="icon icon-chevron-left text-12" />
-      </button>
-      {/* End js-prev */}
-
-      <button className="section-slider-nav -next flex-center button -blue-1 bg-white shadow-1 size-40 rounded-full sm:d-none js-hm4tm-next-active">
-        <i className="icon icon-chevron-right text-12" />
-      </button>
-      {/* End js-next */}
-    </div>
+              ))}
+            </Slider>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
