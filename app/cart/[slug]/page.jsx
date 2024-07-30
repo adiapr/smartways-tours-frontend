@@ -110,7 +110,7 @@ function Cart({ params }) {
             <section className="pt-40">
                 <div className="container">
                     <div className="alert alert-primary">
-                        <b><i className='bi bi-info-circle-fill'></i> Silahkan periksa kembali pesanan Anda</b>
+                        <b><i className='bi bi-info-circle-fill'></i> Silahkan periksa kembali pesanan kamu</b>
                     </div>
 
                     <div className="row">

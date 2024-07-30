@@ -5,7 +5,7 @@ const Sorroundings = () => {
         <div className="form-input ">
           <input type="text" required />
           <label className="lh-1 text-16 text-light-1">
-            Hotel rating standard
+            Hotel rating stkamurd
           </label>
         </div>
       </div>

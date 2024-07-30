@@ -30,7 +30,7 @@ function TestimonialYoutube() {
         <h2 className="text-30">
             Testimony Perjalanan Kami
         </h2>
-        <p>Biarkan testimoni ini menjadi bukti komitmen kami dalam memberikan pelayanan terbaik untuk setiap perjalanan Anda.</p>
+        <p>Biarkan testimoni ini menjadi bukti komitmen kami dalam memberikan pelayanan terbaik untuk setiap perjalanan kamu.</p>
 
         <IframeWrapper>
             <div className="row mt-2">

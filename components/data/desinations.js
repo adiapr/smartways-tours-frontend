@@ -69,7 +69,7 @@ export const destinations2 = [
 export const documentationCategory = [
   {
     id: 1,
-    hoverText: "Jadikan hari wisuda Anda abadi dengan layanan dokumentasi profesional kami. Kenangan indah ini akan selalu hidup dalam foto dan video berkualitas tinggi.",
+    hoverText: "Jadikan hari wisuda kamu abadi dengan layanan dokumentasi profesional kami. Kenangan indah ini akan selalu hidup dalam foto dan video berkualitas tinggi.",
     city: "Graduation",
     img: "/img/documentation/graduation.jpg",
   },
@@ -81,13 +81,13 @@ export const documentationCategory = [
   },
   {
     id: 3,
-    hoverText: "Hari pernikahan Anda adalah momen yang paling berharga. Kami hadir untuk mengabadikan setiap detik cinta Anda.",
+    hoverText: "Hari pernikahan kamu adalah momen yang paling berharga. Kami hadir untuk mengabadikan setiap detik cinta kamu.",
     city: "Pre/Post-wedding",
     img: "/img/documentation/wedding.jpg",
   },
   {
     id: 4,
-    hoverText: "Dengan layanan dokumentasi kami, momen-momen istimewa Anda akan selalu hidup dalam foto dan video berkualitas tinggi.",
+    hoverText: "Dengan layanan dokumentasi kami, momen-momen istimewa kamu akan selalu hidup dalam foto dan video berkualitas tinggi.",
     city: "Special Moment",
     img: "/img/documentation/special.jpg",
   },

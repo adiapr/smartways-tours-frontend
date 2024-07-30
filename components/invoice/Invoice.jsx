@@ -16,7 +16,7 @@ export default function InvoiceComponent () {
       };
     
       const items = [
-        { description: "Standard Plan", price: 443.0, vat: 921.8, total: 9243 },
+        { description: "Stkamurd Plan", price: 443.0, vat: 921.8, total: 9243 },
         { description: "Extra Plan", price: 413.0, vat: 912.8, total: 5943 },
       ];
     

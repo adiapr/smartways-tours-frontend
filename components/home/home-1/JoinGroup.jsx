@@ -5,7 +5,7 @@ function JoinGroup() {
   return (
     
     <section className="layout-pt-md layout-pb-md mt-3" style={{ 
-      backgroundImage: "url('/img/backgrounds/bg-pemandangan.webp')", 
+      backgroundImage: "url('/img/backgrounds/bg-pemkamungan.webp')", 
       backgroundRepeat: 'no-repeat', 
       backgroundSize: 'cover', 
       backgroundPosition: 'top', 
@@ -37,7 +37,7 @@ function JoinGroup() {
                 <input
                   className="bg-white h-60"
                   type="text"
-                  placeholder="Email anda..."
+                  placeholder="Email kamu..."
                 />
               </div> */}
               {/* End email input */}

@@ -110,7 +110,7 @@ export const testimonial2 = [
     avatar: "/img/influencer/@wangsaloka.jpg",
     name: "@wangsaloka.jpg",
     designation: "Influencer",
-    text: `"Pemandangan Bromo sangat menakjubkan dan smartway.tours memastikan kami mendapatkan pengalaman terbaik. Segala sesuatunya diatur dengan sempurna dan kami sangat puas."`,
+    text: `"Pemkamungan Bromo sangat menakjubkan dan smartway.tours memastikan kami mendapatkan pengalaman terbaik. Segala sesuatunya diatur dengan sempurna dan kami sangat puas."`,
     delayAnimation: "800",
   },
 ];

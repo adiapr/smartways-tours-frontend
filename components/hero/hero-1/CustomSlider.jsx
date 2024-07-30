@@ -63,12 +63,12 @@ const CustomSlider = () => {
         {
           image: "/img/slider/s4.jpg",
           title: "Discover Hidden Gems",
-          description: "Temukan permata tersembunyi di berbagai destinasi yang jarang dikunjungi dan nikmati pengalaman eksklusif yang tidak akan Anda temukan di tempat lain.",
+          description: "Temukan permata tersembunyi di berbagai destinasi yang jarang dikunjungi dan nikmati pengalaman eksklusif yang tidak akan kamu temukan di tempat lain.",
         },
         {
           image: "/img/slider/s5.jpg",
           title: "Adventure Awaits",
-          description: "Petualangan menanti Anda dengan berbagai aktivitas seru dan menarik yang kami tawarkan di setiap paket wisata kami.",
+          description: "Petualangan menanti kamu dengan berbagai aktivitas seru dan menarik yang kami tawarkan di setiap paket wisata kami.",
         },
     ]
 

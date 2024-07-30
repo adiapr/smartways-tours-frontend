@@ -6,7 +6,7 @@ const AvailableRooms = ({ hotel }) => {
       <div className="border-light rounded-4 px-30 py-30 sm:px-20 sm:py-20">
         <div className="row y-gap-20">
           <div className="col-12">
-            <h3 className="text-18 fw-500 mb-15">Standard Twin Room</h3>
+            <h3 className="text-18 fw-500 mb-15">Stkamurd Twin Room</h3>
             <div className="roomGrid">
               <div className="roomGrid__header">
                 <div>Room Type</div>
@@ -255,7 +255,7 @@ const AvailableRooms = ({ hotel }) => {
         </div>
         {/* End .row */}
       </div>
-      {/* End standard twin room */}
+      {/* End stkamurd twin room */}
 
       <div className="border-light rounded-4 px-30 py-30 sm:px-20 sm:py-20 mt-20">
         <div className="row y-gap-20">
@@ -509,7 +509,7 @@ const AvailableRooms = ({ hotel }) => {
         </div>
         {/* End .row */}
       </div>
-      {/* End standard twin room */}
+      {/* End stkamurd twin room */}
     </>
   );
 };

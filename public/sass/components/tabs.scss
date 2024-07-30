@@ -73,7 +73,7 @@
 .tabs__controls {
   position: relative;
   overflow: auto;
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: x mkamutory;
   white-space: nowrap;
 
   > div {
@@ -85,7 +85,7 @@
   &__controls {
     position: relative;
     overflow: auto;
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: x mkamutory;
 
     > div {
       scroll-snap-align: center;
@@ -114,7 +114,7 @@
   &__controls {
     position: relative;
     overflow: auto;
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: x mkamutory;
 
     > div {
       scroll-snap-align: center;

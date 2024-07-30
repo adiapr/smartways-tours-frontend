@@ -11,7 +11,7 @@ const BlockGuide = () => {
       id: 2,
       icon: "/img/featureIcons/1/2.svg",
       title: "Rekam Jejak Terbukti",
-      text: `Berdiri sejak tahun 2016, selama lebih dari 7 tahun terakhir, kami telah melayani lebih dari 20.000 pelanggan untuk tur di Indonesia (Jawa Timur, Bali, dan Lombok) maupun luar negeri. Smartway telah menjadi merek travel agen yang ternama yang telah dipercaya oleh banyak perusahaan di tingkat nasional. Selain itu, kami telah berkolaborasi dengan berbagai mitra dari Amerika Serikat, Jerman, Belanda, China, Hong Kong, Malaysia, Singapura, dan Taiwan.`,
+      text: `Berdiri sejak tahun 2016, selama lebih dari 7 tahun terakhir, kami telah melayani lebih dari 20.000 pelanggan untuk tur di Indonesia (Jawa Timur, Bali, dan Lombok) maupun luar negeri. Smartway telah menjadi merek travel agen yang ternama yang telah dipercaya oleh banyak perusahaan di tingkat nasional. Selain itu, kami telah berkolaborasi dengan berbagai mitra dari Amerika Serikat, Jerman, Belkamu, China, Hong Kong, Malaysia, Singapura, dan Taiwan.`,
       delayAnim: "200",
     },
     {

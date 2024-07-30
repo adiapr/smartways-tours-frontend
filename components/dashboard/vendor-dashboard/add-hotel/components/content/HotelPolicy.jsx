@@ -6,12 +6,12 @@ const HotelPolicy = () => {
           <div className="form-input ">
             <input type="text" required />
             <label className="lh-1 text-16 text-light-1">
-              Hotel rating standard
+              Hotel rating stkamurd
             </label>
           </div>
         </div>
       </div>
-      {/* End hotel rating standard */}
+      {/* End hotel rating stkamurd */}
 
       <div className="mt-20">
         <div className="fw-500 mb-20">Policy</div>

@@ -42,7 +42,7 @@ const AvailableRooms2 = ({ hotel }) => {
               {/* image */}
 
               <div>
-                <div className="text-18 fw-500 mt-10">Standard Twin Room</div>
+                <div className="text-18 fw-500 mt-10">Stkamurd Twin Room</div>
                 <div className="y-gap-5 pt-5">
                   <div className="d-flex items-center">
                     <i className="icon-no-smoke text-20 mr-10" />

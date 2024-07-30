@@ -25,7 +25,7 @@ const Index = () => {
               </span>
             </h1>
             <p className="mt-20" data-aos="fade-up" data-aos-delay="500">
-              Abadikan momen indah anda bersama <b>Smartway.tours</b> dengan layanan dokumentasi. <br /> Buat momen paling abadi dan berkesan untuk dikenang sepanjang masa
+              Abadikan momen indah kamu bersama <b>Smartway.tours</b> dengan layanan dokumentasi. <br /> Buat momen paling abadi dan berkesan untuk dikenang sepanjang masa
             </p>
 
             {/* <MainFilterSearchBox /> */}

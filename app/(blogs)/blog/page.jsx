@@ -47,7 +47,7 @@ const BlogListV2 = () => {
                   data-aos="fade-up"
                   data-aos-delay="100"
                 >
-                  Temukan tempat menakjubkan dengan penawaran eksklusif dan Dapatkan artikel menarik sebagai referensi wisata anda.
+                  Temukan tempat menakjubkan dengan penawaran eksklusif dan Dapatkan artikel menarik sebagai referensi wisata kamu.
                 </p>
               </div>
             </div>
