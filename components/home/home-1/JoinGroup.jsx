@@ -5,7 +5,7 @@ function JoinGroup() {
   return (
     
     <section className="layout-pt-md layout-pb-md mt-3" style={{ 
-      backgroundImage: "url('/img/backgrounds/bg-pemkamungan.webp')", 
+      backgroundImage: "url('/img/backgrounds/bg-pemandangan.webp')", 
       backgroundRepeat: 'no-repeat', 
       backgroundSize: 'cover', 
       backgroundPosition: 'top', 
