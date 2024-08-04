@@ -24,7 +24,7 @@ function JoinGroup() {
                   Dapatkan Promo Menarik
                 </h4>
                 <div className="text-black">
-                  Daftar grup whatsapp untuk mendapatkan penawaran terbaik dari kami
+                  Daftar grup Whatsapp untuk mendapatkan penawaran terbaik dari kami
                 </div>
               </div>
             </div>
@@ -43,8 +43,8 @@ function JoinGroup() {
               {/* End email input */}
 
               <div>
-                <a href='https://chat.whatsapp.com/FQJZn7QB43a3r4BGve9b3L' target='_blank' className="button -md h-60 bg-success fw-bold text-white">
-                  <Image src={'/img/icons/whatsapp.svg'} width={18} height={18} /> &nbsp; Gabung Grup Whatsapp
+                <a href='https://chat.Whatsapp.com/FQJZn7QB43a3r4BGve9b3L' target='_blank' className="button -md h-60 bg-success fw-bold text-white">
+                  <Image src={'/img/icons/Whatsapp.svg'} width={18} height={18} /> &nbsp; Gabung Grup Whatsapp
                 </a>
               </div>
               {/* End subscribe btn */}

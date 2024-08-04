@@ -27,7 +27,7 @@ function Menu() {
                 <div className="card-body">
                   <Link href="#tentang">
                     <h6 className="fw-bold">
-                      Tentang Smartway
+                      Profil Perusahaan 
                     </h6>
                   </Link>
                   <hr />
@@ -39,13 +39,13 @@ function Menu() {
                   <hr />
                   <Link href="#kenapa">
                     <h6 className="fw-bold">
-                      Kenapa memilih kami
+                      6 alasan Kenapa memilih Smartway
                     </h6>
                   </Link>
                   <hr />
                   <Link href="#tim">
                     <h6 className="fw-bold">
-                      TIM Kita
+                      Tim Smartway
                     </h6>
                   </Link>
                 </div>

@@ -53,7 +53,7 @@ const Testimonial = () => {
                 Testimoni Influencer
               </h2>
               <p className="sectionTitle__text mt-5 sm:mt-0">
-                Destinasi populer ini memiliki banyak hal untuk ditawarkan
+              Temukan testimoni lainnya di instagram/tiktok @smartway.id @smartway.tours
               </p>
             </div>
           </div>
@@ -75,14 +75,17 @@ const Testimonial = () => {
                   <div className="pt-20 mt-28 border-top-light">
                     <div className="row x-gap-20 y-gap-20 items-center">
                       <div className="col-auto">
-                        <Image
-                          width={60}
-                          height={60}
-                          src={item.avatar}
-                          alt="image"
-                          className="size-60"
-                          style={{ borderRadius: '50%', objectFit: 'cover' }}
-                        />
+                        <div  style={{ position:'relative' }}>
+                          <Image
+                            width={90}
+                            height={90}
+                            src={item.avatar}
+                            alt="image"
+                            className="size-60"
+                            style={{ borderRadius: '50%', objectFit: 'cover' }}
+                          />
+                          <Image src="/img/icons/verified-ig.png" style={{ position:'absolute', bottom:'0px', right: '0px' }} width={20} height={20} />
+                        </div>
                       </div>
                       <div className="col-auto">
                         <div className="text-15 fw-500 lh-14">{item.name}</div>

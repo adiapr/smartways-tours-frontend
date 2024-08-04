@@ -35,8 +35,8 @@ function CategoryDocumentation() {
                   <h4 className="text-26 md:text-20 lh-13 text-white mb-20">
                     {item.city}
                   </h4>
-                  <Link href={`https://api.whatsapp.com/send?phone=6282155144449&text=Hi%20Smartway.tours%0ASaya%20ingin%20menggunakan%20jasa%20layanan%20dokumentasi%20*${item.city}*%20%0A%0AMohon%20info%20selengkapnya.`} className="button col-12 h-60 -blue-1 bg-white text-dark-1">
-                    <i className="bi bi-whatsapp"></i> &nbsp; Pesan Sekarang
+                  <Link href={`https://api.Whatsapp.com/send?phone=6282155144449&text=Hi%20Smartway.tours%0ASaya%20ingin%20menggunakan%20jasa%20layanan%20dokumentasi%20*${item.city}*%20%0A%0AMohon%20info%20selengkapnya.`} className="button col-12 h-60 -blue-1 bg-white text-dark-1">
+                    <i className="bi bi-Whatsapp"></i> &nbsp; Pesan Sekarang
                   </Link>
                 </div>
               </div>

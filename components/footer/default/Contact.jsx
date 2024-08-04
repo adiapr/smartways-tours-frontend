@@ -7,22 +7,22 @@ function Contact() {
     <div>
         <p>
         <b className='text-black'>PT. Bagus Bahagia Bersama</b> <br />
-        Jalan Nakula 51 Tumpang, Malang, Indonesia 65156
+        Jalan Nakula 51 Tumpang, <br className='d-md-none d-block' /> Malang, Indonesia 65156
         </p>
         <ul>
             <li>
-                <Link href={'https://api.whatsapp.com/send/?phone=6282155144449&text&type=phone_number&app_absent=0'}>
-                    <i className="bi bi-telephone-fill"></i> 0341 – 788733 (Office)
+                <Link href={'https://api.Whatsapp.com/send/?phone=6282155144449&text&type=phone_number&app_absent=0'}>
+                    <i className="bi bi-telephone-fill"></i> +62 341 788733 (Office)
                 </Link>
             </li>
             <li>
-                <Link href={'https://api.whatsapp.com/send/?phone=6282155144449&text&type=phone_number&app_absent=0'}>
-                    <i className="bi bi-whatsapp"></i> +62 812 1551 44449 (Smartway Indonesia)
+                <Link href={'https://api.Whatsapp.com/send/?phone=6282155144449&text&type=phone_number&app_absent=0'}>
+                    <i className="bi bi-Whatsapp"></i> +62 821 5514 4449 (Smartway Indonesia)
                 </Link>
             </li>
             <li>
-                <Link href={'https://api.whatsapp.com/send/?phone=6282155144449&text&type=phone_number&app_absent=0'}>
-                    <i className="bi bi-whatsapp"></i> +62 821 1001 3311  (Smartway Internasional)
+                <Link href={'https://api.Whatsapp.com/send/?phone=6282155144449&text&type=phone_number&app_absent=0'}>
+                    <i className="bi bi-Whatsapp"></i> +62 821 1001 3311  (Smartway Internasional)
                 </Link>
             </li>
             

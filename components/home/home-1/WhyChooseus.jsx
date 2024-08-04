@@ -89,12 +89,29 @@ const WhyChooseUs = () => {
                   <Image
                     width={100}
                     height={100}
-                    src="/img/icons/professional.svg"
+                    src="/img/icons/leading.svg"
                     unoptimized
                     alt='Professional Icon'
                   />
                   <h5 className="card-title">{t('common.whyChooseUs.cards.professional.title')}</h5>
                   <p className="card-text">{t('common.whyChooseUs.cards.professional.text')}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-4 mb-4">
+            <div className="card shadow border-0">
+              <div className="card-body d-flex align-items-center">
+                <div>
+                  <Image
+                    width={100}
+                    height={100}
+                    src="/img/icons/pricing.svg"
+                    unoptimized
+                    alt='Professional Icon'
+                  />
+                  <h5 className="card-title">{t('common.whyChooseUs.cards.kompetitif.title')}</h5>
+                  <p className="card-text">{t('common.whyChooseUs.cards.kompetitif.text')}</p>
                 </div>
               </div>
             </div>

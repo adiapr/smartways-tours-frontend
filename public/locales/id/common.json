@@ -7,28 +7,32 @@
       "menuAboutUs": "Tentang Kami",
       "menuContact": "Hubungi Kami",
       "whyChooseUs": {
-        "title": "Kenapa memilih kami?",
-        "subtitle": "Setiap Langkah, Setiap Petualangan Bersama Kami",
+        "title": "6 Alasan kenapa memilih kami Smartway",
+        "subtitle": "Ada banyak pilihan travel agen diluar sana, ini dia nih yang bikin Smartway beda dari yang lain!",
         "cards": {
           "leading": {
-            "title": "Leading di Jawa Timur",
-            "text": "Kami bangga menjadi agen perjalanan terbaik di Jawa Timur, telah mendapatkan penghargaan Travelers' Choice #1 Jawa Timur dari TripAdvisor pada tahun 2020-2022-2023."
+            "title": "Terbaik di Jawa Timur",
+            "text": "Kami bangga dan bersyukur, terpilih sebagai travel agen terbaik #1 di Jawa Timur yang telah mendapatkan penghargaan Tripadvisor Travelers' Choice awards tahun 2020-2022-2023-2024. Kami berkomitmen untuk dapat terus memperbaiki layanan, innovative dan adaptive agar tetap menjadi yang terbaik!"
           },
           "pricing": {
-            "title": "Harga Kompetitif",
-            "text": "Kami menawarkan harga yang sangat kompetitif untuk layanan perjalanan kami, karena kami menerapkan pemasaran online strategis, efisiensi operasional, dan kemitraan yang kuat dengan berbagai mitra."
+            "title": "Telah Berbadan Hukum",
+            "text": "Smartway Tours berdiri sejak 2016 dan telah melayani lebih dari 200.000+ pelanggan. Smartway Tours berada dibawah naungan PT Bagus Bahagia Bersama. Sebuah perusahaan yang dikelola secara profesional yang berfokus pada layanan pariwisata berkelanjutan dengan mengedepankan kearifan lokal budaya Indonesia."
           },
           "service": {
-            "title": "Menerapkan Orientasi Layanan WOW",
-            "text": "Kami menganggap pelanggan kami sebagai tamu yang diundang ke sebuah pesta, dan kami adalah tuan rumah. Tugas kami adalah membuat setiap aspek penting dari pengalaman pelanggan sedikit lebih baik."
+            "title": "WOW Customer Oriented",
+            "text": "Pelanggan adalah titik sentral yang menjadi sumber dari layanan Smartway Tours. Kami mengibaratkan pelanggan kami sebagai para tamu undangan dan kami sebagai tuan rumah pada jamuan pesta. Memperikan pelayanan terbaik sesuai kebutuhan tamu undangan adalah tugas kami sebagai tuan rumah. Senyum, sapa dan salam adalah hal dasar yang akan kami berikan. Selanjutnya, bersiaplah untuk berkata “Wow!” pada layanan yang kami berikan."
           },
           "record": {
-            "title": "Rekam Jejak Terbukti",
-            "text": "Berdiri sejak tahun 2016, selama lebih dari 7 tahun terakhir, kami telah melayani lebih dari 20.000 pelanggan untuk tur di Indonesia (Jawa Timur, Bali, dan Lombok) maupun luar negeri. Smartway telah menjadi merek agen perjalanan terkemuka, mendapatkan kepercayaan dari berbagai perusahaan nasional. Selain itu, kami telah bekerja sama dengan banyak mitra dari Amerika Serikat, Jerman, Belkamu, Tiongkok, Hong Kong, Malaysia, Singapura, dan Taiwan."
+            "title": "Rekam Jejak Profesional",
+            "text": "Smartway telah menjadi merek biro perjalanan terkemuka di Indonesia dan dipercaya oleh ratusan perusahaan baik dalam maupun luar negeri dalam merencanakan kebutuhan perjalanan mereka. Temukan rekam jejak digital kami melalui google, media massa, dan sosial media."
           },
           "professional": {
             "title": "Tim Profesional dengan Sertifikasi BNSP",
-            "text": "Pelatihan, evaluasi, dan perbaikan internal dilakukan setiap bulan, memfasilitasi pertumbuhan positif dalam tim kami. 75% anggota tim kami memiliki kemampuan berbahasa Inggris mulai dari tingkat menengah hingga lancar. Selain itu, tim lapangan kami, yang terdiri dari pemimpin tur, pemandu, dan spesialis acara (MICE), memiliki sertifikasi dari BNSP (Badan Nasional Sertifikasi Profesi)."
+            "text": "Pelatihan, evaluasi, dan perbaikan internal dilakukan setiap bulan untuk memfasilitasi pertumbuhan yang positif pada internal tim Smartway. 80% anggota tim kami memiliki kemampuan berbahasa Inggris tingkat menengah hingga lancar. Sehingga dapat disimpulkan bahwa SDM kami siap melayani tamu dari seluruh penjuru dunia. Selain itu, tim lapangan kami yang terdiri dari pemimpin tur (tour leader), pemandu wisata (tour guide), dan spesialis acara (MICE), telah mengantongi sertifikat dari BNSP (Badan Nasional Sertifikasi Profesi). "
+          },
+          "kompetitif": {
+            "title": "Harga Kompetitif",
+            "text": "Smartway Tours menawarkan harga yang sangat kompetitif pada semua layanan, karena kami menerapkan strategi pemasaran yang efektif, strategi operasional yang efisien, dan kemitraan yang kuat dengan berbagai partner baik di dalam maupun di luar negeri."
           }
         }
       }

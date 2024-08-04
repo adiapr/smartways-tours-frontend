@@ -80,11 +80,11 @@ const About = () => {
                   Tanpa kepercayaan teman-teman semua, kami bukanlah siapa-siapa.
                 </p>
                 <p>
-                  7 tahun sudah kami bertumbuh melayani lebih dari 20.000 pelanggan di semua destinasi wisata yang tersebar di Indonesia, khusushya Jawa Timur, Bali, Lombok, dan Belitung. Ada banyak tantangan dan pelajaran dari setiap proses yang kami lalui. Untuk itu, izinkan kami untuk terus bertumbuh pada proses selanjutnya. Tegur kami jika kami kurang dalam melayani teman-teman, dukung kami jika teman-teman puas dengan pelayanan yang kami berikan. Bintang 5 ya kak!
+                  8 tahun sudah kami bertumbuh melayani lebih dari 200.000 pelanggan di semua destinasi wisata yang tersebar di Indonesia, khusushya Jawa Timur, Bali, Lombok, dan Belitung. Ada banyak tantangan dan pelajaran dari setiap proses yang kami lalui. Untuk itu, izinkan kami untuk terus bertumbuh pada proses selanjutnya. Tegur kami jika kami kurang dalam melayani teman-teman, dukung kami jika teman-teman puas dengan pelayanan yang kami berikan. Bintang 5 ya kak!
                 </p>
                 <br />
                 <p>
-                  Salam sehat luar biasa,
+                  Your smart travel partne,
                 </p>
                 <p className="fw-bold">
                   Fikri Bagus Zakaria, S.Ikom, M.M.
@@ -115,7 +115,7 @@ const About = () => {
               <div className="row y-gap-20 justify-between items-end">
                 <div className="col-auto">
                   <div className="sectionTitle -md">
-                    <h2 className="sectionTitle__title">Tim Kita</h2>
+                    <h2 className="sectionTitle__title">Tim Smartway</h2>
                     <p className=" sectionTitle__text mt-5 sm:mt-0">
                       Tim Profesional dari Smartway.tours
                     </p>

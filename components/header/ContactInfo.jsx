@@ -2,7 +2,7 @@ const ContactInfo = () => {
   const contactContent = [
     {
       id: 1,
-      title: "WHatsapp",
+      title: "Whatsapp",
       action: "+(62) 82155144449",
       text: "+(62) 82155144449",
     },

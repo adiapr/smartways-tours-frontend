@@ -63,7 +63,7 @@ const Contact = () => {
           <div className="row justify-center text-center">
             <div className="col-auto">
               <div className="sectionTitle -md">
-                <h2 className="sectionTitle__title">Kenapa memilih kami?</h2>
+                <h2 className="sectionTitle__title">6 Alasan kenapa memilih kami Smartway</h2>
                 <p className=" sectionTitle__text mt-5 sm:mt-0">
                   These popular destinations have a lot to offer
                 </p>
