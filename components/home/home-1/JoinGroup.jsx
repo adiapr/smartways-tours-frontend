@@ -44,7 +44,7 @@ function JoinGroup() {
 
               <div>
                 <a href='https://chat.Whatsapp.com/FQJZn7QB43a3r4BGve9b3L' target='_blank' className="button -md h-60 bg-success fw-bold text-white">
-                  <Image src={'/img/icons/Whatsapp.svg'} width={18} height={18} /> &nbsp; Gabung Grup Whatsapp
+                  <Image src={'/img/icons/whatsapp.svg'} width={18} height={18} /> &nbsp; Gabung Grup Whatsapp
                 </a>
               </div>
               {/* End subscribe btn */}

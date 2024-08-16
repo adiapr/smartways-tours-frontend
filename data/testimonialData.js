@@ -42,15 +42,6 @@ export const testimonial1 = [
 ];
 export const testimonial2 = [
   {
-    id: 1,
-    meta: "Wisata Gunung Bromo",
-    avatar: "/img/influencer/@darlismuhan.jpg",
-    name: "@darlismuhan",
-    designation: "Influencer",
-    text: `Perjalanan kami ke Gunung Bromo bersama Smartway sangat menyenangkan. Semua tur berjalanan aman, lancar, sesuai dengan itinerary dan paket yang ditawarkan. Tim Smartway bekerja secara profesional. Admin bales cepat dan pas di lapangan dijelasin ini itu. Sukses terus Smartway!"`,
-    delayAnimation: "100",
-  },
-  {
     id: 2,
     meta: "Wisata Lombok",
     avatar: "/img/influencer/@gladysvctry.jpg",
