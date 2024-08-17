@@ -16,8 +16,8 @@ import Link from "next/link";
 import Menu from "./Menu";
 
 export const metadata = {
-  title: "About | Smartway adalah travel agen profesional yang berdiri sejak 2016 dibawah naungan PT. Bagus Bahagia Bersama (BBB Group).",
-  description: "GoTrip - Travel & Tour React NextJS Template",
+  title: "About | Smartway.tours",
+  description: "travel agen profesional yang berdiri sejak 2016 dibawah naungan PT. Bagus Bahagia Bersama (BBB Group).",
 };
 
 const About = () => {

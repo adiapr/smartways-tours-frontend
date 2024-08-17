@@ -13,7 +13,7 @@ const CategoriesMegaMenu = ({ setIsActiveParent }) => {
   const [categorieMegaMenuItems, setCategorieMegaMenuItems] = useState([]);
 
   const itemList = [
-    "Paket Wisata Domestik",
+    "Paket Wisata Indonesia",
     "Paket Wisata Internasional",
   ];
 
@@ -30,7 +30,7 @@ const CategoriesMegaMenu = ({ setIsActiveParent }) => {
         const internasionalData = await internasionalResponse.json();
 
         const formattedData = [
-          formatData(domestikData, "Pilih paket wisata domestik terlengkap", "/img/backgrounds/wisata-bali.webp"),
+          formatData(domestikData, "Pilih paket wisata Indonesia terlengkap", "/img/backgrounds/wisata-bali.webp"),
           formatData(internasionalData, "Jelajahi dunia lebih jauh", "/img/backgrounds/wisata-internasional.jpg")
         ];
 
