@@ -11,6 +11,7 @@ import "swiper/css/effect-cards";
 import "aos/dist/aos.css";
 import "../styles/index.scss";
 import "../styles/font.css";
+import "../styles/custom.css";
 import { Provider } from "react-redux";
 import { store } from "../store/store";
 import { SessionProvider } from "next-auth/react";

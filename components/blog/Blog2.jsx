@@ -27,12 +27,12 @@ const Blog2 = () => {
     <div div className="row md:text-center">
       {articles.slice(0, 5).map((item) => (
         
-          <div className="col-lg-4 col-6 px-1 mx-0">
+          <div className="col-lg-3 col-6 px-2 mx-0">
             <Link
               href={`/blog/${item.slug}`}
-              className="blogCard -type-1 col-12"
+              className=""
             >
-              <div className="blogCard__image rounded-4">
+              <div className="blogCard__image rounded-4  col-12 card-article">
                 <Image
                   width={250}
                   height={250}
@@ -42,10 +42,24 @@ const Blog2 = () => {
                   alt="image"
                   unoptimized
                 />
-                <div className="text-15 text-light-1">{new Date(item.created_at).toLocaleDateString()}</div>
-                <h3 className="text-16 text-dark-1 mt-10 md:mt-5">
-                  {item.name}
-                </h3>
+                <div className="p-2">
+                  <div className="text-15 text-light-1">
+                  {new Date(item.created_at).toLocaleDateString('en-GB', {
+                    day: '2-digit',
+                    month: 'short',
+                    year: 'numeric',
+                  })}
+                  </div>
+                  <h3 className="text-16 text-dark-1 mt-10 md:mt-5">
+                    {item.name}
+                  </h3>
+                  <Link
+                    href={`/blog/${item.slug}`}
+                    className="fw-bold text-primary mt-3"
+                  >
+                    More <i className="bi bi-arrow-right-circle"></i>
+                  </Link>
+                </div>
               </div>
             </Link>
           </div>

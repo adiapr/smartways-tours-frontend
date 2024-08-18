@@ -40,14 +40,14 @@ const BlogListV2 = () => {
                   className="text-60 lg:text-40 md:text-30 text-white"
                   data-aos="fade-up"
                 >
-                  Artikel
+                  Travel Blogs
                 </h1>
                 <p
                   className="text-white mt-5"
                   data-aos="fade-up"
                   data-aos-delay="100"
                 >
-                  Temukan tempat menakjubkan dengan penawaran eksklusif dan Dapatkan artikel menarik sebagai referensi wisata kamu.
+                  Curated journey from the best in the industry
                 </p>
               </div>
             </div>

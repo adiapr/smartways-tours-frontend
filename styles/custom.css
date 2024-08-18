@@ -1,0 +1,6 @@
+.card-article {
+    border: solid 1px rgb(211, 211, 211) !important;
+}
+.card-article:hover{
+    border: solid 2px rgb(118, 117, 117) !important;
+}
