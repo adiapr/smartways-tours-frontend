@@ -1,10 +1,8 @@
 import React from 'react'
-// import Header1 from "@/components/header/header-1";
 import Header1 from "@/components/header/header-1";
-import Hero2 from "@/components/hero/hero-karir";
-import HelpSearchBlock from "@/components/block/HelpSearchBlock";
-import HelpBlock from "@/components/block/HelpCareer";
-import JoinGroup from "@/components/home/home-1/JoinGroup";
+import Hero2 from "../../components/hero/hero-karir";
+import HelpBlock from "../../components/block/HelpCareer";
+import JoinGroup from "../../components/home/home-1/JoinGroup";
 import DefaultFooter from "@/components/footer/default";
 
 export const metadata = {
