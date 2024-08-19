@@ -4,6 +4,7 @@ import Hero2 from "../../components/hero/hero-karir";
 import HelpBlock from "../../components/block/HelpCareer";
 import JoinGroup from "../../components/home/home-1/JoinGroup";
 import DefaultFooter from "../../components/footer/default";
+import Image from 'next/image';
 
 export const metadata = {
   title: "Karir | Smartway.tours",
@@ -11,6 +12,29 @@ export const metadata = {
 };
 
 function Karir() {
+  const posisi = [
+    {
+      id: 1,
+      title: 'Tour leader (English speaker)',
+      subtitle: 'Buat kamu yang pengen kerja sambil jalan-jalan dan ketemu banyak orang dari Sabang sampai Merauke, bahkan Eropa, Amerika, Asia dan negara lain yang belum pernah kamu denger sebelumnya. Kamu bisa temuin itu semua di posisi kerja ini.' 
+    },
+    {
+      id: 2,
+      title: 'Sosial Media Marketing',
+      subtitle: 'Kamu demen maen sosmed dan bisa bikin postingan yang ningkatin engagement rate. Ini posisi kerja yang bagus buat kamu belajar tentang algoritma social media.' 
+    },
+    {
+      id: 3,
+      title: 'Fotografer dan videographer',
+      subtitle: 'Buat kamu yang suka motret dan bikin video, kamu bisa apply posisi ini nih!' 
+    },
+    {
+      id: 4,
+      title: 'Content creator',
+      subtitle: 'Kamu jago edit video dan bikin konten yang FYP? Daftar untuk posisi ini aja!' 
+    },
+  ];
+
   return (
     <>
         <Header1 />
@@ -44,6 +68,54 @@ function Karir() {
             <div className="card-body bg-primary rounded-2 text-center text-white py-30">
               <h1>Gimana asik banget kan?</h1>
               <p className='text-white'>Buruan daftar sekarang! Sebelum kesempatan ini diambil orang.</p>
+            </div>
+          </div>
+          <div className="row mt-50 mb-50">
+            <div className="col-md-6">
+              <h3 className="fw-bold">
+                Posisi yang kami butuhkan :
+              </h3>
+              <ul className='mt-10'>
+                {
+                  posisi.map((item) => (
+                    <li key={item.id} className='mt-10'>
+                      <p className="fw-bold text-black  text-20">
+                        <i className="bi bi-check-circle-fill text-primary mr-10"></i> {item.title}
+                      </p>
+                      <p className="ml-40">
+                        {item.subtitle}
+                      </p>
+                    </li>
+                  ))
+                }
+                
+              </ul>
+            </div>
+            <div className="col-md-6">
+              <div
+                className="col-md-12"
+                data-aos="fade-up"
+                data-aos-delay={100}
+              >
+                <div className="ctaCard -type-1 rounded-4 ">
+                  <div className="ctaCard__image ratio ratio-63:55">
+                    <Image
+                      width={636}
+                      height={555}
+                      className="img-ratio js-lazy loaded"
+                      src="/img/masthead/2/3.png"
+                      alt="image"
+                    />
+                  </div>
+                  <div className="ctaCard__content py-20 px-20 lg:py-30 lg:px-30">
+                      <>
+                        <div className="text-20 fw-bold text-white mb-10">
+                          Submit CV-mu sekarang! <br />  Siapa tau dipanggil interview.
+                        </div>
+                      </>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

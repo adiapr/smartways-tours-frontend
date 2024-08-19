@@ -12,8 +12,6 @@ const Index = () => {
       <div className="masthead__bg bg-dark-3">
         <img alt="image" src="/img/masthead/2/bg.png" className="js-lazy" />
       </div>
-      {/* End bg image */}
-
       <div className="container">
 
         <div className="masthead__content">
@@ -27,13 +25,7 @@ const Index = () => {
               <p className="z-2 text-white mt-20">
                 Temukan karir impianmu dengan budaya kerja yang Gen-Z banget bersama Smartway!
               </p>
-
-              {/* <MainFilterSearchBox /> */}
-
-              {/* End filter content */}
             </div>
-            {/* End .col */}
-
             <div className="col-xl-7">
               <div className="masthead__images relative-1">
                 <div data-aos="fade" data-aos-delay="400">
@@ -43,8 +35,6 @@ const Index = () => {
                     className="js-mouse-move"
                   />
                 </div>
-                {/* End left image */}
-
                 <div data-aos="fade" data-aos-delay="600">
                   <img
                     src="/img/masthead/2/2.png"
@@ -52,8 +42,6 @@ const Index = () => {
                     className="js-mouse-move"
                   />
                 </div>
-                {/* End right top image */}
-
                 <div data-aos="fade" data-aos-delay="800">
                   <img
                     src="/img/masthead/2/3.png"
@@ -61,18 +49,11 @@ const Index = () => {
                     className="js-mouse-move"
                   />
                 </div>
-                {/* End right bottom image */}
               </div>
-
-              {/* End .masthead__images */}
             </div>
-            {/* End .col */}
           </div>
-          {/* End .row */}
         </div>
-        {/* End .masthead__content */}
       </div>
-      {/* End .container */}
     </section>
   );
 };
