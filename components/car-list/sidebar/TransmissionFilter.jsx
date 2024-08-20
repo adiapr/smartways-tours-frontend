@@ -12,10 +12,8 @@ const TransmissionFilter = () => {
           </div>
         </div>
         <div className="col-auto">
-          <div className="text-15 text-light-1">92</div>
         </div>
       </div>
-      {/* End .row */}
       <div className="row y-gap-10 items-center justify-between">
         <div className="col-auto">
           <div className="form-checkbox d-flex items-center">
@@ -27,10 +25,8 @@ const TransmissionFilter = () => {
           </div>
         </div>
         <div className="col-auto">
-          <div className="text-15 text-light-1">45</div>
         </div>
       </div>
-      {/* End .row */}
     </>
   );
 };

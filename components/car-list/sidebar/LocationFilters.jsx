@@ -2,15 +2,15 @@ const LocationFilter = () => {
   const filters = [
     {
       label: "Jawa Timur",
-      count: 92,
+      count: '',
     },
     {
       label: "Bali ",
-      count: 45,
+      count: '',
     },
     {
       label: "Lombok ",
-      count: 45,
+      count: '',
     },
   ];
 
