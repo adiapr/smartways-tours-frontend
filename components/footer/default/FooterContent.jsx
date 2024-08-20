@@ -69,7 +69,7 @@ const FooterContent = () => {
               </Link>
           </div>
           <div className="d-flex y-gap-10 flex-column">
-              <Link target="_blank" href={'#'}>
+              <Link  href={'/career'}>
                 Karir
               </Link>
           </div>

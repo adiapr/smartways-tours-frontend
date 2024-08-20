@@ -97,21 +97,62 @@ function Karir() {
                 data-aos="fade-up"
                 data-aos-delay={100}
               >
-                <div className="ctaCard -type-1 rounded-4 ">
-                  <div className="ctaCard__image ratio ratio-63:55">
-                    <Image
-                      width={636}
-                      height={555}
-                      className="img-ratio js-lazy loaded"
-                      src="/img/masthead/2/3.png"
-                      alt="image"
-                    />
-                  </div>
+                <div
+                  className="rounded-4"
+                  style={{
+                    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/masthead/2/3.png')`,
+                    backgroundSize:'cover'
+                  }}
+                >
                   <div className="ctaCard__content py-20 px-20 lg:py-30 lg:px-30">
                       <>
                         <div className="text-20 fw-bold text-white mb-10">
-                          Submit CV-mu sekarang! <br />  Siapa tau dipanggil interview.
+                          <h3>
+                            Submit CV-mu sekarang!
+                          </h3>
+                          <p className='text-white'>
+                            Siapa tau dipanggil interview.
+                          </p>
+                          <hr />
                         </div>
+                        <form action="" method="post">
+                          <div className="form-group mt-2">
+                            <label htmlFor="" className="font-bold text-white">Nama Lengkap</label>
+                            <input type="text" name="name" id="" className="form-control bg-white" placeholder='Masukkan nama lengkap anda...'/>
+                          </div>
+                          <div className="form-group mt-2">
+                            <label htmlFor="" className="font-bold text-white">No Whatsapp</label>
+                            <input type="nomber" name="phone" id="" className="form-control bg-white" placeholder='Masukkan no whatsapp yang aktif...'/>
+                          </div>
+                          <div className="form-group mt-2">
+                            <label htmlFor="" className="font-bold text-white">Email</label>
+                            <input type="email" name="email" id="" className="form-control bg-white" placeholder='Masukkan email anda...'/>
+                          </div>
+                          <div className="form-group mt-2">
+                            <label htmlFor="" className="font-bold text-white">Posisi yang dilamar</label>
+                            <select className='form-control' name="psition" id="">
+                              <option value="">- Pilih posisi yang dilamar -</option>
+                              {
+                                posisi.map((item) => (
+                                  <option value={item.title} key={item.id}>{item.title}</option>
+                                ))
+                              }
+                            </select>
+                          </div>
+                          <div className="form-group mt-2">
+                            <label htmlFor="" className="font-bold text-white">Akun Tiktok atau Instagram</label>
+                            <input type="text" name="sosmed" id="" className="form-control bg-white" placeholder='Masukkan username tiktok/instagram'/>
+                          </div>
+                          <div className="form-group mt-2">
+                            <label htmlFor="" className="font-bold text-white">Kenapa kamu cocok jadi tim Smartway</label>
+                            <textarea name="description" id="" className="form-control" placeholder='Jelaskan dengan bahasa santaimu saja...'></textarea>
+                          </div>
+                          <div className="form-group mt-2">
+                            <label htmlFor="" className="font-bold text-white">Upload CV kamu dalam format .pdf</label>
+                            <input type="file" name="cv" id="" className="form-control" />
+                          </div>
+                          <button type="submit" className="btn btn-primary w-100 mt-20">Kirim Lamaran</button>
+                        </form>
                       </>
                   </div>
                 </div>
