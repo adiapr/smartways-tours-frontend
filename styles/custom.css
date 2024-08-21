@@ -4,3 +4,8 @@
 .card-article:hover{
     border: solid 2px rgb(118, 117, 117) !important;
 }
+
+ul, li{
+    list-style: disc  !important;
+    margin-left: 10px;
+}

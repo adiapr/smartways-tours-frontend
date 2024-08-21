@@ -6,6 +6,7 @@ import Overview from './Overview';
 import MapPropertyFinder from './MapPropertyFinder';
 import styled from 'styled-components';
 import CarGallery from "@/components/car-single/CarGallery";
+import { formatRupiah } from '@/utils/utility';
 
 const locationMapping = {
     "1": "Jawa Timur",
@@ -118,7 +119,8 @@ const CarIndex = ({ slug }) => {
                                                 <div className="text-14 text-light-1">
                                                     Harga
                                                     <span className="text-20 fw-500 text-dark-1 ml-5">
-                                                        Rp.{car?.price},-
+                                                        <s className="text-10">{formatRupiah(car?.start_price)}</s> <br /> 
+                                                        {formatRupiah(car?.price)}
                                                     </span>
                                                 </div>
                                             </div>
@@ -153,15 +155,35 @@ const CarIndex = ({ slug }) => {
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <IframeWrapper>
-                            <div dangerouslySetInnerHTML={{ __html: car?.youtube }}></div>
-                        </IframeWrapper>
+                    <div className="row mt-50">
+                        <div className='col-md-6'>
+                            <IframeWrapper>
+                                <div dangerouslySetInnerHTML={{ __html: car?.youtube }}></div>
+                            </IframeWrapper>
+                        </div>
+                        <div className="col-md-3">
+                            <h3 className="text-22 fw-bold">Sudah Termasuk</h3>
+                            <p className="text-dark-1 text-15 mt-20">
+                                <div dangerouslySetInnerHTML={{ __html: car?.include }}></div>
+                            </p>
+                        </div>
+                        <div className="col-md-3">
+                            <h3 className="text-22 fw-bold">Belum Termasuk</h3>
+                            <p className="text-dark-1 text-15 mt-20">
+                                <div dangerouslySetInnerHTML={{ __html: car?.no_include }}></div>
+                            </p>
+                        </div>
+                        <div className="col-md-12">
+                            <h3 className="text-22 fw-bold mt-20">Syarat dan Ketentuan</h3>
+                            <p className="text-dark-1 text-15 mt-20">
+                                <div dangerouslySetInnerHTML={{ __html: car?.ketentuan }}></div>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section className="mt-40 pt-40">
+            <section className="mt-40 pt-10">
                 <div className="container">
                     <h3 className="text-22 fw-500 mb-20 fw-bold">Lokasi</h3>
                     <div className="rounded-4 overflow-hidden map-500">

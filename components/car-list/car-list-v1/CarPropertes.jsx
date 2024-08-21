@@ -179,10 +179,10 @@ const CarProperties = () => {
                               <div className="text-14 ml-10">AC</div>
                             </div>
                           </div>
-                          <div className="col-sm-6">
+                          <div className="col-sm-12">
                             <div className="d-flex items-center">
                               <i className="bi bi-database-fill" />
-                              <div className="text-14 ml-10">Full to full</div>
+                              <div className="text-14 ml-10">{item?.bensin}</div>
                             </div>
                           </div>
                         </div>
