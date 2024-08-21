@@ -5,6 +5,7 @@ import PropertyHighlights from './PropertyHighlights';
 import Overview from './Overview';
 import MapPropertyFinder from './MapPropertyFinder';
 import styled from 'styled-components';
+import CarGallery from "@/components/car-single/CarGallery";
 
 const locationMapping = {
     "1": "Jawa Timur",
@@ -46,7 +47,7 @@ const CarIndex = ({ slug }) => {
         }
     }, [slug])
 
-    // console.log(car)
+    // console.log(car.documentations)
 
     if (!car) {
         return <div>Loading...</div>
@@ -74,8 +75,7 @@ const CarIndex = ({ slug }) => {
                                             <div className="d-flex x-gap-5 items-center">
                                                 <i className="icon-location text-16 text-light-1" />
                                                 <div className="text-15 text-light-1">
-                                                    {car?.location?.location}
-                                                    {/* {locationNames} */}
+                                                    {car?.location?.location} - {car.reviews_count} review
                                                 </div>
                                             </div>
                                         </div>
@@ -84,9 +84,10 @@ const CarIndex = ({ slug }) => {
                             </div>
 
                             <div className="mt-40">
-                                <div className="slider__image">
+                                {/* <div className="slider__image">
                                     <img src={car?.media[0]?.original_url} alt={car?.title} style={{ aspectRatio:'16/9' }} />
-                                </div>
+                                </div> */}
+                                <CarGallery documentations={car?.documentations}/>
                             </div>
                         </div>
 

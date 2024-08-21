@@ -95,8 +95,8 @@ const CarProperties = () => {
       <div className="col-xl-9">
         <div className="row y-gap-30">
           {filteredData.slice(0, 5).map((item) => (
-            <div className="col-12" key={item?.id}>
-              <div className="border-top-light pt-30">
+            <div className="col-6 col-md-12 px-1" key={item?.id}>
+              <div className="border-light p-2">
                 <div className="row x-gap-20 y-gap-20">
                   <div className="col-md-auto">
                     <div className="relative d-flex">
@@ -136,7 +136,6 @@ const CarProperties = () => {
                             </div>
                           </div>
                           <div className="col-auto">
-                            {/* <div className="size-3 rounded-full bg-light-1" /> */}
                           </div>
                           <div className="col-auto">
                             <div className="text-14 text-light-1">{item.category}</div>
@@ -144,7 +143,6 @@ const CarProperties = () => {
                         </div>
                         <h3 className="text-18 lh-16 fw-500 mt-5">
                           {item?.name}{" "}
-                          {/* <span className="text-15 text-light-1">or similar</span> */}
                         </h3>
                       </div>
                       <div className="col-lg-7 mt-20">
@@ -177,13 +175,13 @@ const CarProperties = () => {
                           </div>
                           <div className="col-sm-6">
                             <div className="d-flex items-center">
-                              <i className="icon-transmission" />
-                              <div className="text-14 ml-10">Air conditioning</div>
+                              <i className="bi bi-cloud-haze2-fill" />
+                              <div className="text-14 ml-10">AC</div>
                             </div>
                           </div>
                           <div className="col-sm-6">
                             <div className="d-flex items-center">
-                              <i className="icon-speedometer" />
+                              <i className="bi bi-database-fill" />
                               <div className="text-14 ml-10">Full to full</div>
                             </div>
                           </div>
@@ -194,7 +192,7 @@ const CarProperties = () => {
                           <div className="d-flex items-center mt-5">
                             <i className="icon-check text-10" />
                             <div className="text-14 fw-500 text-green-2 ml-10">
-                              Free Cancellation
+                              Include Driver
                             </div>
                           </div>
                         </div>
@@ -218,6 +216,7 @@ const CarProperties = () => {
                     </div>
 
                     <div className="text-22 lh-12 fw-600 mt-70 md:mt-20">
+                      <s className='text-15'>{formatRupiah(item?.start_price)}</s> <br />
                       {formatRupiah(item?.price)}
                     </div>
                     <Link

@@ -17,7 +17,7 @@ const index = () => {
     <>
       <div className="header-margin"></div>
       <Header11 />
-      <section className="pt-60">
+      <section className="">
         <div className="container">
           <div className="row">
             <div className="col-12">
