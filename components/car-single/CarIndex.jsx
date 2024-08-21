@@ -104,7 +104,7 @@ const CarIndex = ({ slug }) => {
                             <div>
                                 <div className="border-top-light mt-40 pt-40 mb-40">
                                     <h3 className="text-22 fw-bold">Detail</h3>
-                                    <p className="text-dark-1 text-15 mt-20">
+                                    <p className="text-dark-1 text-15 mt-20 textarea">
                                         <div dangerouslySetInnerHTML={{ __html: car?.description }}></div>
                                     </p>
                                 </div>
@@ -163,18 +163,18 @@ const CarIndex = ({ slug }) => {
                         </div>
                         <div className="col-md-3">
                             <h3 className="text-22 fw-bold">Sudah Termasuk</h3>
-                            <p className="text-dark-1 text-15 mt-20">
+                            <p className="text-dark-1 text-15 mt-20 textarea">
                                 <div dangerouslySetInnerHTML={{ __html: car?.include }}></div>
                             </p>
                         </div>
                         <div className="col-md-3">
                             <h3 className="text-22 fw-bold">Belum Termasuk</h3>
-                            <p className="text-dark-1 text-15 mt-20">
+                            <p className="text-dark-1 text-15 mt-20 textarea">
                                 <div dangerouslySetInnerHTML={{ __html: car?.no_include }}></div>
                             </p>
                         </div>
                         <div className="col-md-12">
-                            <h3 className="text-22 fw-bold mt-20">Syarat dan Ketentuan</h3>
+                            <h3 className="text-22 fw-bold mt-20 textarea">Syarat dan Ketentuan</h3>
                             <p className="text-dark-1 text-15 mt-20">
                                 <div dangerouslySetInnerHTML={{ __html: car?.ketentuan }}></div>
                             </p>

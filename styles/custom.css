@@ -5,7 +5,7 @@
     border: solid 2px rgb(118, 117, 117) !important;
 }
 
-ul, li{
+.textarea ul, .textarea li{
     list-style: disc  !important;
     margin-left: 10px;
 }
