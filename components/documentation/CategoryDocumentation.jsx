@@ -7,6 +7,12 @@ import { documentationCategory } from '../data/desinations'
 function CategoryDocumentation() {
   return (
     <div className='container mt-90 mb-90'>
+      <h1 className="fw-semibold">
+      Photograph for every moment
+      </h1>
+      <p className='mt-0 mb-20 py-0'>
+        Get inspired to create your own beautiful moments!
+      </p>
       <div className="row">
         {documentationCategory.map((item) => (
           <div className='col-md-3 col-6 px-1 py-1' key={item.id}>

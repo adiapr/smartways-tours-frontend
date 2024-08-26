@@ -5,6 +5,13 @@ import Hero4 from "../../components/hero/hero-4";
 import React from 'react'
 import Travellers from "../../components/home/home-2/Travellers";
 import CategoryDocumentation from "../../components/documentation/CategoryDocumentation";
+import WhyTake from "../../components/documentation/WhyTake";
+import Guarantee from "../../components/documentation/Guarantee";
+
+export const metadata = {
+  title: "Layanan Dokumentasi | Smartway.tours",
+  description: "Smartway adalah travel agen profesional yang berdiri sejak 2016 dibawah naungan PT. Bagus Bahagia Bersama (BBB Group).",
+};
 
 function Documentation() {
   return (
@@ -13,6 +20,8 @@ function Documentation() {
         <Hero4 />
         {/* <Travellers /> */}
         <CategoryDocumentation />
+        <WhyTake />
+        <Guarantee />
         <JoinGroup />
         <DefaultFooter />
     </div>

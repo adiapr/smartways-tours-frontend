@@ -106,16 +106,6 @@ const Index = () => {
             ))}
           </Swiper>
         </div>
-        {/* <div className="masthead-slider__nav -prev js-prev">
-          <button className="button -outline-white size-50 flex-center text-white rounded-full hero4-prev-active">
-            <i className="icon-arrow-left" />
-          </button>
-        </div>
-        <div className="masthead-slider__nav -next js-next">
-          <button className="button -outline-white size-50 flex-center text-white rounded-full hero4-next-active">
-            <i className="icon-arrow-right" />
-          </button>
-        </div> */}
       </section>
     </>
   );
