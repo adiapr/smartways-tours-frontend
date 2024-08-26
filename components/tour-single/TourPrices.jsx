@@ -8,25 +8,25 @@ function TourPrices({prices}) {
         <div className="table-responsive">
             <table className="table table-hover table-striped">
                 <tr className='fw-bold bg-dark-3 text-white '>
-                    <th className='fw-bold'>#</th>
-                    <th className='fw-bold'>Jenis Tur</th>
-                    <th className='fw-bold'>Harga</th>
-                    <th className='fw-bold'>Pesan sekarang</th>
+                    <th className='fw-bold px-1 py-3'>#</th>
+                    <th className='fw-bold px-1 py-3'>Jenis Tur</th>
+                    <th className='fw-bold px-1 py-3'>Harga</th>
+                    <th className='fw-bold px-1 py-3'>Pesan sekarang</th>
                 </tr>
                 {prices.map((item, index) =>
                     <tr className='border-bottom' key={item.id}>
-                        <td>{index + 1}</td>
-                        <td>{item.name}</td>
-                        <td>
+                        <td className='px-1 py-1'>{index + 1}</td>
+                        <td className='px-1 py-1'>{item.name}</td>
+                        <td className='px-1 py-1'>
                         <s>Rp. {parseInt(item.start_price).toLocaleString('id-ID')},-</s> <br />
                         <b>Rp. {parseInt(item.price).toLocaleString('id-ID')},-</b>
                         </td>
-                        <td>
+                        <td className='px-1 py-1'>
                             <Link
                                 href={`/cart/${item.uuid}`}
                                 className="button h-50 px-24 -dark-1 bg-blue-1 text-white mt-10"
                             >
-                                Pilih Paket <div className="icon-arrow-top-right ml-15" />
+                                Pilih <div className="icon-arrow-top-right ml-15" />
                             </Link>
                         </td>
                     </tr>

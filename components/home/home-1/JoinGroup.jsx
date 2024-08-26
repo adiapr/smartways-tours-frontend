@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 function JoinGroup() {
@@ -43,9 +44,9 @@ function JoinGroup() {
               {/* End email input */}
 
               <div>
-                <a href='https://chat.Whatsapp.com/FQJZn7QB43a3r4BGve9b3L' target='_blank' className="button -md h-60 bg-success fw-bold text-white">
+                <Link href='https://chat.Whatsapp.com/FQJZn7QB43a3r4BGve9b3L' target='_blank' className="button -md h-60 bg-success fw-bold text-white">
                   <Image src={'/img/icons/whatsapp.svg'} width={18} height={18} /> &nbsp; Gabung Grup Whatsapp
-                </a>
+                </Link>
               </div>
               {/* End subscribe btn */}
             </div>
