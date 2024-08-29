@@ -19,4 +19,9 @@
     height: 100%;
     background-color: rgba(27, 9, 234, 0.193); /* Warna biru dengan opasitas 50% */
     z-index: -1; /* Pastikan overlay berada di bawah konten */
-  }
+}
+
+.article ul, .article li{
+    list-style: disc  !important;
+    margin-left: 10px;
+}
