@@ -5,6 +5,7 @@ import DefaultHeader from "@/components/header/default-header";
 import Faq from "@/components/faq/Faq";
 import DefaultFooter from "@/components/footer/default";
 import LocationTopBar from "@/components/common/LocationTopBar";
+import JoinGroup from "@/components/home/home-1/JoinGroup";
 
 export const metadata = {
   title: "FAQ | Smartway.tours",
@@ -50,7 +51,8 @@ const Contact = () => {
         {/* End .container */}
       </section>
 
-      <CallToActions />
+      {/* <CallToActions /> */}
+      <JoinGroup />
       <DefaultFooter />
     </>
   );

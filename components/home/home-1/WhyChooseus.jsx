@@ -14,7 +14,7 @@ const WhyChooseUs = () => {
         <h2 className="mb-4">{t('common.whyChooseUs.title')}</h2>
         <p>{t('common.whyChooseUs.subtitle')}</p>
         <div className="row mt-5">
-          <div className="col-md-4 mb-4">
+          <div className="col-md-4 my-4">
             <div className="card shadow border-0">
               <div className="card-body d-flex align-items-center">
                 <div>
@@ -31,7 +31,7 @@ const WhyChooseUs = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-4 mb-4">
+          <div className="col-md-4 my-4">
             <div className="card shadow border-0">
               <div className="card-body d-flex align-items-center">
                 <div>
@@ -48,7 +48,7 @@ const WhyChooseUs = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-4 mb-4">
+          <div className="col-md-4 my-4">
             <div className="card shadow border-0">
               <div className="card-body d-flex align-items-center">
                 <div>
@@ -65,7 +65,7 @@ const WhyChooseUs = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-4 mb-4">
+          <div className="col-md-4 my-4">
             <div className="card shadow border-0">
               <div className="card-body d-flex align-items-center">
                 <div>
@@ -82,7 +82,7 @@ const WhyChooseUs = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-4 mb-4">
+          <div className="col-md-4 my-4">
             <div className="card shadow border-0">
               <div className="card-body d-flex align-items-center">
                 <div>
@@ -99,7 +99,7 @@ const WhyChooseUs = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-4 mb-4">
+          <div className="col-md-4 my-4">
             <div className="card shadow border-0">
               <div className="card-body d-flex align-items-center">
                 <div>

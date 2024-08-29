@@ -99,7 +99,7 @@ const CustomSlider = () => {
         // navigation
         pagination={{ clickable: true }}
         dynamicBullets={ true }
-        // autoplay={{ delay: 3000 }}
+        autoplay={{ delay: 2000 }}
         loop
       >
         {item.map((slide, index) => (
