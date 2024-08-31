@@ -40,7 +40,7 @@ function TopSlider({tour}) {
                                     style={{ height: "501px" }}
                                     className="rounded-4 col-12 cover object-cover"
                                 />
-                                <div className="px-50" style={{ position:'absolute', bottom: "0", borderRadius: '10px 0px', backgroundColor: 'rgb(0,0,0, 0.5)', margin: 'auto' }}>
+                                <div className="px-50" style={{ position:'absolute', bottom: "0", borderRadius: '0px 10px', backgroundColor: 'rgb(0,0,0, 0.5)', margin: 'auto' }}>
                                     <h1 className="text-white">Judul Foto</h1>
                                 </div>
                             </div>
@@ -73,15 +73,6 @@ function TopSlider({tour}) {
             </div>
             </div>
         </section>
-        <div className="container">
-            <div className="row">
-                <div className="col-md-8">
-                    <p>
-                    Some moments deserve more than a selfie, especially moments that are shared with family. Let SweetEscape turn your moments together into memories that last for a lifetime.
-                    </p>
-                </div>
-            </div>
-        </div>
     </>
   )
 }

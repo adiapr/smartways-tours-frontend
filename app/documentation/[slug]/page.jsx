@@ -5,6 +5,7 @@ import DefaultFooter from "@/components/footer/default";
 import JoinGroup from "@/components/home/home-1/JoinGroup";
 import toursData from "@/data/tours";
 import TopSlider from "@/components/documentation/TopSlider";
+import Slide2 from "@/components/documentation/Slide2";
 
 // export const metadata = {
 //   title: "Layanan Dokumentasi | Smartway.tours",
@@ -18,6 +19,18 @@ function page({ params }) {
     <div>
       <DefaultHeader />
       <TopSlider tour={tour} />
+      
+      <div className="container">
+            <div className="row">
+                <div className="col-md-8">
+                    <p>
+                      Some moments deserve more than a selfie, especially moments that are shared with family. Let SweetEscape turn your moments together into memories that last for a lifetime.
+                    </p>
+                    <Slide2 />
+                </div>
+            </div>
+        </div>
+      
       <JoinGroup />
       <DefaultFooter />
     </div>
