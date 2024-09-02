@@ -25,3 +25,9 @@
     list-style: disc  !important;
     margin-left: 10px;
 }
+
+.sticky-div {
+    position: sticky !important;
+    top: 100px !important; /* Ubah ini sesuai kebutuhan Anda */
+    /* overflow: scroll; */
+}

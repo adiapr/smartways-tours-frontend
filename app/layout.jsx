@@ -35,16 +35,18 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/img/logo/logo_bulat.png" /> 
       </head>
       <body>
-        <main>
-          <I18nextProviderWrapper>
-            <SessionProvider>
-              <Provider store={store}>
-                {children}
-                <SrollTop />
-              </Provider>
-            </SessionProvider>
-          </I18nextProviderWrapper>
-        </main>
+        {/* <main> */}
+          <>
+            <I18nextProviderWrapper>
+              <SessionProvider>
+                <Provider store={store}>
+                  {children}
+                  <SrollTop />
+                </Provider>
+              </SessionProvider>
+            </I18nextProviderWrapper>
+          </>
+        {/* </main> */}
       </body>
     </html>
   );

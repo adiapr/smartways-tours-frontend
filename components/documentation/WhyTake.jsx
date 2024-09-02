@@ -45,16 +45,16 @@ function WhyTake() {
   return (
     <>
     <div className="container">
-        <h1 className="fw-bold">
+        <h3 className="fw-bold">
             Why take photos with us?
-        </h1>
+        </h3>
         <p>
         We bring your moments to life with professional quality and creative vision.
         </p>
         <div className="row y-gap-30 pt-10 lg:pt-40">
             {helpBlockContent.map((item) => (
             <div className="col-lg-4 col-6 px-1" key={item.id}>
-                <div className="bg-blue-1-05 rounded-4 px-50 py-40">
+                <div className="bg-blue-1-05 rounded-4 px-md-50 px-10 py-40">
                     <div className="size-70 bg-white rounded-full flex-center">
                         <Image width={30} height={30} src={item.icon} alt="icon" />
                     </div>

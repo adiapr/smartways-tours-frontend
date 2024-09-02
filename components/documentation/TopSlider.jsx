@@ -2,27 +2,26 @@
 // import React from 'react'
 import Image from "next/image";
 import React, { useState } from 'react';
-import SidebarRight from "@/components/tour-single/SidebarRight";
-import Overview from "@/components/tour-single/Overview";
-import TourSnapShot from "@/components/tour-single/TourSnapShot";
 import { Gallery, Item } from "react-photoswipe-gallery";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
-import ModalVideo from "react-modal-video"
+import { Autoplay, Navigation } from "swiper";
 
 
 function TopSlider({tour}) {
-    const [isOpen, setOpen] = useState(false);
   return (
-    <>
-        <section className="pt-40 js-pin-container">
+    <div>
+        <section className="pt-40 mx-auto" style={{ width:'97%' }}>
             <div className="">
             <div className="row y-gap-30">
-                <div className="col-xl-12">
+                <div className="col-xl-12 px-0">
                 <div className="relative d-flex justify-center overflow-hidden js-section-slider">
                     <Swiper
-                    modules={[Navigation]}
+                    modules={[Navigation, Autoplay]}
                     loop={true}
+                    autoplay={{ 
+                        delay: 2000,
+                        disableOnInteraction: false
+                     }}
                     navigation={{
                         nextEl: ".js-img-next",
                         prevEl: ".js-img-prev",
@@ -38,7 +37,7 @@ function TopSlider({tour}) {
                                     src={slide}
                                     alt="image"
                                     style={{ height: "501px" }}
-                                    className="rounded-4 col-12 cover object-cover"
+                                    className="rounded-4 col-12 cover object-cover w-100"
                                 />
                                 <div className="px-50" style={{ position:'absolute', bottom: "0", borderRadius: '0px 10px', backgroundColor: 'rgb(0,0,0, 0.5)', margin: 'auto' }}>
                                     <h1 className="text-white">Judul Foto</h1>
@@ -51,7 +50,7 @@ function TopSlider({tour}) {
                     <Gallery>
                     {tour?.slideImg?.map((slide, i) => (
                         <div
-                        className="absolute px-10 py-10 col-12 h-full d-flex justify-end items-end z-2 bottom-0 end-0"
+                        className="absolute py-10 col-12 h-full d-flex justify-end items-end z-2 bottom-0 end-0"
                         key={i}
                         >
                         </div>
@@ -73,7 +72,7 @@ function TopSlider({tour}) {
             </div>
             </div>
         </section>
-    </>
+    </div>
   )
 }
 
