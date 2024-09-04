@@ -1,5 +1,5 @@
 "use client";
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import toursData from "@/data/tours";
 import TopSlider from "@/components/documentation/TopSlider";
@@ -9,21 +9,44 @@ import Information from "@/components/documentation/Information";
 import WhyTake from './WhyTake';
 
 function Index({ params }) {
-    // console.log(params);
+    // console.log(params.slug);
     const id = params.id;
     const tour = toursData.find((item) => item.id == id) || toursData[0];
+    const [documentatation, setDocumentation] = useState(null);
+    useEffect( ()=> {
+        const fetchData = async () => {
+            try {
+                const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/layanan-dokumentasi/${params.slug}`);
+                // console.log("respon : ", response)
+                const data = await response.json();
+                setDocumentation(data)
+                // console.log(data);
+            } catch (error) {
+                console.log('Err : ', error)
+            }
+        }
+        if(params) {
+            fetchData();
+        }
+    }, [params])
+    // console.log(documentatation.Atas)
+
+    if(!documentatation){
+        return <div>Loading...</div>
+    }
+
   return (
     <div>
-        <TopSlider tour={tour} />
+        <TopSlider documentatation={documentatation} />
         <div className="container">
                 <div className="row">
                     <div className="col-md-8">
-                        <p>
-                        Some moments deserve more than a selfie, especially moments that are shared with family. Let SweetEscape turn your moments together into memories that last for a lifetime.
-                        </p>
-                        <Slide2 />
-                        <Moments />
-                        <Information />
+                        <div className="article">
+                            <p className="text-15" dangerouslySetInnerHTML={{ __html: documentatation.description }}></p>
+                        </div>
+                        <Slide2 bawah={documentatation.Bawah} />
+                        <Moments documentatation={documentatation} />
+                        <Information documentatation={documentatation} />
                         <div className="mt-50"></div>
                         <WhyTake />
                         
@@ -34,13 +57,13 @@ function Index({ params }) {
                             <div className="card">
                                 <div className="card-header d-flex align-items-center justify-content-between">
                                     <h3 className="fw-bold">
-                                        Garduation
+                                        {documentatation.name}
                                     </h3>
                                     <div className='text-end'>
-                                        <p style={{ fontSize: "12px" }}>Harga Mulai</p>
-                                        <h6  className='my-0 py-0'><s>Rp.100.000,-</s></h6>
+                                        <p style={{ fontSize: "12px" }}>Price</p>
+                                        <h6  className='my-0 py-0'><s>{documentatation.start_price}</s></h6>
                                         <h5 className='font-bold my-0 py-0'>
-                                            Rp.20.000,-
+                                            {documentatation.price}
                                         </h5>
                                     </div>
                                 </div>

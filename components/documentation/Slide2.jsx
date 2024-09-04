@@ -6,7 +6,7 @@ import 'swiper/swiper-bundle.min.css';
 import 'swiper/swiper.min.css';
 import Image from 'next/image';
 
-function Slide2() {
+function Slide2({bawah}) {
     const slider = [
         {
             id: 1,
@@ -59,14 +59,15 @@ function Slide2() {
                     modules={[Pagination, FreeMode, Navigation]}
                     className="mySwiper"
                 >
-                    {slider.map((item) => (
+                    {bawah.map((item) => (
                         <SwiperSlide key={item.id}>
                             <Image
                                 width={500}  // Tetapkan lebar tetap untuk gambar
                                 height={500} // Sesuaikan tinggi gambar
                                 priority
-                                src={item.img}
+                                src={item.media[0].original_url}
                                 alt={`image-${item.id}`}
+                                unoptimized
                                 className="rounded-4 col-12 cover object-cover"
                                 style={{ objectFit: "cover", borderRadius: "8px", height: "250px" }}
                             />

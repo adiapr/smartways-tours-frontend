@@ -31,3 +31,56 @@
     top: 100px !important; /* Ubah ini sesuai kebutuhan Anda */
     /* overflow: scroll; */
 }
+
+.citiesCard {
+    position: relative;
+  }
+  
+  .citiesCard__gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%; /* Sesuaikan tinggi gradient sesuai kebutuhan */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    z-index: 1; /* Pastikan gradient berada di atas gambar */
+  }
+  
+  .citiesCard__content {
+    position: relative;
+    z-index: 2; /* Pastikan konten berada di atas gradient */
+  }
+
+
+
+/* Animasi Skeleton */
+@keyframes loading-skeleton {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .skeleton-area .loading-skeleton {
+    background-color: #eee;
+    animation: loading-skeleton 0.5s infinite alternate;
+    pointer-events: none;
+  }
+  
+  /* Grayscale untuk gambar */
+  .skeleton-area .loading-skeleton img {
+    filter: grayscale(100%) contrast(0%) brightness(1.8);
+  }
+  
+  /* Skeleton untuk teks */
+  .skeleton-area h4,
+  .skeleton-area .text-14,
+  .skeleton-area .button {
+    background-color: #eee;
+    color: transparent;
+    border-radius: 4px;
+    animation: loading-skeleton 1.5s infinite alternate;
+  }
+  

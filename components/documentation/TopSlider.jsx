@@ -7,7 +7,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper";
 
 
-function TopSlider({tour}) {
+function TopSlider({documentatation}) {
+    // console.log(documentatation)
+    const atas = documentatation.Atas;
+    console.log(atas)
   return (
     <div>
         <section className="pt-40 mx-auto" style={{ width:'97%' }}>
@@ -27,35 +30,26 @@ function TopSlider({tour}) {
                         prevEl: ".js-img-prev",
                     }}
                     >
-                    {tour?.slideImg?.map((slide, i) => (
+                    {atas?.map((slide, i) => (
                         <SwiperSlide key={i}>
                             <div style={{ position:"relative" }}>
                                 <Image
                                     width={451}
                                     height={450}
                                     priority
-                                    src={slide}
+                                    src={slide?.media[0].original_url}
                                     alt="image"
+                                    unoptimized
                                     style={{ height: "501px" }}
                                     className="rounded-4 col-12 cover object-cover w-100"
                                 />
                                 <div className="px-50" style={{ position:'absolute', bottom: "0", borderRadius: '0px 10px', backgroundColor: 'rgb(0,0,0, 0.5)', margin: 'auto' }}>
-                                    <h1 className="text-white">Judul Foto</h1>
+                                    <h1 className="text-white">{documentatation.name}</h1>
                                 </div>
                             </div>
                         </SwiperSlide>
                     ))}
                     </Swiper>
-
-                    <Gallery>
-                    {tour?.slideImg?.map((slide, i) => (
-                        <div
-                        className="absolute py-10 col-12 h-full d-flex justify-end items-end z-2 bottom-0 end-0"
-                        key={i}
-                        >
-                        </div>
-                    ))}
-                    </Gallery>
 
                     <div className="absolute h-full col-11">
                     <button className="section-slider-nav -prev flex-center button -blue-1 bg-white shadow-1 size-40 rounded-full sm:d-none js-img-prev">

@@ -11,6 +11,7 @@ export const metadata = {
 };
 
 function page({params}) {
+  // console.log(params.slug)
   return (
     <div>
       <DefaultHeader />
