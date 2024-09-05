@@ -21,7 +21,7 @@ function ChoosePackage({price}) {
      <div className="col-12 mt-30">
         <div className="row">
             {/* Card 1 */}
-                {price.map((item) => (
+                {price?.map((item) => (
                     <div className="col-md-4 my-2 col-6 px-1" key={item.id}>
                         <div className="card">
                             <div className="card-header bg-blue-2 border-0">
