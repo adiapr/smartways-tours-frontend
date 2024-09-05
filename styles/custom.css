@@ -83,4 +83,30 @@
     border-radius: 4px;
     animation: loading-skeleton 1.5s infinite alternate;
   }
+
+  .step-item {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .step-content-wrapper {
+    cursor: pointer;
+  }
+  
+  .step.active .step-content {
+    font-weight: bold;
+  }
+  
+  .js-step-progress .step-item {
+    list-style: none;
+  }
+  
+  .js-step-form .step {
+    display: none;
+  }
+  
+  .js-step-form .step.active {
+    display: block;
+  }
+  
   

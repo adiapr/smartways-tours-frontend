@@ -68,21 +68,42 @@ function Index({ params }) {
                                     </div>
                                 </div>
                                 <div className="card-body">
-                                    <b>Paket Termasuk </b> <br />
-                                    <i className="text-primary bi bi-image"></i> Up to 100 edited photos <br />
-                                    <i className="text-primary bi bi-cloud-download"></i> Up to 40 downloadable photos
-                                    <hr />
-                                    <b>
-                                        Where will your photo shoot take place?
-                                    </b>
-                                    <select name="" id="" className="form-select">
-                                        <option value=""> - Pilih Tempat -</option>
-                                        <option value="Jawa Timur">Jawa Timur</option>
-                                        <option value="Bali">Bali</option>
-                                        <option value="Lombok">Lombok</option>
-                                    </select>
+                                    <form action="/documentation-checkout" method="get">
+                                        <b>Paket Termasuk </b> <br />
+                                        <i className="text-primary bi bi-image"></i> {documentatation.include1} <br />
+                                        <i className="text-primary bi bi-cloud-download"></i> {documentatation.include2}
+                                        <hr />
+                                        <b>
+                                            Where will your photo shoot take place?
+                                        </b>
+                                        <input type="hidden" name="category" value={documentatation.id} />
+                                        <select name="location" id="" className="form-select" required>
+                                            <option value=""> - Pilih Tempat -</option>
+                                            <option value="Surabaya">Surabaya</option>
+                                            <option value="Malang">Malang</option>
+                                            <option value="Bromo">Bromo</option>
+                                            <option value="Banyuwangi">Banyuwangi</option>
+                                            <option value="Bali">Bali</option>
+                                            <option value="Lombok">Lombok</option>
+                                            <option value="Yogyakarta">Yogyakarta</option>
+                                            <option value="Bandung">Bandung</option>
+                                            <option value="Jakarta">Jakarta</option>
+                                            <option value="Tokyo">Tokyo</option>
+                                            <option value="Osaka">Osaka</option>
+                                            <option value="Kyoto">Kyoto</option>
+                                            <option value="Perth">Perth</option>
+                                            <option value="Istanbul">Istanbul</option>
+                                            <option value="Ankara">Ankara</option>
+                                            <option value="Bangkok">Bangkok</option>
+                                            <option value="Kuala Lumpur">Kuala Lumpur</option>
+                                            <option value="Singapore">Singapore</option>
+                                            <option value="Taipei">Taipei</option>
+                                            <option value="Hanoi">Hanoi</option>
+                                            <option value="Ho Chi Minh City">Ho Chi Minh City</option>
+                                        </select>
 
-                                    <button type="submit" className="btn btn-primary w-100 mt-10">Cek Ketersediaan</button>
+                                        <button type="submit" className="btn btn-primary w-100 mt-10">Cek Ketersediaan</button>
+                                    </form>
                                 </div>
                             </div>
 

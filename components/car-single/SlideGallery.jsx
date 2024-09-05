@@ -12,7 +12,6 @@ const slides = [
 ];
 
 export default function   SlideGallery() {
-  // const [imagesNavSlider, setImagesNavSlider] = useState(null);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [showSwiper, setShowSwiper] = useState(false);
   useEffect(() => {
