@@ -20,10 +20,7 @@ function Moments({documentatation}) {
                 data-aos="fade"
                 data-aos-delay="1000"
                 >
-                <Link
-                    href="/rental-list-v3"
-                    className="citiesCard -type-3 d-block h-full rounded-4 "
-                >
+                <div className="citiesCard -type-3 d-block h-full rounded-4 ">
                     <div className="citiesCard__image ratio ratio-3:4">
                     <img className="col-12 js-lazy" src={item.media[0].original_url} alt="image" />
                     </div>
@@ -32,7 +29,7 @@ function Moments({documentatation}) {
                         {item.description}
                     </h4>
                     </div>
-                </Link>
+                </div>
                 </div>
             ))}
         </div>

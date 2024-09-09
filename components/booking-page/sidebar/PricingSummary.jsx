@@ -6,13 +6,10 @@ const PricingSummary = () => {
         <div className="col-auto">
           <div className="text-15">Superior Twin</div>
         </div>
-        {/* End col */}
         <div className="col-auto">
           <div className="text-15">US$3,372.34</div>
         </div>
-        {/* End col */}
       </div>
-      {/* End .row */}
 
       <div className="row y-gap-5 justify-between pt-5">
         <div className="col-auto">
@@ -22,7 +19,6 @@ const PricingSummary = () => {
           <div className="text-15">US$674.47</div>
         </div>
       </div>
-      {/* End .row */}
 
       <div className="row y-gap-5 justify-between pt-5">
         <div className="col-auto">
@@ -32,7 +28,6 @@ const PricingSummary = () => {
           <div className="text-15">FREE</div>
         </div>
       </div>
-      {/* End .row */}
 
       <div className="px-20 py-20 bg-blue-2 rounded-4 mt-20">
         <div className="row y-gap-5 justify-between">
@@ -44,9 +39,7 @@ const PricingSummary = () => {
           </div>
         </div>
       </div>
-      {/* End .row */}
     </div>
-    // End px-30
   );
 };
 

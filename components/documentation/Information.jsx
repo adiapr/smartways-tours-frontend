@@ -7,49 +7,6 @@ function Information({documentatation}) {
     setActiveId(activeId === id ? null : id);
   };
 
-  const faqContent = [
-    {
-      id: 1,
-      collapseTarget: "One",
-      title: "What do I need to hire a car?",
-      content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim ad minim veniam, quis nostrud exercitation ullamco.`,
-    },
-    {
-      id: 2,
-      collapseTarget: "Two",
-      title: "How old do I have to be to rent a car?",
-      content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim ad minim veniam, quis nostrud exercitation ullamco.`,
-    },
-    {
-      id: 3,
-      collapseTarget: "Three",
-      title: "Can I book a hire car for someone else?",
-      content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim ad minim veniam, quis nostrud exercitation ullamco.`,
-    },
-    {
-      id: 4,
-      collapseTarget: "Four",
-      title: "How do I find the cheapest car hire deal?",
-      content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim ad minim veniam, quis nostrud exercitation ullamco.`,
-    },
-    {
-      id: 5,
-      collapseTarget: "Five",
-      title: "What should I look for when I'm choosing a car?",
-      content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim ad minim veniam, quis nostrud exercitation ullamco.`,
-    },
-  ];
-
   return (
     <div>
       <h3 className="fw-bold mt-50 mb-10">Useful information</h3>

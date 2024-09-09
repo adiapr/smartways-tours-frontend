@@ -8,7 +8,8 @@ import PaymentSchedule from "./sidebar/PaymentSchedule";
 import PromoCode from "./sidebar/PromoCode";
 import RatingInfo from "./RatingInfo";
 
-const PaymentInfo = () => {
+const PaymentInfo = ({searchParams}) => {
+  console.log(searchParams);
   const [itemsTabs, setItemsTabs] = useState(1);
   const cardTabs = [
     { id: 1, name: "Credit/Debit Card" },
@@ -16,152 +17,79 @@ const PaymentInfo = () => {
   ];
 
   return (
-    <>
-      <div className="col-xl-7 col-lg-8">
-        <RatingInfo />
-        <div className="mt-40">
-          <h3 className="text-22 fw-500 mb-20">How do you want to pay?</h3>
-          <Tabs>
-            <TabList className="row y-gap-20 x-gap-20">
-              {cardTabs.map((item) => (
-                <Tab
-                  className="col-auto"
-                  onClick={() => setItemsTabs(item.id)}
-                  key={item.id}
-                >
-                  <button
-                    className={
-                      itemsTabs === item.id
-                        ? "button -dark-1 bg-blue-1 text-white px-20 py-15"
-                        : "button -blue-1 bg-light-2 px-20 py-15"
-                    }
-                  >
-                    {item.name}
-                  </button>
-                </Tab>
-              ))}
-            </TabList>
-            {/* End tablist */}
+      <>
+        <div className="col-xl-7 col-lg-8">
+          <RatingInfo />
+          <div className="mt-40">
+            <label htmlFor="" className="fw-bold">Date<span className="text-danger">*</span></label>
+            <input type="date" name="" id="" className="form-control border-1" />
+          </div>
+          <div className="mt-20">
+            <label htmlFor="" className="fw-bold">Time<span className="text-danger">*</span></label>
+            <input type="time" name="" id="" className="form-control border-1" />
+          </div>
+          <div className="mt-20">
+            <label htmlFor="" className="fw-bold">PAX</label>
+            <input type="text" name="" id="" className="form-control border-1" />
+          </div>
+          {/* End mt-40 */}
 
-            <TabPanel>
-              <div className="row x-gap-20 y-gap-20 pt-20">
-                <div className="col-12">
-                  <div className="form-input ">
-                    <input type="text" required />
-                    <label className="lh-1 text-16 text-light-1">
-                      Select payment method *
-                    </label>
-                  </div>
-                </div>
-                {/* End col */}
+          <div className="w-full h-1 bg-border mt-40 mb-40" />
 
-                <div className="col-md-6">
-                  <div className="form-input ">
-                    <input type="text" required />
-                    <label className="lh-1 text-16 text-light-1">
-                      Card holder name *
-                    </label>
-                  </div>
+          <h3 className="fw-bold">
+            More Details of Your Photo Shoot
+          </h3>
+          <div className="mt-20">
+            <label htmlFor="" className="fw-bold">Meeting Location<span className="text-danger">*</span></label>
+            <select name="" id="" className="form-control">
+              <option value="">- Select -</option>
+              <option value="Airport">Airport</option>
+              <option value="Hotel">Hotel</option>
+              <option value="Landmark">Landmark</option>
+              <option value="Attaraction">Attaraction</option>
+              <option value="Don't know yet">Don't know yet</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
 
-                  <div className="form-input mt-20">
-                    <input type="text" required />
-                    <label className="lh-1 text-16 text-light-1">
-                      Credit/debit card number *
-                    </label>
-                  </div>
-
-                  <div className="row x-gap-20 y-gap-20 pt-20">
-                    <div className="col-md-6">
-                      <div className="form-input ">
-                        <input type="text" required />
-                        <label className="lh-1 text-16 text-light-1">
-                          Expiry date *
-                        </label>
-                      </div>
-                    </div>
-
-                    <div className="col-md-6">
-                      <div className="form-input ">
-                        <input type="text" required />
-                        <label className="lh-1 text-16 text-light-1">
-                          CVC/CVV *
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  {/* End .row */}
-                </div>
-                {/* End col */}
-                <div className="col-md-6">
-                  <img
-                    src="/img/booking-pages/card.png"
-                    alt="image"
-                    className="h-full"
-                  />
-                </div>
-                {/* End col */}
-              </div>
-              {/* End .row */}
-            </TabPanel>
-            {/* credit debit info */}
-
-            <TabPanel>
-              <div className="mt-60 md:mt-32">
-                <div className="mt-20">
-                  <div className="form-input ">
-                    <input type="text" required />
-                    <label className="lh-1 text-16 text-light-1">
-                      Select payment method *
-                    </label>
-                  </div>
-                </div>
-                <div className="mt-20">
-                  <ul className="list-disc y-gap-4 text-15 text-light-1">
-                    <li>
-                      You have chosen to pay by PayPal. You will be forwarded to
-                      the PayPal website to proceed with this transaction.
-                    </li>
-                    <li>The total amount you will be charged is: $2,338.01</li>
-                  </ul>
-                </div>
-              </div>
-              {/* End mt60 */}
-            </TabPanel>
-            {/* End digital payment */}
-          </Tabs>
+          <div className="mt-20 mb-20">
+            <label htmlFor="" className="fw-bold">Location Detail<span className="text-danger">*</span></label>
+            <input type="text" placeholder="eg. Lobby, park etc" name="" id="" className="form-control border-1" />
+          </div>
+          {/* End terms and conditons */}
         </div>
-        {/* End mt-40 */}
+        {/* End payment details */}
 
-        <div className="w-full h-1 bg-border mt-40 mb-40" />
+        <div className="col-xl-5 col-lg-4">
+          <div className="sticky-div">
+            <div className="booking-sidebar">
+              <div className="px-30 py-30 border-light rounded-4 mt-30">
+                <div className="text-20 fw-500 mb-20">Your price summary</div>
+                <hr />
+                <i className="bi bi-pin-angle-fill text-blue-1"></i> {searchParams.location} <br />
+                <i className="bi bi-clock-fill text-blue-1"></i> 2 Hour Photoshoot
 
-        <div className="row y-gap-20 items-center justify-between">
-          <div className="col-auto">
-            <div className="form-checkbox d-flex items-center">
-              <input type="checkbox" name="name" />
-              <div className="form-checkbox__mark">
-                <div className="form-checkbox__icon icon-check" />
+                <div className="px-20 py-20 bg-blue-2 rounded-4 mt-20">
+                  <div className="row y-gap-5 justify-between">
+                    <div className="col-auto d-flex align-items-center">
+                      <div className="text-18 lh-13 fw-bold">Price</div>
+                    </div>
+                    <div className="col-auto">
+                      <div className="text-12"><s>Rp.10.000,-</s></div>
+                      <div className="text-18 lh-13 fw-bold">US$4,046.81</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <button type="submit" className="btn btn-primary mt-20 bg-blue-1 w-100">Checkout</button>
               </div>
-              <div className="text-14 lh-10 text-light-1 ml-10">
-                Get access to members-only deals, just like the millions of
-                other email subscribers
-              </div>
+              {/* <PaymentSchedule /> */}
+              {/* <PromoCode /> */}
             </div>
           </div>
-          {/* End col-auto */}
         </div>
-        {/* End terms and conditons */}
-      </div>
-      {/* End payment details */}
-
-      <div className="col-xl-5 col-lg-4">
-        <div className="booking-sidebar">
-          <PricingSummary />
-          <PaymentSchedule />
-          <PromoCode />
-        </div>
-      </div>
-      {/* payment sidebar info */}
-    </>
+        {/* payment sidebar info */}
+      </>
   );
 };
 

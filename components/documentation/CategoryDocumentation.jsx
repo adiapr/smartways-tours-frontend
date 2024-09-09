@@ -19,7 +19,7 @@ function CategoryDocumentation() {
           }
 
           const data = await response.json();
-          console.log(data);
+          // console.log(data);
           setCategory(data);
           setLoading(false); //jika data berhasil diambil
 
@@ -104,7 +104,7 @@ function CategoryDocumentation() {
         {category.map((item) => (
           <div className='col-md-3 col-6 px-1 py-1' key={item.id}>
             <Link
-              href="#"
+              href={`/documentation/${item.slug}`}
               className="citiesCard -type-1 d-block rounded-4 position-relative overflow-hidden"
             >
               <div className="citiesCard__image ratio ratio-3:4" key={item.id}>
