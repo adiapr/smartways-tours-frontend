@@ -1,10 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from "react";
-import { useSession } from "next-auth/react"; // Import NextAuth untuk mendapatkan user session
-import ChoosePackage from "./ChoosePackage";
-import PaymentInfo from "./PaymentInfo";
-import OrderSubmittedInfo from "./OrderSubmittedInfo";
+import { useSession } from "next-auth/react";
 import RatingInfo from "./RatingInfo";
 
 const DocumentationCheckout = ({ searchParams }) => {

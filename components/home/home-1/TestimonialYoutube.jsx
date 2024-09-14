@@ -1,5 +1,6 @@
 "use client"
 import React, { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next';
 import styled from 'styled-components'
 
 const IframeWrapper = styled.div`
@@ -12,6 +13,7 @@ const IframeWrapper = styled.div`
 
 function TestimonialYoutube() {
     const [videos, setVideos] = useState([]);
+    const { t } = useTranslation('common');
 
     useEffect(() => {
         const fetchData = async () => {
@@ -25,12 +27,14 @@ function TestimonialYoutube() {
         }
         fetchData();
     }, [])
+
   return (
     <div className='container mt-3'>
         <h2 className="text-30">
-            Testimoni Perjalanan
+             
+            {t('testimony.TestimoniPerjalanan')}
         </h2>
-        <p>Biarkan testimoni ini menjadi bukti komitmen kami dalam memberikan pelayanan terbaik untuk setiap perjalanan.</p>
+        <p>{t('testimony.TestimoniDeskripsi')}</p>
 
         <IframeWrapper>
             <div className="row mt-2">

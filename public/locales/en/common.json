@@ -1,41 +1,161 @@
 {
   "common": {
     "menuPackages": "Tour Packages",
-      "menuDocumentation": "Documentation Services",
-      "menuRentals": "Car/Bus Rentals",
-      "menuArticles": "Articles",
-      "menuAboutUs": "About Us",
-      "menuContact": "Contact Us",
-      "whyChooseUs": {
-        "title": "Why Choose Us?",
-        "subtitle": "Every Step, Every Adventure With Us",
-        "cards": {
-          "leading": {
-            "title": "Leading in East Java",
-            "text": "We pride ourselves on being the best travel agency in East Java, having been awarded TripAdvisor's East Java #1 Travelers' Choice in 2020-2022-2023."
-          },
-          "pricing": {
-            "title": "Competitive Pricing",
-            "text": "We offer highly competitive prices for our travel services, as we implemented our strategic online marketing, operational efficiency, and strong partnerships with various partners."
-          },
-          "service": {
-            "title": "Implementing WOW Service Orientation",
-            "text": "We regard our customers as invited guests to a party, and we are the hosts. It's our job to make every important aspect of the customer experience a little bit better."
-          },
-          "record": {
-            "title": "Proven Track Record",
-            "text": "Established since 2016, over the past 7+ years, we have served more than 20,000 customers for tours in Indonesia (East Java, Bali, and Lombok) and abroad. Smartway has emerged as a renown travel agency brand, earning the trust of numerous national companies. Additionally, we have collaborated with numerous partners from the United States, Germany, the Netherlands, China, Hong Kong, Malaysia, Singapore, and Taiwan."
-          },
-          "professional": {
-            "title": "Professional Team with BNSP Certification",
-            "text": "Training, evaluation, and internal improvements are conducted monthly, fostering positive growth within our team. 75% of our team members possess English language proficiency ranging from medium to fluent levels. Additionally, our field team, comprising tour leaders, guides, and event specialists (MICE), holds certification from the BNSP (Badan Nasional Sertifikasi Profesi / The Professional Certification National Board)."
-          },
-          "kompetitif": {
-            "title": "Competitive Pricing",
-            "text": "Smartway Tours offers highly competitive prices on all services, as we implement effective marketing strategies, efficient operational strategies, and strong partnerships with various partners both domestically and internationally."
-          }
+    "menuDocumentation": "Documentation Services",
+    "menuRentals": "Car/Bus Rentals",
+    "menuArticles": "Articles",
+    "menuAboutUs": "About Us",
+    "menuContact": "Contact Us",
+    "whyChooseUs": {
+      "title": "6 Reasons to Choose Smartway",
+      "subtitle": "There are many travel agencies out there, here’s what makes Smartway different!",
+      "cards": {
+        "leading": {
+          "title": "Best in East Java",
+          "text": "We are proud and grateful to be chosen as the #1 travel agency in East Java, having received the Tripadvisor Travelers' Choice awards in 2020, 2022, 2023, and 2024. We are committed to continuously improving our services, being innovative and adaptive to remain the best!"
+        },
+        "pricing": {
+          "title": "Legally Incorporated",
+          "text": "Established in 2016, Smartway Tours has served over 200,000+ customers. Smartway Tours is under the management of PT Bagus Bahagia Bersama, a professionally managed company focused on sustainable tourism services that prioritize the local wisdom of Indonesian culture."
+        },
+        "service": {
+          "title": "WOW Customer Oriented",
+          "text": "Customers are the central point and source of Smartway Tours' services. Providing the best service according to the guests' needs is our duty. Smile, greet, and salute are the basics we provide. Next, get ready to say 'Wow!' at the service we deliver."
+        },
+        "record": {
+          "title": "Professional Track Record",
+          "text": "Smartway has become a leading travel agency brand in Indonesia and is trusted by hundreds of companies both domestically and internationally in planning their travel needs. Discover our digital track record through Google, mass media, and social media."
+        },
+        "professional": {
+          "title": "BNSP Certified Professional Team",
+          "text": "Our entire field team, consisting of tour leaders, tour guides, and event specialists (MICE), are certified by BNSP (National Professional Certification Agency). About 80% of our team is proficient in intermediate to fluent English."
+        },
+        "kompetitif": {
+          "title": "Competitive Prices",
+          "text": "Smartway Tours offers highly competitive prices for all services because we implement effective marketing strategies, efficient operational strategies, and strong partnerships with various partners both domestically and internationally."
         }
       }
     }
+  },
+  "testimony": {
+    "TestimoniPerjalanan": "Travel Testimonials",
+    "TestimoniDeskripsi": "Let these testimonials be proof of our commitment to providing the best service for every journey."
+  },
+  "influencer": {
+    "title": "Influencer Testimonials",
+    "subtitle": "Find more testimonials on Instagram/TikTok @smartway.id @smartway.tours"
+  },
+  "testimonials": {
+    "2": {
+      "meta": "Lombok Tour",
+      "avatar": "/img/influencer/@gladysvctry.jpg",
+      "name": "@gladysvctry",
+      "designation": "Influencer",
+      "text": "The experience of vacationing in Lombok with smartway.tours was unforgettable. The chosen destinations were very interesting and met our expectations. The service provided was very satisfying.",
+      "delayAnimation": "200"
+    },
+    "3": {
+      "meta": "Mount Bromo Tour",
+      "avatar": "/img/influencer/@her_journeys.jpg",
+      "name": "@her_journeys",
+      "designation": "Influencer",
+      "text": "The photos turned out to be magical and hard to move on from! Yesterday I took the romantic breakfast tour. The concept was so cute, having breakfast while enjoying the epic view of Mount Bromo! Just go ahead and book without hesitation. Definitely approved!",
+      "delayAnimation": "300"
+    },
+    "4": {
+      "meta": "Raja Ampat Tour",
+      "avatar": "/img/influencer/@jejakiki.jpg",
+      "name": "@jejakiki",
+      "designation": "Influencer",
+      "text": "Raja Ampat is a paradise on earth, and we were fortunate to choose smartway.tours for our trip. All the facilities provided were excellent, and we were very satisfied with the service.",
+      "delayAnimation": "400"
+    },
+    "5": {
+      "meta": "Mount Bromo Tour",
+      "avatar": "/img/influencer/@missrtii.jpg",
+      "name": "@missrtii",
+      "designation": "Influencer",
+      "text": "I found out about Smartway from a friend. When I contacted them, the response was fast, and the photos turned out great! The team on the field was fantastic, they knew the terrain well, and loved to share stories. Hehe... Keep up the great work, Smartway!",
+      "delayAnimation": "500"
+    },
+    "6": {
+      "meta": "Bandung Tour",
+      "avatar": "/img/influencer/@mpryann.jpg",
+      "name": "@mpryann",
+      "designation": "Influencer",
+      "text": "Vacationing in Bandung with smartway.tours was very enjoyable. We were taken to the best places with experienced tour guides. Extraordinary!",
+      "delayAnimation": "600"
+    },
+    "7": {
+      "meta": "Malang Batu Tour",
+      "avatar": "/img/influencer/@sadam.jpg",
+      "name": "@sadam",
+      "designation": "Influencer",
+      "text": "For friends who love content creation, just use Smartway! Don't worry; the Smartway team understands if you take time while creating content. I've used Smartway 3 times and am satisfied with their service. Thank you to my driver and guide from yesterday! Keep succeeding, Smartway.",
+      "delayAnimation": "700"
+    },
+    "8": {
+      "meta": "Malang Tour",
+      "avatar": "/img/influencer/@wangsaloka.jpg",
+      "name": "@wangsa.loka",
+      "designation": "Influencer",
+      "text": "My Malang Bromo content went viral thanks to the help of the Smartway team! There was a thick fog in the field, but luckily the driver and tour leader were patient enough to wait until the fog cleared. Thank you so much, everyone!",
+      "delayAnimation": "800"
+    }
+  },
+  "support": {
+      "didukung": "Supported By",
+      "diulas": "Reviewed by many media outlets",
+      "kerjasama": "Corporate and institutional partnerships",
+      "promo": "Get Exciting Promotions",
+      "daftar_grup": "Join our Whatsapp group to get the best offers from us",
+      "whatsapp": "Join Whatsapp Group"
+  },
+  "private_tour": {
+      "title": "Enjoy an Exclusive Vacation with Private Tours and Custom Tours from Smartway!",
+      "description": "For those of you who want to travel but don't want to be grouped with other tour participants. You can request to take a private tour. You can also determine your travel destination according to your preferences through the custom tour service. Smartway's travel consultants will help you plan and create the best travel itinerary! With these 2 tour schemes, you will get many benefits!",
+      "cta": "Register for Private Tour",
+      "menu": {
+        "1": {
+          "title": "Can depart anytime",
+          "subtitle": "Yes, that's right! These 2 tour schemes allow you to travel anytime. You are free to choose the departure date!"
+        },
+        "2": {
+          "title": "Privacy and Comfort",
+          "subtitle": "For your privacy and comfort, you don't need to worry because you won't be grouped with other tour participants. You can freely express yourself, maximize content, celebrate special moments without feeling awkward or disturbed by strangers."
+        },
+        "3": {
+          "title": "Freedom of time",
+          "subtitle": "You can freely determine the duration of visits at each tourist destination."
+        },
+        "4": {
+          "title": "Request destination",
+          "subtitle": "If you like hidden gem destinations that not many people know about, this tour scheme is perfect for you because you can request unique destinations according to your preferences. Sounds fun, right!"
+        },
+        "5": {
+          "title": "Suitable for family vacations, corporate events, fun games/office outings.",
+          "subtitle": "Yes, more than 40,000+ guests (out of a total of 200,000+ Smartway guests since 2016) have tried this tour scheme. Now it's your turn and your loved ones, let's go!"
+        }
+      }
+  },
+  "menabung": {
+      "title": "Realize Your Dream Adventure!",
+      "description": "Want to go on vacation but find it hard to save? Don’t worry! Smartway has a saving program for those of you who have a hard time resisting temptation and managing daily expenses that often leave you broke at the end of the month. You can register for a saving program for your next vacation to your dream destination! Join and enjoy various benefits:",
+      "cta": "Register for Saving Program",
+      "menu": {
+        "1": {
+          "title": "Trusted and Reliable",
+          "subtitle": "Hundreds of people have tried Smartway's trip saving program since 2016. You can check our company's legal documents and customer testimonials on Google Reviews, Tripadvisor, and social media (Instagram, Tiktok, Facebook, and Youtube)."
+        },
+        "2": {
+          "title": "Request saving scheme",
+          "subtitle": "Easily and effectively manage your vacation budget. Financial planning is easy because it is oriented towards each participant's saving ability."
+        },
+        "3": {
+          "title": "No interest",
+          "subtitle": "No need to worry about interest because this program is designed to help you plan the best trip with Smartway! So we just help keep your money safe without charging any interest!"
+        }
+      }
   }
-
+}
+  

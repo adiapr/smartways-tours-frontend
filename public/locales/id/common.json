@@ -1,41 +1,160 @@
 {
   "common": {
     "menuPackages": "Paket Wisata",
-      "menuDocumentation": "Layanan Dokumentasi",
-      "menuRentals": "Rental Mobil/Bus",
-      "menuArticles": "Artikel",
-      "menuAboutUs": "Tentang Kami",
-      "menuContact": "Hubungi Kami",
-      "whyChooseUs": {
-        "title": "6 Alasan kenapa memilih kami Smartway",
-        "subtitle": "Ada banyak pilihan travel agen diluar sana, ini dia nih yang bikin Smartway beda dari yang lain!",
-        "cards": {
-          "leading": {
-            "title": "Terbaik di Jawa Timur",
-            "text": "Kami bangga dan bersyukur, terpilih sebagai travel agen terbaik #1 di Jawa Timur yang telah mendapatkan penghargaan Tripadvisor Travelers' Choice awards tahun 2020-2022-2023-2024. Kami berkomitmen untuk dapat terus memperbaiki layanan, innovative dan adaptive agar tetap menjadi yang terbaik!"
-          },
-          "pricing": {
-            "title": "Telah Berbadan Hukum",
-            "text": "Smartway Tours berdiri sejak 2016 dan telah melayani lebih dari 200.000+ pelanggan. Smartway Tours berada dibawah naungan PT Bagus Bahagia Bersama. Sebuah perusahaan yang dikelola secara profesional yang berfokus pada layanan pariwisata berkelanjutan dengan mengedepankan kearifan lokal budaya Indonesia."
-          },
-          "service": {
-            "title": "WOW Customer Oriented",
-            "text": "Pelanggan adalah titik sentral yang menjadi sumber dari layanan Smartway Tours. Memberikan pelayanan terbaik sesuai kebutuhan tamu adalah tugas kami. Senyum, sapa dan salam adalah hal dasar yang akan kami berikan. Selanjutnya, bersiaplah untuk berkata “Wow!” pada layanan yang kami berikan."
-          },
-          "record": {
-            "title": "Rekam Jejak Profesional",
-            "text": "Smartway telah menjadi merek biro perjalanan terkemuka di Indonesia dan dipercaya oleh ratusan perusahaan baik dalam maupun luar negeri dalam merencanakan kebutuhan perjalanan mereka. Temukan rekam jejak digital kami melalui google, media massa, dan sosial media."
-          },
-          "professional": {
-            "title": "Tim Profesional Bertifikasi BNSP",
-            "text": "Seluruh tim lapangan kami yang terdiri dari pemimpin tur (tour leader), pemandu wisata (tour guide), dan spesialis acara (MICE), telah mengantongi sertifikat dari BNSP (Badan Nasional Sertifikasi Profesi). Sekitar 80%  tim kami memiliki kemampuan berbahasa Inggris tingkat menengah hingga lancer."
-          },
-          "kompetitif": {
-            "title": "Harga Kompetitif",
-            "text": "Smartway Tours menawarkan harga yang sangat kompetitif pada semua layanan, karena kami menerapkan strategi pemasaran yang efektif, strategi operasional yang efisien, dan kemitraan yang kuat dengan berbagai partner baik di dalam maupun di luar negeri."
-          }
+    "menuDocumentation": "Layanan Dokumentasi",
+    "menuRentals": "Rental Mobil/Bus",
+    "menuArticles": "Artikel",
+    "menuAboutUs": "Tentang Kami",
+    "menuContact": "Hubungi Kami",
+    "whyChooseUs": {
+      "title": "6 Alasan kenapa memilih kami Smartway",
+      "subtitle": "Ada banyak pilihan travel agen diluar sana, ini dia nih yang bikin Smartway beda dari yang lain!",
+      "cards": {
+        "leading": {
+          "title": "Terbaik di Jawa Timur",
+          "text": "Kami bangga dan bersyukur, terpilih sebagai travel agen terbaik #1 di Jawa Timur yang telah mendapatkan penghargaan Tripadvisor Travelers' Choice awards tahun 2020-2022-2023-2024. Kami berkomitmen untuk dapat terus memperbaiki layanan, innovative dan adaptive agar tetap menjadi yang terbaik!"
+        },
+        "pricing": {
+          "title": "Telah Berbadan Hukum",
+          "text": "Smartway Tours berdiri sejak 2016 dan telah melayani lebih dari 200.000+ pelanggan. Smartway Tours berada dibawah naungan PT Bagus Bahagia Bersama. Sebuah perusahaan yang dikelola secara profesional yang berfokus pada layanan pariwisata berkelanjutan dengan mengedepankan kearifan lokal budaya Indonesia."
+        },
+        "service": {
+          "title": "WOW Customer Oriented",
+          "text": "Pelanggan adalah titik sentral yang menjadi sumber dari layanan Smartway Tours. Memberikan pelayanan terbaik sesuai kebutuhan tamu adalah tugas kami. Senyum, sapa dan salam adalah hal dasar yang akan kami berikan. Selanjutnya, bersiaplah untuk berkata “Wow!” pada layanan yang kami berikan."
+        },
+        "record": {
+          "title": "Rekam Jejak Profesional",
+          "text": "Smartway telah menjadi merek biro perjalanan terkemuka di Indonesia dan dipercaya oleh ratusan perusahaan baik dalam maupun luar negeri dalam merencanakan kebutuhan perjalanan mereka. Temukan rekam jejak digital kami melalui google, media massa, dan sosial media."
+        },
+        "professional": {
+          "title": "Tim Profesional Bertifikasi BNSP",
+          "text": "Seluruh tim lapangan kami yang terdiri dari pemimpin tur (tour leader), pemandu wisata (tour guide), dan spesialis acara (MICE), telah mengantongi sertifikat dari BNSP (Badan Nasional Sertifikasi Profesi). Sekitar 80% tim kami memiliki kemampuan berbahasa Inggris tingkat menengah hingga lancar."
+        },
+        "kompetitif": {
+          "title": "Harga Kompetitif",
+          "text": "Smartway Tours menawarkan harga yang sangat kompetitif pada semua layanan, karena kami menerapkan strategi pemasaran yang efektif, strategi operasional yang efisien, dan kemitraan yang kuat dengan berbagai partner baik di dalam maupun di luar negeri."
         }
       }
     }
+  },
+  "testimony": {
+    "TestimoniPerjalanan": "Testimoni Perjalanan",
+    "TestimoniDeskripsi": "Biarkan testimoni ini menjadi bukti komitmen kami dalam memberikan pelayanan terbaik untuk setiap perjalanan."
+  },
+  "influencer": {
+    "title": "Testimoni Influencer",
+    "subtitle": "Temukan testimoni lainnya di instagram/tiktok @smartway.id @smartway.tours"
+  },
+  "testimonials": {
+    "2": {
+      "meta": "Wisata Lombok",
+      "avatar": "/img/influencer/@gladysvctry.jpg",
+      "name": "@gladysvctry",
+      "designation": "Influencer",
+      "text": "Pengalaman berlibur ke Lombok dengan smartway.tours tidak terlupakan. Destinasi yang dipilih sangat menarik dan sesuai dengan ekspektasi kami. Pelayanan yang diberikan sangat memuaskan.",
+      "delayAnimation": "200"
+    },
+    "3": {
+      "meta": "Wisata Gunung Bromo",
+      "avatar": "/img/influencer/@her_journeys.jpg",
+      "name": "@her_journeys",
+      "designation": "Influencer",
+      "text": "Hasil fotonya magic banget dan bikin susah move on! Kemaren gue ambil tur romantic breakfast. Lucu banget konsepnya sarapan pagi sambil nikmatin pemandangan epic Gunung Bromo! Cuss booking aja gausah ragu. Mpok sih approved yhaaa!",
+      "delayAnimation": "300"
+    },
+    "4": {
+      "meta": "Wisata Raja Ampat",
+      "avatar": "/img/influencer/@jejakiki.jpg",
+      "name": "@jejakiki",
+      "designation": "Influencer",
+      "text": "Raja Ampat adalah surga dunia dan kami beruntung memilih smartway.tours untuk perjalanan kami. Semua fasilitas yang disediakan luar biasa dan kami merasa sangat puas dengan layanan yang diberikan.",
+      "delayAnimation": "400"
+    },
+    "5": {
+      "meta": "Wisata Gunung Bromo",
+      "avatar": "/img/influencer/@missrtii.jpg",
+      "name": "@missrtii",
+      "designation": "Influencer",
+      "text": "Aku tau Smartway dari temen, pas aku wa responnya cepet dan hasil fotonya bagus semua! Tim di lapangan mantap, pada paham medan dan suka kasih dongeng. Hehe... Sukses terus Smartway!",
+      "delayAnimation": "500"
+    },
+    "6": {
+      "meta": "Wisata Bandung",
+      "avatar": "/img/influencer/@mpryann.jpg",
+      "name": "@mpryann",
+      "designation": "Influencer",
+      "text": "Liburan ke Bandung bersama smartway.tours sangat menyenangkan. Kami diajak mengunjungi tempat-tempat terbaik dengan pemandu wisata yang berpengalaman. Luar biasa!",
+      "delayAnimation": "600"
+    },
+    "7": {
+      "meta": "Wisata Malang Batu",
+      "avatar": "/img/influencer/@sadam.jpg",
+      "name": "@sadam",
+      "designation": "Influencer",
+      "text": "Buat temen-temen yang suka ngonten pake Smartway aja! Gausah khawatir, tim Smartway udah pada paham kalo kalian lama pas bikin konten. Gue udah 3x pake Smartway dan puas sama pelayanannya. Terima kasih untuk bapak driver dan guide gue kemaren! Sukses selalu Smartyway.",
+      "delayAnimation": "700"
+    },
+    "8": {
+      "meta": "Wisata Malang",
+      "avatar": "/img/influencer/@wangsaloka.jpg",
+      "name": "@wangsa.loka",
+      "designation": "Influencer",
+      "text": "Konten Malang Bromo ku viral karena bantuan tim Smartway! Jadi pas dilapangan kebetulan kabut pekat banget, untung bapak driver dan tour leadernya sabar mau tungguin sampe kabutnya hilang. Makasih bangeeeeeeet semuanya!",
+      "delayAnimation": "800"
+    }
+  },
+  "support": {
+    "didukung": "Didukung Oleh",
+    "diulas": "Telah diulas oleh banyak media masa",
+    "kerjasama": "Kerjasama perusahaan dan institusi",
+    "promo": "Dapatkan Promo Menarik",
+    "daftar_grup": "Daftar grup Whatsapp untuk mendapatkan penawaran terbaik dari kami",
+    "whatsapp": "Gabung Grup Whatsapp"
+  },
+  "private_tour": {
+    "title": "Nikmati Liburan Eksklusif dengan Private Tour dan Custom Tour dari Smartway!",
+    "description": "Buat kamu yang mau liburan tapi nggak mau digabung sama peserta tur lain. Kamu bisa banget nih request untuk ambil private tour. Kamu juga bisa tentuin destinasi tujuan perjalanan kamu sesuai dengan preferensi lewat layanan custom tour. Travel consultant Smartway bakal bantu kamu ngerencanain dan bikin itinerary perjalanan terbaik! Dengan 2 skema tur ini, kamu bakal dapet banyak keuntungan!",
+    "cta": "Daftar Private Tour",
+    "menu": {
+      "1": {
+        "title": "Bisa berangkat kapan aja",
+        "subtitle": "Yup, betul banget 2 skema tur ini memungkinkan untuk dijalankan kapan aja. Kamu bebas tentuin tanggal keberangkatannya!"
+      },
+      "2": {
+        "title": "Privasi dan Kenyamanan",
+        "subtitle": "Untuk privasi dan kenyaman kamu ga perlu khawatir karena kamu ga bakal digabung sama peserta tur lain. Kamu bisa bebas berekspresi, maksimalin konten, rayakan momen istimewa tanpa sungkan / terganggu sama orang lain yang ga kamu kenal."
+      },
+      "3": {
+        "title": "Kebebasan waktu",
+        "subtitle": "Kamu bisa leluasa tentuin durasi kunjungan di masing-masing destinasi wisata."
+      },
+      "4": {
+        "title": "Request destinasi",
+        "subtitle": "Buat kamu yang suka sama destinasi hidden gems yang ga banyak orang tau, skema tur ini cocok banget buat kamu karena kamu bisa request ke destinasi-destinasi unik sesuai dengan preferensi kamu. Asik banget kan!"
+      },
+      "5": {
+        "title": "Cocok buat liburan keluarga, perusahaan, acara fun games/outing kantor.",
+        "subtitle": "Yup, udah lebih dari 40.000+ tamu (dari total 200.000+ tamu Smartway sejak 2016), yang udah cobain skema tur ini. Sekarang giliran kamu dan orang tersayang nih, gaskeun!"
+      }
+    }
+  },
+  "menabung":{
+    "title": "Wujudkan Petualangan Impianmu!",
+    "description": "Pengen liburan tapi susah nabungnya. Eits tenang! Smartway punya program nabung buat kamu yang susah nahan godaan dan kelola pengeluaran harian yang suka bikin kamu boncos di akhir bulan. Kamu bisa daftar program nabung buat liburan kamu berikutnya ke destinasi impian! Gabung dan nikmati berbagai macam keuntungannya:",
+    "cta": "Daftar Program Menabung",
+    "menu": {
+      "1": {
+        "title": "Terpercaya dan Amanah",
+        "subtitle": "Sudah ratusan orang coba program nabung trip Smartway dari tahun 2016. Kamu bisa cek dokumen legalitas perusahaan dan testimoni pelanggan kami di google review, Tripadvisor, social media (Instagram, Tiktok, Facebook, dan Youtube)."
+      },
+      "2": {
+        "title": "Request skema nabung",
+        "subtitle": "Atur anggaran liburan kamu dengan mudah dan efektif. Perencanaan keuangan mudah karena berorientasi pada kemampuan nabung masing- masing peserta."
+      },
+      "3": {
+        "title": "Tanpa bunga",
+        "subtitle": "Ga perlu khawatir kena bunga karena program ini didesain untuk bantu kamu merencanakan perjalanan terbaik bersama Smartway! Jadi kami cuma bantu simpen uang kamu aja, tanpa kena bunga sepeserpun!"
+      }
+    }
   }
-
+}

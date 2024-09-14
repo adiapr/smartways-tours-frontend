@@ -40,7 +40,7 @@ export const testimonial1 = [
     dealyAnimation: "400",
   },
 ];
-export const testimonial2 = [
+export const testimonial2 =  [
   {
     id: 2,
     meta: "Wisata Lombok",
