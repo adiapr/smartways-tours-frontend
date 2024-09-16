@@ -113,4 +113,11 @@
     border: solid 1px rgba(64, 63, 63, 0.367) !important;
   }
   
+  .form-control {
+    border: solid 1px rgba(64, 63, 63, 0.367) !important;
+  }
+  label{
+    font-weight: bold;
+    /* margin-top: 20px; */
+  }
   

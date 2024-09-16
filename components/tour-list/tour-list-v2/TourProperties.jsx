@@ -35,7 +35,7 @@ const TourProperties = ({ selectedLocations }) => {
         >
           <Link
             href={`/paket-wisata/${item.slug}`}
-            className="tourCard -type-1 rounded-4 position-relative  border-1 border-black bg-primary "
+            className="tourCard -type-1 rounded-4 position-relative "
           >
             <div className="border-1 p-1 rounded" style={{ backgroundColor: 'rgb(194,196,199, 0.2)' }}>
               <div className="tourCard__image">

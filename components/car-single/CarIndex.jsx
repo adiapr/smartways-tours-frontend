@@ -7,6 +7,7 @@ import MapPropertyFinder from './MapPropertyFinder';
 import styled from 'styled-components';
 import CarGallery from "@/components/car-single/CarGallery";
 import { formatRupiah } from '@/utils/utility';
+import Link from 'next/link';
 
 const locationMapping = {
     "1": "Jawa Timur",
@@ -146,9 +147,10 @@ const CarIndex = ({ slug }) => {
                                                 <PropertyHighlights />
                                             </div>
 
-                                            <a href={`https://api.Whatsapp.com/send?phone=6282155144449&text=Halo%2C%20saya%20ingin%20rental%20mobil%20*${car?.name}*%20di%20smartway.%0A%0ALink%20dokumentasi%0A${window.location.href}`} className="btn btn-success">
+                                            {/* <a href={`https://api.Whatsapp.com/send?phone=6282155144449&text=Halo%2C%20saya%20ingin%20rental%20mobil%20*${car?.name}*%20di%20smartway.%0A%0ALink%20dokumentasi%0A${window.location.href}`} className="btn btn-success">
                                                     Rental Sekarang
-                                            </a>
+                                            </a> */}
+                                            <Link href={`/cart-car/${car?.uuid}`} className='btn btn-primary mt-2' > Rental Sekarang </Link>
                                         </div>
                                     </div>
                                 </div>
