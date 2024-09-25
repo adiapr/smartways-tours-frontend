@@ -70,9 +70,20 @@ const TourProperties = ({ selectedLocations }) => {
                 <h4 className="tourCard__title text-dark-1 text-14 md-text-18 lh-16 fw-bold">
                   <span>{item?.name}</span>
                 </h4>
-                <div className="row justify-between items-center pt-15">
-                  <div className="col-auto">
-                    <div className="d-flex items-center">
+                <div className="row justify-between items-center pt-1">
+                  <div className="col-12 w-100">
+                    <div style={{ display:'flex', justifyContent:'space-between', alignItems: 'center' }}>
+                      <div style={{ fontSize:'12px' }} className="fw-bold">Start From</div>
+                      <div style={{ float:'right' }} className="text-black">
+                        <p className="my-0 py-0" style={{ lineHeight: '10px' }}>
+                          <s className="my-0 py-0 text-right" style={{ fontSize:'10px', textAlign:'right' }}>
+                          {new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(item?.price?.start_price)}
+                          </s>
+                        </p>
+                        <p className="my-0 py-0 text-black">
+                          <b>{new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(item?.price?.price)}</b>
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>

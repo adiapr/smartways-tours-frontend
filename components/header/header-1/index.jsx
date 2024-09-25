@@ -45,7 +45,7 @@ const Header1 = () => {
 
             <div className="col-auto">
               <div className="d-flex items-center">
-                <div className="row x-gap-20 items-center xxl:d-none">
+                <div className="row x-gap-20 items-center">
                   <div className="header-menu">
                     <div className="header-menu__content">
                       <MainMenu style="text-white" />
