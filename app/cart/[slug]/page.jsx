@@ -18,14 +18,14 @@ function Cart({ params }) {
     const [snapInitialized, setSnapInitialized] = useState(false);
     const { data: session } = useSession();
     const [tour, setTour] = useState(null);
-    const [days, setDays] = useState(1); // defailt 1 hari
+    const [peserta, setPeserta] = useState(0);
 
     const [availability, setAvailability] = useState(null); // Menyimpan status ketersediaan
     const [availabilityMessage, setAvailabilityMessage] = useState(''); // Menyimpan pesan ketersediaan
 
 
     const [orderTourData, setOrderTourData] = useState({
-        jml_peserta: days,
+        jml_peserta: peserta,
         keberangkatan: '',
         name: '',
         pasport: '',
@@ -55,6 +55,7 @@ function Cart({ params }) {
                 const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/cart/${params.slug}`);
                 const data = await response.json();
                 setTour(data);
+                setPeserta(data.pax);
             } catch (error) {
                 console.log('error ', error);
             }
@@ -76,7 +77,7 @@ function Cart({ params }) {
                 return;
             }
     
-            const total = (Number(tour?.price) || 0) * days + (Number(selectedCarPrice) || 0);
+            const total = (Number(tour?.price) || 0) * peserta + (Number(selectedCarPrice) || 0);
     
             const requestBody = {
                 order_id: tour.id,
@@ -118,14 +119,16 @@ function Cart({ params }) {
         });
     }
 
-    // tambah jumlah hari 
-    const handleAddDay = () => {
-        setDays(days + 1);
+    // Tambah jumlah peserta
+    const handleAddPeserta = () => {
+        setPeserta((prevPeserta) => prevPeserta + tour.pax); // Menambahkan pax awal ke jumlah peserta saat ini
     }
 
-    // kurangi hari 
-    const handleRemoveDay = () => {
-        setDays(days - 1);
+    // Kurangi jumlah peserta
+    const handleRemovePeserta = () => {
+        if (peserta > tour.pax) { // Pastikan jumlah peserta tidak turun di bawah pax awal
+            setPeserta((prevPeserta) => prevPeserta - tour.pax);
+        }
     }
 
     const handleInputChange = (e) => {
@@ -146,9 +149,9 @@ function Cart({ params }) {
     useEffect(() => {
         setOrderTourData((prevData) => ({
             ...prevData,
-            jml_peserta: days
+            jml_peserta: peserta
         }));
-    }, [days]);
+    }, [peserta]);
 
     const checkAvailability = async (date) => {
         try {
@@ -179,7 +182,7 @@ function Cart({ params }) {
     
     
 
-    const total = ((Number(tour?.price) || 0) * days) + (Number(selectedCarPrice) || 0);
+    const total = ((Number(tour?.price) || 0) * peserta) + (Number(selectedCarPrice) || 0);
 
     return (
         <div>
@@ -224,20 +227,21 @@ function Cart({ params }) {
                                                 <div className="col-8 d-flex align-items-center">
                                                     <button 
                                                         className="btn btn-danger" 
-                                                        onClick={handleRemoveDay} 
-                                                        disabled={days === 1} // Tidak bisa kurang dari 1 hari
+                                                        onClick={handleRemovePeserta} 
+                                                        disabled={peserta === 1} // Tidak bisa kurang dari 1 hari
                                                     >
                                                         <i className="bi bi-dash"></i>
                                                     </button>
                                                     <input 
                                                         type="text" 
                                                         className="form-control mx-2 text-center" 
-                                                        value={days} 
+                                                        value={peserta} 
+                                                        // value={days} 
                                                         readOnly 
                                                     />
                                                     <button 
                                                         className="btn btn-success" 
-                                                        onClick={handleAddDay}
+                                                        onClick={handleAddPeserta}
                                                     >
                                                         <i className="bi bi-plus"></i>
                                                     </button>
@@ -433,7 +437,7 @@ function Cart({ params }) {
                                                 <p>Jumlah Peserta</p>
                                             </div>
                                             <div>
-                                                {days} Peserta
+                                                {peserta} Peserta
                                             </div>
                                         </div>
                                         <hr />
