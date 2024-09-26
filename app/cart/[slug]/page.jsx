@@ -210,7 +210,7 @@ function Cart({ params }) {
                                                 {tour?.tour.name}
                                                 <hr />
                                                 <span className="text-primary">
-                                                    Rp.{tour?.price.toLocaleString('id-ID')},-
+                                                    Rp.{(Number(tour?.price) || 0).toLocaleString('id-ID')},-
                                                 </span>
                                             </h5>
                                         </div>
