@@ -18,7 +18,7 @@ const TourSnapShot = ({tour}) => {
             <i className="icon-customer text-22 text-blue-1 mr-10"></i>
             <div className="text-15 lh-15">
             Maksimal Orang:
-              <br /> {tour.group_size}
+              <br /> 5 - 6 Per Jeep
             </div>
           </div>
         </div>

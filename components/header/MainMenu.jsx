@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useTranslation } from 'react-i18next';
+
 import { useState } from "react";
 import {
   homeItems,
@@ -15,20 +15,16 @@ import {
   isActiveParentChaild,
 } from "../../utils/linkActiveChecker";
 import { usePathname } from "next/navigation";
-import Image from "next/image";
+import ButtonLanguage from "./ButtonLanguage";
+import { useTranslation } from 'react-i18next';
 
 const MainMenu = ({ style = "" }) => {
   const { t, i18n } = useTranslation('common');
+  
   const pathname = usePathname();
   const [isActiveParent, setIsActiveParent] = useState(false);
 
-  const changeLanguageToEnglish = () => {
-    i18n.changeLanguage('en');
-  };
-
-  const changeLanguageToIndonesian = () => {
-    i18n.changeLanguage('id');
-  };
+  
 
   return (
     <nav className="menu js-navList">
@@ -96,11 +92,7 @@ const MainMenu = ({ style = "" }) => {
           <Link href="/contact">{t('common.menuContact')}</Link>
         </li> */}
         <li className="language-switch ms-2">
-          {i18n.language === 'en' ? (
-            <button onClick={changeLanguageToIndonesian}><Image src={'/img/lang/id.png'} width={40} height={40} style={{ borderRadius:'10px', border:'solid 1px white' }}/></button>
-          ) : (
-            <button onClick={changeLanguageToEnglish}><Image src={'/img/lang/en.png'} width={40} height={40} style={{ borderRadius:'10px', border:'solid 1px white' }}/></button>
-          )}
+          <ButtonLanguage />
         </li>
       </ul>
     </nav>

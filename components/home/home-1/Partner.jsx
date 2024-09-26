@@ -79,7 +79,7 @@ function Partner() {
                 <Image src={'/img/partnership/kerjasama/16.png'} width={200} height={100} className='slide-img me-4 mt-20' style={{ height:'25px', width:'auto' }} unoptimized loading="lazy" />
             </Link>
             <Link href="https://bmw.astra.co.id/" target='_blank'>
-                <Image src={'/img/partnership/kerjasama/bmw.jpg'} width={50} height={50} className='slide-img me-4 mt-20' style={{ height:'25px', width:'auto' }} unoptimized loading="lazy" />
+                <Image src={'/img/partnership/kerjasama/bmw_astra.png'} width={50} height={50} className='slide-img me-4 mt-20' style={{ height:'25px', width:'auto' }} unoptimized loading="lazy" />
             </Link>
             <Link href="https://reliancesekuritas.com/" target='_blank'>
                 <Image src={'/img/partnership/kerjasama/reliance.jpg'} width={200} height={100} className='slide-img me-4 mt-20' style={{ height:'25px', width:'auto' }} unoptimized loading="lazy" />

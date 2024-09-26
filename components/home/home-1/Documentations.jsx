@@ -162,6 +162,20 @@ export default function Documentation() {
                 </Link>
               </div>
             ))}
+
+            <div className="col-md-4"></div>
+            <div className="col-4">
+              <div className="text-center mt-30">
+                <Link
+                  href="https://www.instagram.com/smartway.id/"
+                  className="button h-50 px-24 -dark-1 bg-blue-1 text-white"
+                  target="_blank"
+                >
+                  Lihat Semua Dokumentasi <div className="icon-arrow-top-right ml-15" />
+                </Link>
+              </div>
+            </div>
+            <div className="col-md-4"></div>
           </div>
         </div>
       </section>

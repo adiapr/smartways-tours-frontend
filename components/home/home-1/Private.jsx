@@ -26,7 +26,7 @@ function Private() {
                     <h3 className="fw-bold">
                         {t('private_tour.title')}
                     </h3>
-                    <p>
+                    <p style={{ textAlign:'justify' }}>
                         {t('private_tour.description')}
                         <ul>
                             {menuPrivate.map((key) => {
@@ -73,7 +73,7 @@ function Private() {
                     <h3 className="fw-bold">
                         {t('menabung.title')}
                     </h3>
-                    <p>
+                    <p style={{ textAlign:'justify' }}>
                         {t('menabung.description')}
                         <br />
                         <ul>

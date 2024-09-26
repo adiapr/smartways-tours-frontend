@@ -77,7 +77,7 @@ const Testimonial = () => {
                     <h4 className="text-16 fw-500 text-blue-1 mb-20">
                       {item.meta}
                     </h4>
-                    <p className="testimonials__text lh-18 fw-500 text-dark-1">
+                    <p className="testimonials__text lh-18 fw-500 text-dark-1" style={{ textAlign:'justify' }}>
                       {item.text}
                     </p>
                     <div className="pt-20 mt-28 border-top-light">

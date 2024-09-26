@@ -26,7 +26,7 @@ const WhyChooseUs = () => {
                     alt='Leading Icon'
                   />
                   <h5 className="card-title">{t('common.whyChooseUs.cards.leading.title')}</h5>
-                  <p className="card-text">{t('common.whyChooseUs.cards.leading.text')}</p>
+                  <p className="card-text text-justify" style={{ textAlign:'justify' }}>{t('common.whyChooseUs.cards.leading.text')}</p>
                 </div>
               </div>
             </div>
@@ -43,7 +43,7 @@ const WhyChooseUs = () => {
                     alt='Pricing Icon'
                   />
                   <h5 className="card-title">{t('common.whyChooseUs.cards.pricing.title')}</h5>
-                  <p className="card-text">{t('common.whyChooseUs.cards.pricing.text')}</p>
+                  <p className="card-text" style={{ textAlign:'justify' }}>{t('common.whyChooseUs.cards.pricing.text')}</p>
                 </div>
               </div>
             </div>
@@ -60,7 +60,7 @@ const WhyChooseUs = () => {
                     alt='Service Icon'
                   />
                   <h5 className="card-title">{t('common.whyChooseUs.cards.service.title')}</h5>
-                  <p className="card-text">{t('common.whyChooseUs.cards.service.text')}</p>
+                  <p className="card-text" style={{ textAlign:'justify' }}>{t('common.whyChooseUs.cards.service.text')}</p>
                 </div>
               </div>
             </div>
@@ -77,7 +77,7 @@ const WhyChooseUs = () => {
                     alt='Record Icon'
                   />
                   <h5 className="card-title">{t('common.whyChooseUs.cards.record.title')}</h5>
-                  <p className="card-text">{t('common.whyChooseUs.cards.record.text')}</p>
+                  <p className="card-text" style={{ textAlign:'justify' }}>{t('common.whyChooseUs.cards.record.text')}</p>
                 </div>
               </div>
             </div>
@@ -94,7 +94,7 @@ const WhyChooseUs = () => {
                     alt='Professional Icon'
                   />
                   <h5 className="card-title">{t('common.whyChooseUs.cards.professional.title')}</h5>
-                  <p className="card-text">{t('common.whyChooseUs.cards.professional.text')}</p>
+                  <p className="card-text" style={{ textAlign:'justify' }}>{t('common.whyChooseUs.cards.professional.text')}</p>
                 </div>
               </div>
             </div>
@@ -111,7 +111,7 @@ const WhyChooseUs = () => {
                     alt='Professional Icon'
                   />
                   <h5 className="card-title">{t('common.whyChooseUs.cards.kompetitif.title')}</h5>
-                  <p className="card-text">{t('common.whyChooseUs.cards.kompetitif.text')}</p>
+                  <p className="card-text" style={{ textAlign:'justify' }}>{t('common.whyChooseUs.cards.kompetitif.text')}</p>
                 </div>
               </div>
             </div>

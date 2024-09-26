@@ -6,6 +6,7 @@ import { useSession, signOut } from "next-auth/react";
 import MainMenu from "../MainMenu";
 import MobileMenu from "../MobileMenu";
 import ButtonHeader from "../Button";
+import ButtonLanguage from "../ButtonLanguage";
 
 const Header1 = () => {
   const [navbar, setNavbar] = useState(false);
@@ -62,17 +63,21 @@ const Header1 = () => {
                 {/* Start btn-group */}
                 <div className="d-flex items-center ml-20 is-menu-opened-hide md:d-none">
                   <ButtonHeader session={session} />
+                  
                 </div>
                 {/* End btn-group */}
 
                 {/* Start mobile menu icon */}
                 <div className="d-none xl:d-flex x-gap-20 items-center pl-30 text-white">
-                  {/* <div>
+                  <div>
+                    <ButtonLanguage />
+                  </div>
+                  <div>
                     <Link
                       href="/login"
                       className="d-flex items-center icon-user text-inherit text-22"
                     />
-                  </div> */}
+                  </div>
                   <div>
                     <button
                       className="d-flex items-center icon-menu text-inherit text-20"
