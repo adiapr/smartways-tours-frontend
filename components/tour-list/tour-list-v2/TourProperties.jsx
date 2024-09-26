@@ -67,7 +67,7 @@ const TourProperties = ({ selectedLocations }) => {
                   <div className="size-3 bg-light-1 rounded-full ml-10 mr-10" />
                   <div className="text-14 text-light-1"> {item?.location?.location}</div>
                 </div>
-                <h4 className="tourCard__title text-dark-1 text-14 md-text-18 lh-16 fw-bold">
+                <h4 className="tourCard__title text-dark-1 text-14 md-text-18 lh-16 fw-bold line-clamp-2">
                   <span>{item?.name}</span>
                 </h4>
                 <div className="row justify-between items-center pt-1">
