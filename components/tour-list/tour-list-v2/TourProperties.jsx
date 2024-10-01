@@ -1,11 +1,12 @@
-'use client'
+'use client';
 
-import Image from "next/image";
-import Link from "next/link";
-import { useEffect, useState } from "react";
+import Image from 'next/image';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 const TourProperties = ({ selectedLocations }) => {
   const [toursData, setToursData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -15,14 +16,21 @@ const TourProperties = ({ selectedLocations }) => {
         setToursData(data);
       } catch (error) {
         console.error('Error fetching data:', error);
+      } finally {
+        setLoading(false);
       }
     };
     fetchData();
   }, []);
 
-  const filteredToursData = toursData.filter((item) => 
+  // Filter data berdasarkan lokasi yang dipilih
+  const filteredToursData = toursData.filter((item) =>
     selectedLocations.length === 0 || selectedLocations.includes(item.location.id.toString())
   );
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
 
   return (
     <>
@@ -47,7 +55,7 @@ const TourProperties = ({ selectedLocations }) => {
                           width={300}
                           height={300}
                           className="w-100"
-                          style={{ aspectRatio:'16/9', objectFit:'cover' }}
+                          style={{ aspectRatio: '16/9', objectFit: 'cover' }}
                           src={item.media[0].original_url}
                           alt={item.name}
                           unoptimized
@@ -56,12 +64,13 @@ const TourProperties = ({ selectedLocations }) => {
                     </div>
                   </div>
                 </div>
-                <div className="cardImage__wishlist" style={{ marginRight: '-60px' }}>
-                </div>
+                <div className="cardImage__wishlist" style={{ marginRight: '-60px' }}></div>
               </div>
               <div className="tourCard__content mt-10 p-2">
                 <div className="d-flex items-center lh-14 mb-5">
-                  <div className={`text-14 text-light-1  bg-${item.type == 'Domestik' ? 'primary' : 'success'} rounded px-3 text-white`}>
+                  <div
+                    className={`text-14 text-light-1  bg-${item.type === 'Domestik' ? 'primary' : 'success'} rounded px-3 text-white`}
+                  >
                     {item?.type}
                   </div>
                   <div className="size-3 bg-light-1 rounded-full ml-10 mr-10" />
@@ -72,16 +81,29 @@ const TourProperties = ({ selectedLocations }) => {
                 </h4>
                 <div className="row justify-between items-center pt-1">
                   <div className="col-12 w-100">
-                    <div style={{ display:'flex', justifyContent:'space-between', alignItems: 'center' }}>
-                      <div style={{ fontSize:'12px' }} className="fw-bold">Start From</div>
-                      <div style={{ float:'right' }} className="text-black">
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <div style={{ fontSize: '12px' }} className="fw-bold">
+                        Start From
+                      </div>
+                      <div style={{ float: 'right' }} className="text-black">
                         <p className="my-0 py-0" style={{ lineHeight: '10px' }}>
-                          <s className="my-0 py-0 text-right" style={{ fontSize:'10px', textAlign:'right' }}>
-                          {new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(item?.price?.start_price)}
+                          <s
+                            className="my-0 py-0 text-right"
+                            style={{ fontSize: '10px', textAlign: 'right' }}
+                          >
+                            {new Intl.NumberFormat('id-ID', {
+                              style: 'currency',
+                              currency: 'IDR',
+                            }).format(item?.price?.start_price)}
                           </s>
                         </p>
                         <p className="my-0 py-0 text-black">
-                          <b>{new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(item?.price?.price)}</b>
+                          <b>
+                            {new Intl.NumberFormat('id-ID', {
+                              style: 'currency',
+                              currency: 'IDR',
+                            }).format(item?.price?.price)}
+                          </b>
                         </p>
                       </div>
                     </div>

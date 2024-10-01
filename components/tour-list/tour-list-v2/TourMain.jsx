@@ -1,11 +1,20 @@
-"use client"
-import { useState } from "react";
+"use client";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import TopHeaderFilter from "@/components/tour-list/tour-list-v2/TopHeaderFilter";
 import TourIndex from "@/components/tour-list/tour-list-v2/TourIndex";
 import Sidebar from "@/components/tour-list/tour-list-v2/Sidebar";
 
 const TourMain = () => {
+  const searchParams = useSearchParams();
   const [selectedLocations, setSelectedLocations] = useState([]);
+
+  useEffect(() => {
+    const location = searchParams.get("location");
+    if (location) {
+      setSelectedLocations([location]);
+    }
+  }, [searchParams]);
 
   return (
     <>

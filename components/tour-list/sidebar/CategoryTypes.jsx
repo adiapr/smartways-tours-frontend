@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useEffect, useState } from "react";
 
 const CategoryTypes = ({ setSelectedLocations }) => {
@@ -49,7 +49,6 @@ const CategoryTypes = ({ setSelectedLocations }) => {
               <div className="text-15 ml-10">{category.location}</div>
             </div>
           </div>
-          <div className="col-auto"></div>
         </div>
       ))}
     </>
