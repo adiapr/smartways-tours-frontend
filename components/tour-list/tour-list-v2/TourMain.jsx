@@ -1,9 +1,10 @@
-"use client";
-import { useState, useEffect } from "react";
-import { useSearchParams } from "next/navigation";
-import TopHeaderFilter from "@/components/tour-list/tour-list-v2/TopHeaderFilter";
-import TourIndex from "@/components/tour-list/tour-list-v2/TourIndex";
-import Sidebar from "@/components/tour-list/tour-list-v2/Sidebar";
+'use client';
+
+import { Suspense, useEffect, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
+import TopHeaderFilter from '@/components/tour-list/tour-list-v2/TopHeaderFilter';
+import TourIndex from '@/components/tour-list/tour-list-v2/TourIndex';
+import Sidebar from '@/components/tour-list/tour-list-v2/Sidebar';
 
 const TourMain = () => {
   const searchParams = useSearchParams();
@@ -17,7 +18,7 @@ const TourMain = () => {
   }, [searchParams]);
 
   return (
-    <>
+    <Suspense fallback={<div>Loading...</div>}>
       <div className="col-xl-3">
         <aside className="sidebar y-gap-40 xl:d-none">
           <Sidebar setSelectedLocations={setSelectedLocations} />
@@ -48,7 +49,7 @@ const TourMain = () => {
         <div className="mt-30"></div>
         <TourIndex selectedLocations={selectedLocations} />
       </div>
-    </>
+    </Suspense>
   );
 };
 

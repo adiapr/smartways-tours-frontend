@@ -2,9 +2,11 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 
 const TourProperties = ({ selectedLocations }) => {
+  const searchParams = useSearchParams();
   const [toursData, setToursData] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -23,7 +25,6 @@ const TourProperties = ({ selectedLocations }) => {
     fetchData();
   }, []);
 
-  // Filter data berdasarkan lokasi yang dipilih
   const filteredToursData = toursData.filter((item) =>
     selectedLocations.length === 0 || selectedLocations.includes(item.location.id.toString())
   );
@@ -33,7 +34,7 @@ const TourProperties = ({ selectedLocations }) => {
   }
 
   return (
-    <>
+    <Suspense fallback={<div>Loading tours...</div>}>
       {filteredToursData.slice(0, 15).map((item) => (
         <div
           className="col-lg-4 col-6 px-1"
@@ -114,7 +115,7 @@ const TourProperties = ({ selectedLocations }) => {
           </Link>
         </div>
       ))}
-    </>
+    </Suspense>
   );
 };
 
