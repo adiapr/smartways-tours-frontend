@@ -1,14 +1,12 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useState, Suspense } from 'react';
-import { useSearchParams } from 'next/navigation';
 
 const TourProperties = ({ selectedLocations }) => {
-  const searchParams = useSearchParams();
-  const [toursData, setToursData] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [toursData, setToursData] = useState([]); // State untuk menyimpan data wisata
+  const [loading, setLoading] = useState(true); // State untuk menangani loading
 
   useEffect(() => {
     const fetchData = async () => {
@@ -34,7 +32,7 @@ const TourProperties = ({ selectedLocations }) => {
   }
 
   return (
-    <Suspense fallback={<div>Loading tours...</div>}>
+    <>
       {filteredToursData.slice(0, 15).map((item) => (
         <div
           className="col-lg-4 col-6 px-1"
@@ -115,7 +113,7 @@ const TourProperties = ({ selectedLocations }) => {
           </Link>
         </div>
       ))}
-    </Suspense>
+    </>
   );
 };
 

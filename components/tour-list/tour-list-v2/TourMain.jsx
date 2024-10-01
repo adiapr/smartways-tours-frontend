@@ -1,24 +1,24 @@
 'use client';
 
-import { Suspense, useEffect, useState } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useEffect, useState } from 'react';
+import { useSearchParams } from 'next/navigation'; // Menggunakan useSearchParams
 import TopHeaderFilter from '@/components/tour-list/tour-list-v2/TopHeaderFilter';
 import TourIndex from '@/components/tour-list/tour-list-v2/TourIndex';
 import Sidebar from '@/components/tour-list/tour-list-v2/Sidebar';
 
 const TourMain = () => {
-  const searchParams = useSearchParams();
+  const searchParams = useSearchParams(); // Mengambil search params dari URL
   const [selectedLocations, setSelectedLocations] = useState([]);
 
   useEffect(() => {
-    const location = searchParams.get("location");
+    const location = searchParams.get('location'); // Ambil parameter `location` dari URL
     if (location) {
-      setSelectedLocations([location]);
+      setSelectedLocations([location]); // Set lokasi pertama kali berdasarkan query param
     }
-  }, [searchParams]);
+  }, [searchParams]); // Jalankan useEffect setiap kali `searchParams` berubah
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <>
       <div className="col-xl-3">
         <aside className="sidebar y-gap-40 xl:d-none">
           <Sidebar setSelectedLocations={setSelectedLocations} />
@@ -49,7 +49,7 @@ const TourMain = () => {
         <div className="mt-30"></div>
         <TourIndex selectedLocations={selectedLocations} />
       </div>
-    </Suspense>
+    </>
   );
 };
 
