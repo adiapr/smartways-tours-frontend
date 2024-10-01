@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -32,7 +32,7 @@ const TourProperties = ({ selectedLocations }) => {
   }
 
   return (
-    <>
+    <Suspense fallback={<div>Loading Tours...</div>}>
       {filteredToursData.slice(0, 15).map((item) => (
         <div
           className="col-lg-4 col-6 px-1"
@@ -113,7 +113,7 @@ const TourProperties = ({ selectedLocations }) => {
           </Link>
         </div>
       ))}
-    </>
+    </Suspense>
   );
 };
 
