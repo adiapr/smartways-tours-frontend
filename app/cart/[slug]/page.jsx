@@ -52,17 +52,18 @@ function Cart({ params }) {
     useEffect(() => {
         const fetchTour = async () => {
             try {
-                const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/cart/${params.slug}`);
-                const data = await response.json();
-                setTour(data);
-                setPeserta(data.pax);
+                const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/cart/${params.slug}`)
+                const data = await response.json()
+                setTour(data)
+                setPeserta(data.pax)
+                setOrderTourData(prevData => ({ ...prevData, jml_peserta: data.pax }))
             } catch (error) {
-                console.log('error ', error);
+                console.error('Error fetching tour data:', error)
             }
         }
-
+    
         if (params) {
-            fetchTour();
+            fetchTour()
         }
     }, [params]);
 
@@ -122,16 +123,16 @@ function Cart({ params }) {
     // Tambah jumlah peserta
     const handleAddPeserta = useCallback(() => {
         if (tour && tour.pax) {
-          setPeserta(prevPeserta => {
-            const newValue = prevPeserta + Number(tour.pax)
-            console.log('Adding peserta:', prevPeserta, '+', tour.pax, '=', newValue)
-            setOrderTourData(prevData => ({ ...prevData, jml_peserta: newValue }))
-            return newValue
-          })
+            setPeserta(prevPeserta => {
+                const newValue = Number(prevPeserta) + Number(tour.pax)
+                console.log('Adding peserta:', prevPeserta, '+', tour.pax, '=', newValue)
+                setOrderTourData(prevData => ({ ...prevData, jml_peserta: newValue }))
+                return newValue
+            })
         } else {
-          console.warn('Cannot add peserta: tour or tour.pax is not defined')
+            console.warn('Cannot add peserta: tour or tour.pax is not defined')
         }
-      }, [tour])
+    }, [tour])
 
     // Kurangi jumlah peserta
     const handleRemovePeserta = () => {
