@@ -4,7 +4,7 @@ import Header1 from '@/components/header/default-header'
 import JoinGroup from '@/components/home/home-1/JoinGroup';
 import Image from 'next/image'
 import DefaultFooter from "@/components/footer/default";
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { Snap } from 'midtrans-client';
 import LoginForm from '@/components/common/LoginForm';
 import { useSession } from 'next-auth/react';
@@ -120,20 +120,22 @@ function Cart({ params }) {
     }
 
     // Tambah jumlah peserta
-    const handleAddPeserta = () => {
-        setPeserta((prevPeserta) => {
-          const newPeserta = prevPeserta + (tour?.pax || 0)
-          console.log('New peserta count:', newPeserta) // For debugging
-          return newPeserta
-        })
-    }
+    const handleAddPeserta = useCallback(() => {
+        if (tour && tour.pax) {
+          setPeserta(prevPeserta => {
+            const newValue = prevPeserta + Number(tour.pax)
+            console.log('Adding peserta:', prevPeserta, '+', tour.pax, '=', newValue)
+            setOrderTourData(prevData => ({ ...prevData, jml_peserta: newValue }))
+            return newValue
+          })
+        } else {
+          console.warn('Cannot add peserta: tour or tour.pax is not defined')
+        }
+      }, [tour])
 
     // Kurangi jumlah peserta
     const handleRemovePeserta = () => {
-        // if (peserta > tour.pax) { // Pastikan jumlah peserta tidak turun di bawah pax awal
-        //     setPeserta((prevPeserta) => prevPeserta - tour.pax);
-        // }
-        if (tour && tour.pax && peserta > tour.pax) { // Pastikan jumlah peserta tidak turun di bawah pax awal
+        if (peserta > tour.pax) { // Pastikan jumlah peserta tidak turun di bawah pax awal
             setPeserta((prevPeserta) => prevPeserta - tour.pax);
         }
     }
