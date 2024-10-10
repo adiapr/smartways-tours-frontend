@@ -121,12 +121,18 @@ function Cart({ params }) {
 
     // Tambah jumlah peserta
     const handleAddPeserta = () => {
-        setPeserta((prevPeserta) => prevPeserta + tour.pax); // Menambahkan pax awal ke jumlah peserta saat ini
+        // setPeserta((prevPeserta) => prevPeserta + tour.pax); // Menambahkan pax awal ke jumlah peserta saat ini
+        if (tour && tour.pax) {
+            setPeserta((prevPeserta) => prevPeserta + tour.pax); // Menambahkan pax awal ke jumlah peserta saat ini
+        }
     }
 
     // Kurangi jumlah peserta
     const handleRemovePeserta = () => {
-        if (peserta > tour.pax) { // Pastikan jumlah peserta tidak turun di bawah pax awal
+        // if (peserta > tour.pax) { // Pastikan jumlah peserta tidak turun di bawah pax awal
+        //     setPeserta((prevPeserta) => prevPeserta - tour.pax);
+        // }
+        if (tour && tour.pax && peserta > tour.pax) { // Pastikan jumlah peserta tidak turun di bawah pax awal
             setPeserta((prevPeserta) => prevPeserta - tour.pax);
         }
     }
