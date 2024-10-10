@@ -502,15 +502,15 @@ export const paketWisataItems = [
         menuList: [
           {
             name: "Jawa Timur",
-            routePath: "/paket-wisata?location=Jawa Timur",
+            routePath: "/paket-wisata?location=1",
           },
           {
             name: "Bali",
-            routePath: "/paket-wisata?location=Bali",
+            routePath: "/paket-wisata?location=2",
           },
           {
             name: "Lombok",
-            routePath: "/paket-wisata?location=Lombok",
+            routePath: "/paket-wisata?location=3",
           }
         ],
       },
@@ -520,7 +520,7 @@ export const paketWisataItems = [
         menuList: [
           {
             name: "Jepang",
-            routePath: "/paket-wisata?location=Jepang",
+            routePath: "/paket-wisata?location=4",
           },
         ],
       }

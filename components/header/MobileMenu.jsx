@@ -15,7 +15,7 @@ import {
   pageItems,
   dashboardItems,
   categorieMobileItems,
-  categorieMegaMenuItems,
+  // categorieMegaMenuItems,
   paketWisataItems,
   outbondItems,
   renCar,
@@ -39,25 +39,25 @@ const MobileMenu = () => {
 
   const router = useRouter()
 
-   useEffect(() => {
+//    useEffect(() => {
 
-    categorieMegaMenuItems.map((megaMenu=>{
-    megaMenu?.menuCol?.map((megaCol=>{
-      megaCol?.menuItems?.map((item=>{   
-        item?.menuList?.map((list)=>{
-          if (list.routePath?.split('/')[1] == pathname.split('/')[1]) {
-            setIsActiveParent(true)
-            setisActiveNestedParentTwo(item?.title)
-            setisActiveNestedParent(megaMenu?.id)           
-          }        
-        })
-      }))
-    }))
-  }))
+//     categorieMegaMenuItems.map((megaMenu=>{
+//     megaMenu?.menuCol?.map((megaCol=>{
+//       megaCol?.menuItems?.map((item=>{   
+//         item?.menuList?.map((list)=>{
+//           if (list.routePath?.split('/')[1] == pathname.split('/')[1]) {
+//             setIsActiveParent(true)
+//             setisActiveNestedParentTwo(item?.title)
+//             setisActiveNestedParent(megaMenu?.id)           
+//           }        
+//         })
+//       }))
+//     }))
+//   }))
 
 
    
- }, [])
+//  }, [])
 
   return (
     <>
@@ -120,14 +120,10 @@ const MobileMenu = () => {
                       {single.menuList.map((menu, i) => (
                         <MenuItem
                           key={i}
-                          onClick={()=>router.push(menu.routePath)}
-                          className={
-                            isActiveLink(menu.routePath, pathname)
-                              ? "menu-active-link"
-                              : "inactive-menu"
-                          }
                         >
-                          {menu.name}
+                          <a href={menu.routePath}>
+                            {menu.name}
+                          </a>
                         </MenuItem>
                       ))}
                     </SubMenu>
