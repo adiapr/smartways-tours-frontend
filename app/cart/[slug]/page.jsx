@@ -121,9 +121,11 @@ function Cart({ params }) {
 
     // Tambah jumlah peserta
     const handleAddPeserta = () => {
-        // setPeserta((prevPeserta) => prevPeserta + tour.pax); // Menambahkan pax awal ke jumlah peserta saat ini
         if (tour && tour.pax) {
+            console.log('Tour Pax:', tour.pax); // Tambahkan log ini untuk memeriksa nilai tour.pax
             setPeserta((prevPeserta) => prevPeserta + tour.pax); // Menambahkan pax awal ke jumlah peserta saat ini
+        } else {
+            console.log('Tour or tour.pax is not defined.');
         }
     }
 
