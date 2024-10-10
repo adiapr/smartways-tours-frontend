@@ -108,7 +108,7 @@ const SignUpForm = () => {
           </div>
         </div>
 
-        <div className="col-12">
+        {/* <div className="col-12">
           <div className="d-flex">
             <div className="form-checkbox mt-5">
               <input type="checkbox" name="promotions" />
@@ -121,7 +121,7 @@ const SignUpForm = () => {
               in the Privacy Policy.
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className="col-12">
           <button

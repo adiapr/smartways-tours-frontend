@@ -30,9 +30,9 @@ const SignUp = () => {
                 {/* End SignUP */}
 
                 <div className="row y-gap-20 pt-30">
-                  <div className="col-12">
+                  {/* <div className="col-12">
                     <div className="text-center">or sign in with</div>
-                  </div>
+                  </div> */}
                   {/* <LoginWithSocial /> */}
                   <div className="col-12">
                     <div className="text-center px-30">

@@ -101,7 +101,7 @@ const CategoriesMegaMenu = ({ setIsActiveParent }) => {
               <li className="">
                 {megaCol?.menuItems?.map((item) => (
                   <div className="mega__item font-bold" key={item.id}>
-                    <Link href={`/paket-wisata?location=${item.id}`} className="text-15 fw-bold underline">{item.title}</Link>
+                    <a href={`/paket-wisata?location=${item.id}`} className="text-15 fw-bold underline">{item.title}</a>
                     <div className="y-gap-5 text-15 pt-5">
                       {item?.menuList?.map((list, i) => (
                         <div
