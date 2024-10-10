@@ -492,10 +492,7 @@ export const categorieMobileItems = [
 ];
 
 export const paketWisataItems = [
-  {
-    id: 1,
-    title: "Paket Wisata",
-    menuItems: [
+  
       {
         id: 1,
         title: "Domestik",
@@ -524,6 +521,4 @@ export const paketWisataItems = [
           },
         ],
       }
-    ],
-  },
 ];

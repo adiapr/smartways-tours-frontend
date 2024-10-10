@@ -112,25 +112,20 @@ const MobileMenu = () => {
               Home
             </MenuItem> */}
 
-            <SubMenu label="Paket Wisata" className={isActiveParent ? 'menu-active-link':'' }>
+            <SubMenu label="Paket Wisata" className={isActiveParent ? 'menu-active-link' : ''}>
               {paketWisataItems.map((item) => (
-                <SubMenu label={item.title} key={item.id} className={isActiveNestedParent == item.id ? 'menu-active-link':'inactive-menu'}>
-                  {item.menuItems.map((single) => (
-                    <SubMenu label={single.title} key={single.id}  className={isActiveNestedParentTwo == single.title ? 'menu-active-link':'inactive-menu'} >
-                      {single.menuList.map((menu, i) => (
-                        <MenuItem
-                          key={i}
-                        >
-                          <a href={menu.routePath}>
+                <SubMenu label={item.title} key={item.id} className={isActiveNestedParent == item.id ? 'menu-active-link' : 'inactive-menu'}>
+                  {item.menuList.map((menu, i) => (
+                      <a  key={i} href={menu.routePath}>
+                        <MenuItem>
                             {menu.name}
-                          </a>
                         </MenuItem>
-                      ))}
-                    </SubMenu>
+                      </a>
                   ))}
                 </SubMenu>
               ))}
             </SubMenu>
+
 
             <SubMenu label="Layanan Dokumentasi" className={ blogItems.some((item=>item.routePath?.split('/')[1] == pathname.split('/')[1])) ? "menu-active-link":''}>
               {documentationItems.map((item, i) => (
