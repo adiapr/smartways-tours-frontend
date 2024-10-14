@@ -9,8 +9,8 @@ import DocumentationCheckout from '@/components/booking-page/DocumentaionCheckou
 function Page({ searchParams }) {
     // console.log(searchParams);
   return (
-    <div style={{ display:"flex", justifyContent:"center", alignItems:"center" }}>
-      {/* <DefaultHeader />
+    <div>
+      <DefaultHeader />
       <div className="mt-90" style={{ backgroundImage: 'linear-gradient(to top right, rgba(0, 0, 255, 0.3), rgba(255, 255, 255, 0.5))' }}>
         <div className="container py-50">
           <h1 className="fw-bold">Let’s plan your photo shoot</h1>
@@ -22,8 +22,7 @@ function Page({ searchParams }) {
         </div>
       </div>
       <JoinGroup />
-      <DefaultFooter /> */}
-      <h1>- The site is unavaiable -</h1>
+      <DefaultFooter />
     </div>
   );
 }
