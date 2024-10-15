@@ -9,10 +9,10 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      {/* <Wrapper>
+      <Wrapper>
         <MainHome />
-      </Wrapper> */}
-      <div style={{ display:"flex", justifyContent:"center", alignItems:"center", height:"100vh" }}>
+      </Wrapper>
+      {/* <div style={{ display:"flex", justifyContent:"center", alignItems:"center", height:"100vh" }}>
         <div>
           <h1 style={{ textAlign:"center" }}>
             - <br />
@@ -20,7 +20,7 @@ export default function Home() {
             -
           </h1>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
