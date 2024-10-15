@@ -44,7 +44,7 @@ const TourProperties = ({ selectedLocations }) => {
             href={`/paket-wisata/${item.slug}`}
             className="tourCard -type-1 rounded-4 position-relative "
           >
-            <div className="border-1 p-1 rounded" style={{ backgroundColor: 'rgb(194,196,199, 0.2)' }}>
+            <div className="border-1 p-1 rounded" style={{ backgroundColor: 'rgb(194,196,199, 0.2)', height: '330px', position: 'relative' }}>
               <div className="tourCard__image">
                 <div className="cardImage ratio ratio-16:9">
                   <div className="cardImage__content">
@@ -78,7 +78,7 @@ const TourProperties = ({ selectedLocations }) => {
                 <h4 className="tourCard__title text-dark-1 text-14 md-text-18 lh-16 fw-bold line-clamp-2">
                   <span>{item?.name}</span>
                 </h4>
-                <div className="row justify-between items-center pt-1">
+                <div className="row justify-between items-center pt-1" style={{ bottom: '10px', position: 'absolute', width: '100%' }}>
                   <div className="col-12 w-100">
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                       <div style={{ fontSize: '12px' }} className="fw-bold">
