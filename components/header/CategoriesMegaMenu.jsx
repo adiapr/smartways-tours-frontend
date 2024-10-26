@@ -102,7 +102,7 @@ const CategoriesMegaMenu = ({ setIsActiveParent }) => {
                 {megaCol?.menuItems?.map((item) => (
                   <div className="mega__item font-bold" key={item.id}>
                     <a href={`/paket-wisata?location=${item.id}`} className="text-15 fw-bold underline">{item.title}</a>
-                    <div className="y-gap-5 text-15 pt-5">
+                    {/* <div className="y-gap-5 text-15 pt-5">
                       {item?.menuList?.map((list, i) => (
                         <div
                           key={i}
@@ -112,10 +112,10 @@ const CategoriesMegaMenu = ({ setIsActiveParent }) => {
                               : ""
                           }
                         >
-                          {/* <Link href={'/paket-wisata/'+list.routePath}>{list.name.slice(0,20)}</Link> */}
+                          <Link href={'/paket-wisata/'+list.routePath}>{list.name.slice(0,20)}</Link>
                         </div>
                       ))}
-                    </div>
+                    </div> */}
                   </div>
                 ))}
               </li>
