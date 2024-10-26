@@ -1,7 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
 
-const CategoryTypes = ({ setSelectedLocations }) => {
+// Accept selectedLocations and setSelectedLocations as props
+const CategoryTypes = ({ selectedLocations, setSelectedLocations }) => {
   const [locations, setLocations] = useState([]);
 
   useEffect(() => {
@@ -42,6 +43,7 @@ const CategoryTypes = ({ setSelectedLocations }) => {
                 name="locations"
                 value={category.id}
                 onChange={handleCheckboxChange}
+                checked={selectedLocations.includes(category.id.toString())}
               />
               <div className="form-checkbox__mark">
                 <div className="form-checkbox__icon icon-check" />

@@ -1,10 +1,15 @@
-"use client"
+"use client";
 import CategoryTypes from "../sidebar/CategoryTypes";
 
-const Sidebar = ({ setSelectedLocations }) => {
+// Accept selectedLocations and setSelectedLocations as props
+const Sidebar = ({ selectedLocations, setSelectedLocations }) => {
   return (
     <aside className="sidebar y-gap-40">
-      <CategoryTypes setSelectedLocations={setSelectedLocations} />
+      {/* Pass the props to CategoryTypes */}
+      <CategoryTypes 
+        selectedLocations={selectedLocations} 
+        setSelectedLocations={setSelectedLocations} 
+      />
     </aside>
   );
 };

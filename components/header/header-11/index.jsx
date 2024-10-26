@@ -10,6 +10,7 @@ import LanguageMegaMenu from "../LanguageMegaMenu";
 import MobileMenu from "../MobileMenu";
 import ButtonHeader from "../Button";
 import { useSession } from "next-auth/react";
+import ButtonLanguage from "../ButtonLanguage";
 
 const Header1 = () => {
   const [navbar, setNavbar] = useState(false);
@@ -85,6 +86,7 @@ const Header1 = () => {
 
                 {/* Start mobile menu icon */}
                 <div className="d-none xl:d-flex x-gap-20 items-center pl-30 text-white">
+                  <ButtonLanguage />
                   <div>
                     <Link
                       href="/login"

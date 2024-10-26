@@ -126,4 +126,17 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+
+  /* Custom CSS to handle sidebar visibility */
+.sidebar-desktop-only {
+  display: none; /* Hide by default */
+}
+
+/* Show sidebar only on desktop and larger screens */
+@media (min-width: 1200px) { /* Adjust the breakpoint as necessary */
+  .sidebar-desktop-only {
+    display: block;
+  }
+}
+
   
