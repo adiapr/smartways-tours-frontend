@@ -23,10 +23,12 @@ const TourMain = () => {
       <div className="row">
         {/* Use custom class instead of Bootstrap's d-none */}
         <div className="col-xl-3 sidebar-desktop-only">
-          <Sidebar 
-            selectedLocations={selectedLocations} 
-            setSelectedLocations={setSelectedLocations} 
-          />
+          <div className="position-sticky" style={{ top:'80px' }}>
+            <Sidebar 
+              selectedLocations={selectedLocations} 
+              setSelectedLocations={setSelectedLocations} 
+            />
+          </div>
         </div>
 
         {/* Mobile Off-canvas Sidebar */}
