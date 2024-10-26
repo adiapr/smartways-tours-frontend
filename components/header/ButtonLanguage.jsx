@@ -14,9 +14,9 @@ function ButtonLanguage() {
   return (
     <div>
         {i18n.language === 'en' ? (
-            <button onClick={changeLanguageToIndonesian}><Image src={'/img/lang/id.png'} width={40} height={40} style={{ borderRadius:'10px', border:'solid 1px white' }}/></button>
+            <button onClick={changeLanguageToIndonesian}><Image src={'/img/lang/en.png'} width={40} height={40} style={{ borderRadius:'10px', border:'solid 1px white' }}/></button>
           ) : (
-            <button onClick={changeLanguageToEnglish}><Image src={'/img/lang/en.png'} width={40} height={40} style={{ borderRadius:'10px', border:'solid 1px white' }}/></button>
+            <button onClick={changeLanguageToEnglish}><Image src={'/img/lang/id.png'} width={40} height={40} style={{ borderRadius:'10px', border:'solid 1px white' }}/></button>
           )}
     </div>
   )
