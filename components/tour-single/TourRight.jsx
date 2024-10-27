@@ -18,7 +18,7 @@ const TourRight = ({tour}) => {
                     <i className="icon-customer text-22 text-blue-1 mr-10"></i>
                     <div className="text-15 lh-15">
                     Maksimal Orang:
-                    <br /> 5 - 6 Per Jeep
+                    <br /> {tour.group_size} 
                     </div>
                 </div>
                 </div>
