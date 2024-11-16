@@ -1,9 +1,7 @@
-const path = require('path');
-
 module.exports = {
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en', 'id'],
+    locales: ['en', 'id'], // Bahasa yang didukung
+    defaultLocale: 'id',   // Tetapkan default ke 'en'
+    localeDetection: false, // Nonaktifkan deteksi otomatis
   },
-  localePath: path.resolve('./public/locales'),
 };
