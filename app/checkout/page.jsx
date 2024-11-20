@@ -266,7 +266,7 @@ function Checkout() {
                   </button>
                 ) : (
                   <div>
-                    <LoginForm />
+                    {/* <LoginForm /> */}
                   </div>
                 )}
               </div>
