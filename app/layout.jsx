@@ -17,6 +17,7 @@ import { store } from "../store/store";
 import { SessionProvider } from "next-auth/react";
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import { I18nextProviderWrapper } from "./providers/i18nextProvider";
+import { CartProvider } from "./context/CartContext";
 
 if (typeof window !== "undefined") {
   require("bootstrap/dist/js/bootstrap");
@@ -37,6 +38,7 @@ export default function RootLayout({ children }) {
       <body>
         {/* <main> */}
           <>
+          <CartProvider>
             <I18nextProviderWrapper>
               <SessionProvider>
                 <Provider store={store}>
@@ -45,6 +47,7 @@ export default function RootLayout({ children }) {
                 </Provider>
               </SessionProvider>
             </I18nextProviderWrapper>
+          </CartProvider>
           </>
         {/* </main> */}
       </body>

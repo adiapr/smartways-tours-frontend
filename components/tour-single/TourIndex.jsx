@@ -15,8 +15,25 @@ import JoinGroup from '../home/home-1/JoinGroup';
 
 const TourIndex = ({ slug }) => {
   const [tour, setTour] = useState(null);
+  const [prices, setPrices] = useState(null);
 
 //   console.log('Slug:', slug); // Logging slug
+  useEffect( ()=> {
+    const fetchHarga = async () => {
+      try {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/menu-wisata/${slug}/harga`);
+        const data = await response.json();
+        // console.log(data)
+        setPrices(data);
+      } catch (error) {
+        console.log('Error fetching data', error);
+      }
+    };
+    if(slug){
+      fetchHarga()
+    }
+  }, [slug])
+ 
 
   useEffect(() => {
     const fetchTour = async () => {
@@ -34,6 +51,7 @@ const TourIndex = ({ slug }) => {
     if (slug) {
       fetchTour();
     }
+    
   }, [slug]);
 
 //   console.log(tour.documentations);
@@ -156,7 +174,7 @@ const TourIndex = ({ slug }) => {
 
       <section className="border-top-light  mt-20 pt-40">
         <div className="container">
-          <TourPrices prices={tour.prices} />
+          <TourPrices prices={prices} tour={tour} />
         </div>
       </section>
 

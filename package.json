@@ -44,6 +44,7 @@
     "sass": "^1.68.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.11",
+    "sweetalert2": "^11.14.5",
     "swiper": "^8.4.7"
   }
 }

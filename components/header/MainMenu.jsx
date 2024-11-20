@@ -16,6 +16,7 @@ import {
 } from "../../utils/linkActiveChecker";
 import { usePathname } from "next/navigation";
 import ButtonLanguage from "./ButtonLanguage";
+import ButtonCart from "./ButtonCart";
 import { useTranslation } from 'react-i18next';
 
 const MainMenu = ({ style = "" }) => {
@@ -91,6 +92,9 @@ const MainMenu = ({ style = "" }) => {
         {/* <li className={pathname === "/contact" ? "current" : ""}>
           <Link href="/contact">{t('common.menuContact')}</Link>
         </li> */}
+        <li className="language-switch ms-2">
+          <ButtonCart />
+        </li>
         <li className="language-switch ms-2">
           <ButtonLanguage />
         </li>

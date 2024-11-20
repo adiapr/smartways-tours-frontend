@@ -54,6 +54,7 @@ function Cart({ params }) {
             try {
                 const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/cart/${params.slug}`)
                 const data = await response.json()
+                // console.log(data)
                 setTour(data)
                 setPeserta(data.pax)
                 setOrderTourData(prevData => ({ ...prevData, jml_peserta: data.pax }))
@@ -209,13 +210,13 @@ function Cart({ params }) {
                             <div className="card">
                                 <div className="card-header">
                                     <h5 className="card-title">
-                                        <i className="bi bi-cart4"></i> Detail Pesanan
+                                        <i className="bi bi-cart4"></i> Detail Pesanan  
                                     </h5>
                                 </div>
                                 <div className="card-body">
                                     <div className="row">
                                         <div className="col-md-4">
-                                            <Image src={'/img/slider/s1.jpg'} className='img-thumbnail w-100' width={400} height={200} />
+                                            <Image src={tour?.tour?.media[0].original_url} className='img-thumbnail w-100 aspect-video' width={400} height={200} unoptimized />
                                         </div>
                                         <div className="col-md-8">
                                             <div className="badge bg-primary">{tour?.name}</div>
