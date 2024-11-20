@@ -265,7 +265,9 @@ function Checkout() {
                     Pesan Sekarang <i className="bi bi-arrow-right"></i>
                   </button>
                 ) : (
-                  <LoginForm />
+                  <div>
+                    <LoginForm />
+                  </div>
                 )}
               </div>
             </div>
