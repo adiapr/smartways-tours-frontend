@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import Header1 from "@/components/header/default-header";
 import DefaultFooter from "@/components/footer/default";
 import { useSession } from "next-auth/react";
@@ -266,7 +266,9 @@ function Checkout() {
                   </button>
                 ) : (
                   <div>
-                    <LoginForm />
+                     <Suspense fallback={<div>Loading...</div>}>
+                      <LoginForm />
+                    </Suspense>
                   </div>
                 )}
               </div>
