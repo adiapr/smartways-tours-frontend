@@ -45,7 +45,7 @@ function Checkout() {
   };
 
   const calculateTotalPrice = () => {
-    return cartItems.reduce((total, item) => total + item.price, 0);
+    return cartItems.reduce((total, item) => total + (item.price || 0), 0);
   };
 
   const validateForm = () => {
