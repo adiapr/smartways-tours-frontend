@@ -116,6 +116,9 @@ function Checkout() {
     }
   };
 
+  console.log("cartItems di server:", cartItems);
+console.log("Total Price di server:", calculateTotalPrice());
+
   return (
     <div>
       <div className="header-margin"></div>
