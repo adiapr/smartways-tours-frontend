@@ -1,5 +1,4 @@
 "use client";
-
 import React, { Suspense, useEffect, useState } from "react";
 import Header1 from "@/components/header/default-header";
 import DefaultFooter from "@/components/footer/default";
@@ -20,14 +19,12 @@ function Checkout() {
     tiktok: "",
     email: session?.user?.email || "",
   });
-  const [formErrors, setFormErrors] = useState({});
+  const [formErrors, setFormErrors] = useState({}); // Untuk menyimpan pesan error
 
-  // Ambil data dari Local Storage saat komponen dimount
+  // Ambil data dari Local Storage saat pertama kali render
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const storedCart = JSON.parse(localStorage.getItem("checkoutCart")) || [];
-      setCartItems(storedCart);
-    }
+    const storedCart = JSON.parse(localStorage.getItem("checkoutCart")) || [];
+    setCartItems(storedCart);
   }, []);
 
   const handleInputChange = (e) => {
@@ -37,7 +34,7 @@ function Checkout() {
       [name]: value,
     }));
 
-    // Reset error jika diubah
+    // Reset error saat user mulai mengisi input
     setFormErrors((prevErrors) => ({
       ...prevErrors,
       [name]: "",
@@ -45,19 +42,19 @@ function Checkout() {
   };
 
   const calculateTotalPrice = () => {
-    return cartItems.reduce((total, item) => total + (item.price || 0), 0);
+    return cartItems.reduce((total, item) => total + item.price, 0);
   };
 
+  // Validasi Form
   const validateForm = () => {
     let errors = {};
-
     if (!formData.keberangkatan) errors.keberangkatan = "Tanggal keberangkatan wajib diisi";
     if (!formData.name) errors.name = "Nama lengkap wajib diisi";
     if (!formData.email) errors.email = "Email wajib diisi";
     if (!formData.phone) errors.phone = "Nomor telepon wajib diisi";
     if (!formData.birthday) errors.birthday = "Tanggal lahir wajib diisi";
 
-    // Validasi anggota di cartItems
+    // Periksa masing-masing anggota di cartItems
     cartItems.forEach((item, index) => {
       if (!item.anggota || item.anggota.trim() === "") {
         errors[`anggota_${index}`] = `Nama anggota di item ${index + 1} wajib diisi`;
@@ -65,11 +62,11 @@ function Checkout() {
     });
 
     setFormErrors(errors);
-    return Object.keys(errors).length === 0; // Jika tidak ada error
+    return Object.keys(errors).length === 0; // True jika tidak ada error
   };
 
   const handleCheckout = async () => {
-    if (!validateForm()) return;
+    if (!validateForm()) return; // Jika validasi gagal, hentikan proses
 
     try {
       const requestBody = {
@@ -94,9 +91,9 @@ function Checkout() {
       };
 
       const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/checkout-cart`, {
-        method: "POST",
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(requestBody),
       });
@@ -104,8 +101,10 @@ function Checkout() {
       const data = await response.json();
 
       if (data.success && data.snap_token) {
-        localStorage.removeItem("checkoutCart");
-        setCartItems([]);
+        // Hapus semua item dari keranjang
+        localStorage.removeItem("checkoutCart"); // Hapus dari Local Storage
+        setCartItems([]); // Hapus dari state
+        // Redirect ke Midtrans Snap
         window.location.href = `${process.env.NEXT_PUBLIC_MIDTRANS_URL}/${data.snap_token}`;
         alert("Checkout berhasil. Redirect ke Midtrans Snap...");
       } else {
@@ -115,9 +114,6 @@ function Checkout() {
       alert("Terjadi kesalahan saat checkout.");
     }
   };
-
-  console.log("cartItems di server:", cartItems);
-console.log("Total Price di server:", calculateTotalPrice());
 
   return (
     <div>
@@ -145,6 +141,7 @@ console.log("Total Price di server:", calculateTotalPrice());
                           <input
                             type="date"
                             name="keberangkatan"
+                            required
                             className="form-control"
                             value={formData.keberangkatan}
                             onChange={handleInputChange}
@@ -181,22 +178,98 @@ console.log("Total Price di server:", calculateTotalPrice());
                 )}
               </div>
             </div>
+
+            <div className="card mt-50">
+              <div className="card-header my-10">
+                <h5>Informasi Pemesan</h5>
+              </div>
+              <div className="card-body">
+                <div className="form-group mt-20">
+                  <label>Nama Lengkap</label>
+                  <input
+                    required
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    className="form-control"
+                  />
+                  {formErrors.name && <small className="text-danger">{formErrors.name}</small>}
+                </div>
+                <div className="form-group mt-20">
+                  <label>Paspor</label>
+                  <input
+                    type="text"
+                    name="pasport"
+                    value={formData.pasport}
+                    onChange={handleInputChange}
+                    className="form-control"
+                  />
+                </div>
+                <div className="form-group mt-20">
+                  <label>Tanggal Lahir</label>
+                  <input
+                    required
+                    type="date"
+                    name="birthday"
+                    value={formData.birthday}
+                    onChange={handleInputChange}
+                    className="form-control"
+                  />
+                  {formErrors.birthday && (
+                    <small className="text-danger">{formErrors.birthday}</small>
+                  )}
+                </div>
+                <div className="form-group mt-20">
+                  <label>No. Telp</label>
+                  <input
+                    required
+                    type="text"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    className="form-control"
+                  />
+                  {formErrors.phone && <small className="text-danger">{formErrors.phone}</small>}
+                </div>
+                <div className="form-group mt-20">
+                  <label>Email</label>
+                  <input
+                    required
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    className="form-control"
+                  />
+                  {formErrors.email && <small className="text-danger">{formErrors.email}</small>}
+                </div>
+              </div>
+            </div>
           </div>
+
           <div className="col-md-4">
-            <div className="card">
+            <div className="card" style={{ position: "sticky", top: "100px" }}>
               <div className="card-header">
                 <h5>Ringkasan Pesanan</h5>
               </div>
               <div className="card-body">
-                <p>Total Harga: Rp. {calculateTotalPrice().toLocaleString("id-ID")}</p>
+                <p className="text-black fw-bold">
+                  Total Harga: Rp. {calculateTotalPrice().toLocaleString("id-ID")}
+                </p>
                 {session ? (
-                  <button className="btn btn-success w-100" onClick={handleCheckout}>
-                    Pesan Sekarang
+                  <button
+                    className="btn btn-success w-100 mt-10"
+                    onClick={handleCheckout}
+                  >
+                    Pesan Sekarang <i className="bi bi-arrow-right"></i>
                   </button>
                 ) : (
-                  <Suspense fallback={<div>Loading...</div>}>
-                    <LoginForm />
-                  </Suspense>
+                  <div>
+                     <Suspense fallback={<div>Loading...</div>}>
+                      <LoginForm />
+                    </Suspense>
+                  </div>
                 )}
               </div>
             </div>
