@@ -48,7 +48,10 @@ function TourPrices({ prices, tour }) {
 
     return (
         <div>
-            <h3 className="text-22 fw-bold mb-20">Penawaran menarik bulan ini!</h3>
+            <h3 className="text-22 fw-bold mb-5">Penawaran menarik bulan ini!</h3>
+            <div className="alert alert-success py-1">
+                Pembayaran bisa dengan uang muka  ✨
+            </div>
             <div className="table-responsive">
                 <div>
                     {prices.map((price) => (

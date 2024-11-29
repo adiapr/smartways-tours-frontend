@@ -12,17 +12,18 @@ import { useSession } from 'next-auth/react';
 
 
 function Cart({ params }) {
+    // console.log(params);
     const [carData, setCarData] = useState([]);
     const [selectedCarPrice, setSelectedCarPrice] = useState(0);
-    const [snapToken, setSnapToken] = useState(null);
-    const [snapInitialized, setSnapInitialized] = useState(false);
     const { data: session } = useSession();
     const [tour, setTour] = useState(null);
     const [peserta, setPeserta] = useState(0);
-
-    const [availability, setAvailability] = useState(null); // Menyimpan status ketersediaan
-    const [availabilityMessage, setAvailabilityMessage] = useState(''); // Menyimpan pesan ketersediaan
-
+    const [dp, setDp] = useState();
+    const [isChecked, setIsChecked] = useState(false);
+    const [availability, setAvailability] = useState(null);
+    const [availabilityMessage, setAvailabilityMessage] = useState('');
+    const [total, setTotal] = useState(0);
+    const [errors, setErrors] = useState({}); 
 
     const [orderTourData, setOrderTourData] = useState({
         jml_peserta: peserta,
@@ -35,6 +36,17 @@ function Cart({ params }) {
         tiktok: '',
         email: ''
     });
+
+    const validateForm = () => {
+        let formErrors = {};
+        Object.keys(orderTourData).forEach(key => {
+            if (orderTourData[key] === '') {
+                formErrors[key] = 'This field is required';
+            }
+        });
+        setErrors(formErrors);
+        return Object.keys(formErrors).length === 0;
+    };
 
     useEffect(() => {
         const fetchData = async () => {
@@ -50,11 +62,49 @@ function Cart({ params }) {
     }, []);
 
     useEffect(() => {
+        const fetchDp = async () => {
+            try {
+                const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/tour-price/${params.slug}`);
+                const data = await response.json();
+                setDp(data);
+            } catch (error) {
+                console.log('error : ', error)
+            }
+        };
+        fetchDp();
+    }, [params.slug]);
+
+    const getDpPrice = () => {
+        if (!dp) return 0;
+    
+        if (dp?.tour?.location === 'international') {
+          return 2000000;
+        }
+    
+        if (dp?.name.includes('WNI')) {
+          return 150000;
+        }
+    
+        if (dp?.name.includes('WNA')) {
+          return total * 0.5;
+        }
+    
+        return 0;
+    };
+
+    useEffect(() => {
+        const calculateTotal = () => {
+            const baseTotal = ((Number(tour?.price) || 0) * peserta) + (Number(selectedCarPrice) || 0);
+            return isChecked ? getDpPrice() * peserta : baseTotal;
+        };
+        setTotal(calculateTotal());
+    }, [isChecked, peserta, dp, tour?.price, selectedCarPrice]);
+
+    useEffect(() => {
         const fetchTour = async () => {
             try {
                 const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/cart/${params.slug}`)
                 const data = await response.json()
-                // console.log(data)
                 setTour(data)
                 setPeserta(data.pax)
                 setOrderTourData(prevData => ({ ...prevData, jml_peserta: data.pax }))
@@ -73,13 +123,16 @@ function Cart({ params }) {
     };
 
     const handleOrder = async () => {
+        if (!validateForm()) {
+            console.error('Please fill in all required fields');
+            return;
+        }
+        
         try {
             if (!tour) {
                 console.error('Tour data is not available');
                 return;
             }
-    
-            const total = (Number(tour?.price) || 0) * peserta + (Number(selectedCarPrice) || 0);
     
             const requestBody = {
                 order_id: tour.id,
@@ -89,7 +142,9 @@ function Cart({ params }) {
                 total: total,
                 product_type: 'App\\Models\\Tour',
                 product_id: tour?.tour.id,
-                order_tour_data: [orderTourData], // Mengirim data tambahan ke backend
+                order_tour_data: [orderTourData],
+                tour_price_uuid: params.slug,
+                tour_type : isChecked ? 'dp' : 'full',
             };
     
             const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/transaction-tour`, {
@@ -108,25 +163,15 @@ function Cart({ params }) {
                 console.error('Failed to retrieve snap token:', data);
             }
         } catch (error) {
-            console.error('Error:', error);
+            console.error('Error:', error.message);
         }
     };
-    
 
-    const formatCurrency = (value) => {
-        return value.toLocaleString('id-ID', {
-            style: 'currency',
-            currency: 'IDR',
-            minimumFractionDigits: 0
-        });
-    }
-
-    // Tambah jumlah peserta
     const handleAddPeserta = useCallback(() => {
         if (tour && tour.pax) {
             setPeserta(prevPeserta => {
                 const newValue = Number(prevPeserta) + Number(tour.pax)
-                console.log('Adding peserta:', prevPeserta, '+', tour.pax, '=', newValue)
+                // console.log('Adding peserta:', prevPeserta, '+', tour.pax, '=', newValue)
                 setOrderTourData(prevData => ({ ...prevData, jml_peserta: newValue }))
                 return newValue
             })
@@ -135,9 +180,8 @@ function Cart({ params }) {
         }
     }, [tour])
 
-    // Kurangi jumlah peserta
     const handleRemovePeserta = () => {
-        if (peserta > tour.pax) { // Pastikan jumlah peserta tidak turun di bawah pax awal
+        if (peserta > tour.pax) {
             setPeserta((prevPeserta) => prevPeserta - tour.pax);
         }
     }
@@ -150,12 +194,10 @@ function Cart({ params }) {
             [name]: value
         });
     
-        // Jika tanggal keberangkatan diubah, periksa ketersediaan
         if (name === 'keberangkatan') {
             checkAvailability(value);
         }
     };
-    
 
     useEffect(() => {
         setOrderTourData((prevData) => ({
@@ -173,7 +215,7 @@ function Cart({ params }) {
                 },
                 body: JSON.stringify({ 
                     keberangkatan: date,
-                    tour_id: tour?.tour.id  // Mengirim tour_id untuk pengecekan di backend
+                    tour_id: tour?.tour.id
                 }),
             });
     
@@ -190,10 +232,6 @@ function Cart({ params }) {
             console.error('Error checking availability:', error);
         }
     };
-    
-    
-
-    const total = ((Number(tour?.price) || 0) * peserta) + (Number(selectedCarPrice) || 0);
 
     return (
         <div>
@@ -290,8 +328,9 @@ function Cart({ params }) {
                                                     name="name" 
                                                     value={orderTourData.name}
                                                     onChange={handleInputChange}
-                                                    className="form-control" 
+                                                    className={`form-control ${errors.name ? 'is-invalid' : ''}`}
                                                 />
+                                                {errors.name && <div className="invalid-feedback">{errors.name}</div>}
                                             </div>
 
                                             {/* Paspor */}
@@ -303,8 +342,9 @@ function Cart({ params }) {
                                                     name="pasport" 
                                                     value={orderTourData.pasport}
                                                     onChange={handleInputChange}
-                                                    className="form-control" 
+                                                    className={`form-control ${errors.pasport ? 'is-invalid' : ''}`}
                                                 />
+                                                {errors.pasport && <div className="invalid-feedback">{errors.pasport}</div>}
                                             </div>
 
                                             {/* Tanggal Lahir */}
@@ -316,8 +356,9 @@ function Cart({ params }) {
                                                     name="birthday" 
                                                     value={orderTourData.birthday}
                                                     onChange={handleInputChange}
-                                                    className="form-control" 
+                                                    className={`form-control ${errors.birthday ? 'is-invalid' : ''}`}
                                                 />
+                                                {errors.birthday && <div className="invalid-feedback">{errors.birthday}</div>}
                                             </div>
 
                                             {/* No. Telp */}
@@ -329,8 +370,9 @@ function Cart({ params }) {
                                                     name="phone" 
                                                     value={orderTourData.phone}
                                                     onChange={handleInputChange}
-                                                    className="form-control" 
+                                                    className={`form-control ${errors.phone ? 'is-invalid' : ''}`}
                                                 />
+                                                {errors.phone && <div className="invalid-feedback">{errors.phone}</div>}
                                             </div>
 
                                             {/* Instagram */}
@@ -342,8 +384,9 @@ function Cart({ params }) {
                                                     name="instagram" 
                                                     value={orderTourData.instagram}
                                                     onChange={handleInputChange}
-                                                    className="form-control" 
+                                                    className={`form-control ${errors.instagram ? 'is-invalid' : ''}`}
                                                 />
+                                                {errors.instagram && <div className="invalid-feedback">{errors.instagram}</div>}
                                             </div>
 
                                             {/* Tiktok */}
@@ -355,8 +398,9 @@ function Cart({ params }) {
                                                     name="tiktok" 
                                                     value={orderTourData.tiktok}
                                                     onChange={handleInputChange}
-                                                    className="form-control" 
+                                                    className={`form-control ${errors.tiktok ? 'is-invalid' : ''}`}
                                                 />
+                                                {errors.tiktok && <div className="invalid-feedback">{errors.tiktok}</div>}
                                             </div>
 
                                             {/* Email */}
@@ -368,8 +412,9 @@ function Cart({ params }) {
                                                     name="email" 
                                                     value={orderTourData.email}
                                                     onChange={handleInputChange}
-                                                    className="form-control" 
+                                                    className={`form-control ${errors.email ? 'is-invalid' : ''}`}
                                                 />
+                                                {errors.email && <div className="invalid-feedback">{errors.email}</div>}
                                             </div>
                                         </div>
 
@@ -448,10 +493,23 @@ function Cart({ params }) {
                                                 <p>Jumlah Peserta</p>
                                             </div>
                                             <div>
-                                                {peserta} Peserta
+                                                {peserta} Orang
                                             </div>
                                         </div>
                                         <hr />
+                                        <span className='mb-0 d-flex'>
+                                            <input type="checkbox" 
+                                                name="dp" 
+                                                id="dp" 
+                                                className='d-inline-block' 
+                                                style={{ width:'auto' }} 
+                                                checked={isChecked}
+                                                onChange={()=> setIsChecked(!isChecked)}
+                                            /> &nbsp;
+                                            <label htmlFor="dp" className='d-inline-block fw-normal'>Bayar dengan DP mulai dari <b>Rp. {getDpPrice().toLocaleString('id-ID')} ,-/Orang</b></label>
+                                        </span>
+                                        <br />
+                                        <br />
                                         <div className="d-flex justify-content-between fw-bold">
                                             <div>
                                                 <p>Total</p>
