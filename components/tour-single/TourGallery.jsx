@@ -49,8 +49,8 @@ export default function TourGallery({tour}) {
                           priority
                           src={media.original_url} // Ensure fallback URL
                           alt="image"
-                          style={{ height: "501px" }}
-                          className="rounded-4 col-12 cover object-cover aspect-video"
+                          style={{ aspectRatio: "16/9" }}
+                          className="rounded-4 col-12 cover object-cover !aspect-video"
                           unoptimized
                         />
                       </SwiperSlide>
