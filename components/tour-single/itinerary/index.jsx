@@ -14,7 +14,7 @@ const index = ({tour}) => {
   // console.log(tour.tour_schedules);
   return (
     <div className="row y-gap-30">
-      <div className="col-lg-4">
+      <div className="col-lg-4 iteraryy">
         <div className="relative">
           <div className="border-test" />
           <div className="accordion -map row y-gap-20" id="itineraryContent">
@@ -26,7 +26,7 @@ const index = ({tour}) => {
 
       <div className="col-lg-8">
         <IframeWrapper className="rounded-4 ">
-          {/* <MapPropertyFinder /> */}
+        {/* <MapPropertyFinder /> */}
           <div dangerouslySetInnerHTML={{ __html: tour.map }} />
         </IframeWrapper>
       </div>

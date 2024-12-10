@@ -136,6 +136,12 @@
   top: 50px;
 }
 
+.iteraryy figure img{
+  max-width: 80% !important;
+  margin-top: 8px;
+  border-radius: 10px;
+}
+
 /* Show sidebar only on desktop and larger screens */
 @media (min-width: 1200px) { /* Adjust the breakpoint as necessary */
   .sidebar-desktop-only {
