@@ -75,9 +75,10 @@ function Cart({ params }) {
     }, [params.slug]);
 
     const getDpPrice = () => {
+        // console.log(dp?.tour?.type);
         if (!dp) return 0;
     
-        if (dp?.tour?.location === 'international') {
+        if (dp?.tour?.type === 'Internasional') {
           return 2000000;
         }
     
@@ -420,10 +421,7 @@ function Cart({ params }) {
 
                                         {/* end data tambahan */}
                                         <div className="col-12 mt-40">
-                                            <h5 className="fw-bold">
-                                                Ingin sekalian sewa mobil dan sopir? <br />
-                                                Pilih sekarang
-                                            </h5>
+                                            {/* <h5 cl                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             */}
                                             <div className="row mt-10">
                                                 {carData.map((item) => (
                                                     <div className="col-md-3 col-6 px-1" key={item.id}>
@@ -497,16 +495,16 @@ function Cart({ params }) {
                                             </div>
                                         </div>
                                         <hr />
-                                        <span className='mb-0 d-flex'>
+                                        <span className='mb-0 d-flex align-items-start'>
                                             <input type="checkbox" 
                                                 name="dp" 
                                                 id="dp" 
-                                                className='d-inline-block' 
+                                                className='d-inline-block mt-1' 
                                                 style={{ width:'auto' }} 
                                                 checked={isChecked}
                                                 onChange={()=> setIsChecked(!isChecked)}
                                             /> &nbsp;
-                                            <label htmlFor="dp" className='d-inline-block fw-normal'>Bayar dengan DP mulai dari <b>Rp. {getDpPrice().toLocaleString('id-ID')} ,-/Orang</b></label>
+                                            <label htmlFor="dp" className='d-inline-block fw-normal' style={{ lineHeight: '1.2' }}>Bayar dengan DP mulai dari  <b>Rp. {getDpPrice().toLocaleString('id-ID')},-/Orang</b></label>
                                         </span>
                                         <br />
                                         <br />
