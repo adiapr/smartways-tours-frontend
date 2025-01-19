@@ -50,8 +50,8 @@ const Testimonial = () => {
     <section className="section-bg layout-pt-lg layout-pb-lg">
       <div className="section-bg__item -mx-20 bg-light-2" />
       <div className="container">
-        <div className="row justify-center text-center">
-          <div className="col-auto">
+        <div className="d-flex justify-center text-center">
+          <div className="col-12">
             <div className="sectionTitle -md">
               <h2 className="sectionTitle__title">
                 {t('influencer.title')}
@@ -62,6 +62,8 @@ const Testimonial = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="container">
         <div className="overflow-hidden pt-30 js-section-slider">
           <div className="item_gap-x10">
             <Slider {...settings}>
@@ -81,29 +83,31 @@ const Testimonial = () => {
                       {item.text}
                     </p>
                     <div className="pt-20 mt-28 border-top-light">
-                      <div className="row x-gap-20 y-gap-20 items-center">
-                        <div className="col-auto">
-                          <div style={{ position: 'relative' }}>
-                            <Image
-                              width={90}
-                              height={90}
-                              src={item.avatar}
-                              alt="image"
-                              className="size-60"
-                              style={{ borderRadius: '50%', objectFit: 'cover' }}
-                            />
-                            <Image
-                              src="/img/icons/verified-ig.png"
-                              style={{ position: 'absolute', bottom: '0px', right: '0px' }}
-                              width={20}
-                              height={20}
-                            />
+                      <div className="container">
+                        <div className="row x-gap-20 y-gap-20 items-center">
+                          <div className="col-auto">
+                            <div style={{ position: 'relative' }}>
+                              <Image
+                                width={90}
+                                height={90}
+                                src={item.avatar}
+                                alt="image"
+                                className="size-60"
+                                style={{ borderRadius: '50%', objectFit: 'cover' }}
+                              />
+                              <Image
+                                src="/img/icons/verified-ig.png"
+                                style={{ position: 'absolute', bottom: '0px', right: '0px' }}
+                                width={20}
+                                height={20}
+                              />
+                            </div>
                           </div>
-                        </div>
-                        <div className="col-auto">
-                          <div className="text-15 fw-500 lh-14">{item.name}</div>
-                          <div className="text-14 lh-14 text-light-1 mt-5">
-                            {item.designation}
+                          <div className="col-auto">
+                            <div className="text-15 fw-500 lh-14">{item.name}</div>
+                            <div className="text-14 lh-14 text-light-1 mt-5">
+                              {item.designation}
+                            </div>
                           </div>
                         </div>
                       </div>

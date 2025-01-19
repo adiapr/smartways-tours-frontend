@@ -24,12 +24,12 @@ const Home_1 = () => {
       <CustomSlider />
       <TestimonialYoutube />
       <WhyChooseUs />
-      <Documentation hotel={hotel} />
+      {/* <Documentation hotel={hotel} /> */}
       <Testimonial />
       <Partner />
       <Private />
-      <JoinGroup />
-      <DefaultFooter />
+      {/* <JoinGroup />
+      <DefaultFooter /> */}
     </>
   );
 };

@@ -37,12 +37,14 @@ function TestimonialYoutube() {
         <p>{t('testimony.TestimoniDeskripsi')}</p>
 
         <IframeWrapper>
-            <div className="row mt-2">
-                {videos.map((item) => (
-                    <div className="col-md-3 col-6 px-2" key={item.id}>
-                            <iframe src={`https://www.youtube-nocookie.com/embed/${item.name}&amp;controls=0`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-                    </div>
-                ))}
+            <div className="container">
+                <div className="row mt-2">
+                    {videos.map((item) => (
+                        <div className="col-md-3 col-6 px-2" key={item.id}>
+                                <iframe src={`https://www.youtube-nocookie.com/embed/${item.name}&amp;controls=0`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                        </div>
+                    ))}
+                </div>
             </div>
         </IframeWrapper>
     </div>
